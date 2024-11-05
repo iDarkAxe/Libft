@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 13:46:37 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/05 09:49:30 by ppontet           #+#    #+#             */
+/*   Updated: 2024/11/05 13:10:42 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <stddef.h>
-
-int		ft_isalpha(int character);
-int		ft_isdigit(int character);
-int		ft_isalnum(int character);
-int		ft_isascii(int character);
-int		ft_isprint(int character);
-size_t	ft_strlen(const char *theString);
-
-int		ft_toupper(int character);
-int		ft_tolower(int character);
-char	*ft_strchr(const char *string, int searchedChar);
-
-#endif
+/**
+ * @brief Transform all minuscules into majuscules
+ *
+ * @param character
+ * @return character in majuscule if was in minuscule
+ * OR character isn´t minuscule
+ */
+int	ft_toupper(int character)
+{
+	if ((character >= 'a' && character <= 'z'))
+		return (character - 32);
+	return (character);
+}

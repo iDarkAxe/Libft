@@ -13,7 +13,7 @@ all : $(NAME)
 # main : $(SRC)/main.c
 # 	$(CC) $? -o $(SRC)/$@ $(CFLAGS) -Llibft
 
-main : $(SRC)/main.c $(SRC)/ft_isalpha.c $(SRC)/ft_isdigit.c $(SRC)/ft_isalnum.c $(SRC)/ft_isascii.c $(SRC)/ft_isprint.c $(SRC)/ft_strlen.c
+main : $(SRC)/main.c $(SRC)/ft_isalpha.c $(SRC)/ft_isdigit.c $(SRC)/ft_isalnum.c $(SRC)/ft_isascii.c $(SRC)/ft_isprint.c $(SRC)/ft_strlen.c $(SRC)/ft_toupper.c $(SRC)/ft_tolower.c $(SRC)/ft_strchr.c
 	$(CC) $^ -o $(SRC)/$@ $(CFLAGS) -Llibft
 
 ft_isalpha.o : $(SRC)/ft_isalpha.c
