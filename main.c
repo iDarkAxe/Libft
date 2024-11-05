@@ -6,21 +6,27 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:33:14 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 13:30:16 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/05 17:51:46 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <bsd/string.h>
 #include <ctype.h>
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 int	main(void)
 {
 	int		test;
 	char	*test_string;
+	char	*test_string2;
+	char	*pointer;
+	char	*pointer2;
+	size_t	count;
 
 	test_string = "Je suis une string";
+	test_string2 = "Je suis une String";
 	test = 'C';
 	if ((ft_isalpha(test) && isalpha(test))
 		|| ft_isalpha(test) == isalpha(test))
@@ -118,10 +124,78 @@ int	main(void)
 	else
 		printf("ft_tolower(): %d \net tolower(): %d\n", ft_tolower(test),
 			tolower(test));
-	test = 'C';
-	if (ft_strchr(test_string, test) == strchr(test_string, test))
-		printf("strchr OK\n");
+	test = 's';
+	pointer = ft_strchr(test_string, test);
+	pointer2 = strchr(test_string, test);
+	if (pointer != NULL && pointer == pointer2)
+		printf("strchr OK at \"%s\"\n", pointer);
+	else if (pointer == NULL && pointer == pointer2)
+		printf("strchr OK, char not found\n");
 	else
-		printf("ft_strchr(): %s \net strchr(): %s\n", ft_strchr(test_string,
-				test), strchr(test_string, test));
+		printf("ft_strchr(): %s \net strchr(): %s\n", pointer, pointer2);
+	test = 's';
+	pointer = ft_strrchr(test_string, test);
+	pointer2 = strrchr(test_string, test);
+	if (pointer != NULL && pointer == pointer2)
+		printf("strrchr OK at \"%s\"\n", pointer);
+	else if (pointer == NULL && pointer == pointer2)
+		printf("strrchr OK, char not found\n");
+	else
+		printf("ft_strrchr(): \"%s\" \net strrchr(): \"%s\"\n", pointer,
+			pointer2);
+	test = 5;
+	if (ft_strncmp(test_string, test_string2, test) == strncmp(test_string,
+			test_string2, test))
+		printf("strncmp OK\n");
+	else
+		printf("ft_strncmp(): %d \net strncmp(): %d\n", ft_strncmp(test_string,
+				test_string2, test), strncmp(test_string, test_string2, test));
+	test = 25;
+	if (ft_strncmp(test_string, test_string2, test) == strncmp(test_string,
+			test_string2, test))
+		printf("strncmp OK\n");
+	else
+		printf("ft_strncmp(): %d \net strncmp(): %d\n", ft_strncmp(test_string,
+				test_string2, test), strncmp(test_string, test_string2, test));
+	count = 5;
+	(void)count;
+	test = 64;
+	// test_string2 = test_string;
+	// ft_memset(test_string, test, count);
+	// printf("%s\n", test_string);
+	// if (ft_memset(test_string, test, count) == memset(test_string2, test,
+	// 		count))
+	// 	printf("memset OK\n");
+	// else
+	// 	printf("ft_memset(): %p \net memset(): %p\n", ft_memset(test_string,
+	// 			test, count), memset(test_string, test, count));
+	count = 5;
+	(void)count;
+	test = 64;
+	// test_string = "Je suis une string";
+	// test_string2 = test_string;
+	// ft_memset(test_string, test, count);
+	// printf("%s\n", test_string);
+	// if (ft_memset(test_string, test, count) == memset(test_string, test,
+	// count))
+	// 	printf("memset OK\n");
+	// else
+	// 	printf("ft_memset(): %p \net memset(): %p\n", ft_memset(test_string,
+	// 			test, count), memset(test_string, test, count));
+	// test = 's';
+	// test_string2 = "suis";
+	// pointer = ft_strnstr(test_string, test_string2, count);
+	// pointer2 = strnstr(test_string, test_string2, count);
+	// if (pointer != NULL && pointer == pointer2)
+	// 	printf("strnstr OK at \"%s\"\n", pointer);
+	// else if (pointer == NULL && pointer == pointer2)
+	// 	printf("strnstr OK, string not found\n");
+	// else
+	// 	printf("ft_strnstr(): %s \net strnstr(): %s\n", pointer, pointer2);
+	test_string = "  -650090";
+	if (ft_atoi(test_string) == atoi(test_string))
+		printf("atoi OK");
+	else
+		printf("ft_atoi(): %d \net atoi(): %d\n", ft_atoi(test_string),
+			atoi(test_string));
 }

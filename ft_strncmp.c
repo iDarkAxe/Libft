@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 16:07:13 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/05 15:16:03 by ppontet           #+#    #+#             */
+/*   Updated: 2024/11/05 16:21:17 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
 /**
- * @brief Len of string
+ * @brief Find differences between first and second
  *
- * @param theString
- * @return size_t len
+ * @param first
+ * @param second
+ * @param length
+ * @return int value of first - second
  */
-size_t	ft_strlen(const char *theString)
+int	ft_strncmp(const char *first, const char *second, size_t length)
 {
-	size_t	count;
-
-	count = 0;
-	while (theString[count] != '\0')
-		count++;
-	return (count);
+	while (length > 0 && *first == *second)
+	{
+		length--;
+		first++;
+		second++;
+	}
+	return (*first - *second);
 }

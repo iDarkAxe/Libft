@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 16:07:13 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/05 16:33:04 by ppontet           #+#    #+#             */
+/*   Updated: 2024/11/05 17:02:40 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+//@WIP A TERMINER
 /**
- * @brief Len of string
+ * @brief Met à 0, les n premiers octets de la string
  *
- * @param theString
- * @return size_t len
+ * @param s
+ * @param n
  */
-size_t	ft_strlen(const char *theString)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	count;
+	int	*new_pointer;
 
-	count = 0;
-	while (theString[count] != '\0')
-		count++;
-	return (count);
+	new_pointer = (int *)s;
+	while (n > 0)
+	{
+		*(new_pointer + n) = 0;
+		n--;
+	}
+	return ;
 }

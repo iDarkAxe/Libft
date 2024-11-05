@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 16:07:13 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/05 15:29:02 by ppontet           #+#    #+#             */
+/*   Updated: 2024/11/05 16:55:57 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdio.h>
 
+//@WIP A TERMINER
 /**
- * @brief Len of string
+ * @brief Set a memory zone with a value, count times
  *
- * @param theString
- * @return size_t len
+ * @param pointer
+ * @param value
+ * @param count
+ * @return void*
  */
-size_t	ft_strlen(const char *theString)
+void	*ft_memset(void *pointer, int value, size_t count)
 {
-	size_t	count;
+	int	*new_pointer;
 
-	count = 0;
-	while (theString[count] != '\0')
-		count++;
-	return (count);
+	new_pointer = (int *)pointer;
+	while (count > 0)
+	{
+		*(new_pointer + count) = value;
+		count--;
+	}
+	return (pointer);
 }

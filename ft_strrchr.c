@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 16:07:13 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/05 15:05:54 by ppontet           #+#    #+#             */
+/*   Updated: 2024/11/05 16:01:50 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
 /**
- * @brief Len of string
+ * @brief Find last occurrence of searchedChar
  *
- * @param theString
- * @return size_t len
+ * @param string
+ * @param searchedChar
+ * @return char*
  */
-size_t	ft_strlen(const char *theString)
+char	*ft_strrchr(const char *string, int searchedChar)
 {
-	size_t	count;
+	unsigned int	i;
 
-	count = 0;
-	while (theString[count] != '\0')
-		count++;
-	return (count);
+	i = 0;
+	while (string[i] != '\0')
+		i++;
+	while (i > 0)
+	{
+		if (string[i] == searchedChar)
+			return ((char *)&string[i]);
+		i--;
+	}
+	return (NULL);
 }

@@ -6,12 +6,19 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:15:41 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 13:32:05 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/05 16:01:19 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Find first occurrence of searchedChar
+ *
+ * @param string
+ * @param searchedChar
+ * @return char* index of Char found
+ */
 char	*ft_strchr(const char *string, int searchedChar)
 {
 	unsigned int	i;
@@ -20,7 +27,7 @@ char	*ft_strchr(const char *string, int searchedChar)
 	while (string[i] != '\0')
 	{
 		if (string[i] == searchedChar)
-			return (&string[i]);
+			return ((char *)&string[i]);
 		i++;
 	}
 	return (NULL);
