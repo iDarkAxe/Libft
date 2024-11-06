@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:33:14 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 17:51:46 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 12:47:34 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main(void)
 	int		test;
 	char	*test_string;
 	char	*test_string2;
+	char	tableau[100] = "Je suis un tableau";
+	char	tableau2[100];
 	char	*pointer;
 	char	*pointer2;
 	size_t	count;
@@ -158,17 +160,15 @@ int	main(void)
 		printf("ft_strncmp(): %d \net strncmp(): %d\n", ft_strncmp(test_string,
 				test_string2, test), strncmp(test_string, test_string2, test));
 	count = 5;
-	(void)count;
-	test = 64;
-	// test_string2 = test_string;
-	// ft_memset(test_string, test, count);
-	// printf("%s\n", test_string);
-	// if (ft_memset(test_string, test, count) == memset(test_string2, test,
-	// 		count))
-	// 	printf("memset OK\n");
-	// else
-	// 	printf("ft_memset(): %p \net memset(): %p\n", ft_memset(test_string,
-	// 			test, count), memset(test_string, test, count));
+	test = 798;
+	pointer = ft_memset(tableau, test, count);
+	pointer2 = memset(tableau2, test, count);
+	printf("%s\n", pointer);
+	printf("%s\n", pointer2);
+	if (pointer == pointer2)
+		printf("memset OK\n");
+	else
+		printf("ft_memset(): %s \net memset(): %s\n", pointer, pointer2);
 	count = 5;
 	(void)count;
 	test = 64;

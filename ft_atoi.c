@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:34:53 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 17:52:09 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 13:48:34 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
  */
 int	ft_atoi(const char *nptr)
 {
-	int number;
-	unsigned short int minus_sign;
+	int					number;
+	unsigned short int	minus_sign;
 
 	number = 0;
+	minus_sign = 0;
 	while (*nptr != '\0' && *nptr == ' ')
 		nptr++;
 	if (*nptr != '\0' && *nptr == '-')

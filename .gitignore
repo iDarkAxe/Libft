@@ -1,1 +1,5 @@
 main
+.idea/*
+.vscode/*
+**/*.o
+libft.a

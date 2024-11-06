@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:29:02 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 16:55:57 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 11:23:48 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,15 @@
  */
 void	*ft_memset(void *pointer, int value, size_t count)
 {
-	int	*new_pointer;
+	unsigned char	*new_pointer;
+	unsigned int	index;
 
-	new_pointer = (int *)pointer;
+	new_pointer = (unsigned char *)pointer;
+	index = 0;
 	while (count > 0)
 	{
-		*(new_pointer + count) = value;
+		new_pointer[index] = (unsigned char)value;
+		index++;
 		count--;
 	}
 	return (pointer);

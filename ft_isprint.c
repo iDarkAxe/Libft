@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:32:05 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 13:09:40 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 13:41:46 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  */
 int	ft_isprint(int character)
 {
-	if ((character >= 32 && character <= 127))
+	if ((character >= 32 && character <= 126))
 		return (1);
 	return (0);
 }

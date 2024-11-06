@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:15:41 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 16:01:19 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 13:31:54 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ char	*ft_strchr(const char *string, int searchedChar)
 			return ((char *)&string[i]);
 		i++;
 	}
+	if (string[i] == searchedChar)
+		return ((char *)&string[i]);
 	return (NULL);
 }

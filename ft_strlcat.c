@@ -6,11 +6,19 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:59:13 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 17:05:56 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 09:51:33 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 //@TODO A TESTER ET MAIN
+/**
+ * @brief Concatenate src into dst, up to size bytes
+ *
+ * @param dst
+ * @param src
+ * @param size
+ * @return unsigned int
+ */
 unsigned int	ft_strlcat(char *dst, char *src, unsigned int size)
 {
 	unsigned int	index;

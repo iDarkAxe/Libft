@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:33:04 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 17:02:40 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 13:57:14 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,15 @@
  */
 void	ft_bzero(void *s, size_t n)
 {
-	int	*new_pointer;
+	unsigned char	*new_pointer;
+	unsigned int	index;
 
-	new_pointer = (int *)s;
+	new_pointer = (unsigned char *)s;
+	index = 0;
 	while (n > 0)
 	{
-		*(new_pointer + n) = 0;
+		new_pointer[index] = 0;
+		index++;
 		n--;
 	}
 	return ;
