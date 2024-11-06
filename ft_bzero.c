@@ -6,13 +6,12 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:33:04 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/06 13:57:14 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 15:18:22 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-//@WIP A TERMINER
 /**
  * @brief Met à 0, les n premiers octets de la string
  *

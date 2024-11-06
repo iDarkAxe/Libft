@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:54 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/06 13:35:22 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 14:47:35 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,27 @@ char	*ft_strrchr(const char *string, int searchedChar)
 			return ((char *)&string[i]);
 		i--;
 	}
+	if (string[i] == searchedChar)
+		return ((char *)&string[i]);
 	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	int		test;
+// 	char	*pointer;
+// 	char	*pointer2;
+// 	char	*test_string;
+
+// 	test = 'a';
+// 	test_string = "abbbbbbbb";
+// 	pointer = ft_strrchr(test_string, test);
+// 	pointer2 = strrchr(test_string, test);
+// 	if (pointer != NULL && pointer == pointer2)
+// 		printf("strrchr OK at \"%s\"\n", pointer);
+// 	else if (pointer == NULL && pointer == pointer2)
+// 		printf("strrchr OK, char not found\n");
+// 	else
+// 		printf("ft_strrchr(): \"%s\" \net strrchr(): \"%s\"\n", pointer,
+// 			pointer2);
+// }

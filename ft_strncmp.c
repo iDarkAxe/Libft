@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:16:03 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 16:21:17 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/06 15:03:03 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,19 @@
  * @param length
  * @return int value of first - second
  */
+
 int	ft_strncmp(const char *first, const char *second, size_t length)
 {
-	while (length > 0 && *first == *second)
+	unsigned int	index;
+
+	index = 0;
+	if (length == 0)
+		return (0);
+	while ((length - 1) > 0 && first[index] == second[index]
+		&& first[index] != '\0')
 	{
 		length--;
-		first++;
-		second++;
+		index++;
 	}
-	return (*first - *second);
+	return (first[index] - second[index]);
 }

@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:29:02 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/06 15:18:49 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/06 15:26:57 by ppontet           #+#    #+#             */
+/*   Updated: 2024/11/06 15:35:15 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <stdio.h>
 
 /**
  * @brief Set a memory zone with a value, count times
@@ -21,18 +20,20 @@
  * @param count
  * @return void*
  */
-void	*ft_memset(void *pointer, int value, size_t count)
+void	*ft_memcpy(void *destination, const void *source, size_t size)
 {
-	unsigned char	*new_pointer;
+	unsigned char	*dest_pointer;
+	unsigned char	*src_pointer;
 	unsigned int	index;
 
-	new_pointer = (unsigned char *)pointer;
+	dest_pointer = (unsigned char *)destination;
+	src_pointer = (unsigned char *)source;
 	index = 0;
-	while (count > 0)
+	while (size > 0)
 	{
-		new_pointer[index] = (unsigned char)value;
+		dest_pointer[index] = (unsigned char)src_pointer[index];
 		index++;
-		count--;
+		size--;
 	}
-	return (pointer);
+	return (dest_pointer);
 }
