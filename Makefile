@@ -16,6 +16,7 @@ SRC :=	ft_isalpha.c \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
+		ft_memmove.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
 		ft_toupper.c \
@@ -23,15 +24,35 @@ SRC :=	ft_isalpha.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
 		ft_strnstr.c \
-		ft_atoi.c
+		ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c
+
+SRC_bonus :=	ft_substr.c \
+				ft_strjoin.c \
+				ft_strtrim.c \
+				ft_split.c \
+				ft_itoa.c \
+				ft_strmapi.c \
+				ft_striteri.c \
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c 
 
 OBJSC=$(SRC:.c=.o)
+OBJSC_bonus=$(SRC_bonus:.c=.o)
 
 all : $(SRC) $(NAME)
 
 $(NAME) : $(OBJSC)
 	ar -rcs $(NAME) $(OBJSC)
+
+# bonus : $(OBJSC_bonus) $(OBJSC)
+# 	ar -rcs $(NAME) $(OBJSC)
 
 clean : 
 	rm -rf *.o
