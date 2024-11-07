@@ -6,53 +6,34 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:54 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/06 14:47:35 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 16:25:50 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+//@TODO rate un test sur libftTester
 /**
- * @brief Find last occurrence of searchedChar
+ * @brief Find last occurrence of searched_char
  *
  * @param string
- * @param searchedChar
+ * @param searched_char
  * @return char*
  */
-char	*ft_strrchr(const char *string, int searchedChar)
+char	*ft_strrchr(const char *string, int searched_char)
 {
-	unsigned int	i;
+	unsigned long int	i;
 
 	i = 0;
 	while (string[i] != '\0')
 		i++;
 	while (i > 0)
 	{
-		if (string[i] == searchedChar)
+		if (string[i] == searched_char)
 			return ((char *)&string[i]);
 		i--;
 	}
-	if (string[i] == searchedChar)
+	if (string[i] == searched_char)
 		return ((char *)&string[i]);
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	int		test;
-// 	char	*pointer;
-// 	char	*pointer2;
-// 	char	*test_string;
-
-// 	test = 'a';
-// 	test_string = "abbbbbbbb";
-// 	pointer = ft_strrchr(test_string, test);
-// 	pointer2 = strrchr(test_string, test);
-// 	if (pointer != NULL && pointer == pointer2)
-// 		printf("strrchr OK at \"%s\"\n", pointer);
-// 	else if (pointer == NULL && pointer == pointer2)
-// 		printf("strrchr OK, char not found\n");
-// 	else
-// 		printf("ft_strrchr(): \"%s\" \net strrchr(): \"%s\"\n", pointer,
-// 			pointer2);
-// }
