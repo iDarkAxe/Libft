@@ -6,13 +6,14 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:06:20 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 17:34:21 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 16:24:53 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
 //@WIP A TERMINER
+//@TODO rate tout les tests
 /**
  * @brief Search a substring in a bigger string, up to len position in string
  *
