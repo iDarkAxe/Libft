@@ -2,4 +2,6 @@ main
 .idea/*
 .vscode/*
 **/*.o
+**/a.out
+**/*.sw*
 libft.a

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:19:49 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/07 15:06:38 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/08 11:03:55 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,25 +23,22 @@
  */
 void	*ft_memmove(void *destination, const void *source, size_t size)
 {
-	unsigned char	*dest_pointer;
-	unsigned char	*src_pointer;
-	size_t			index;
-	signed char		order;
+	unsigned char		*dest_pointer;
+	const unsigned char	*src_pointer;
 
 	dest_pointer = (unsigned char *)destination;
-	src_pointer = (unsigned char *)source;
-	index = 0;
-	order = 1;
-	if (dest_pointer <= src_pointer)
-		order = -1;
-	while (size > 0)
+	src_pointer = (const unsigned char *)source;
+	if (dest_pointer > src_pointer && dest_pointer < (src_pointer + size))
 	{
-		if (order)
-			dest_pointer[index] = (unsigned char)src_pointer[index];
-		else
-			dest_pointer[size] = (unsigned char)src_pointer[size];
-		index++;
-		size--;
+		dest_pointer += size;
+		src_pointer += size;
+		while (size-- > 0)
+			*(--dest_pointer) = *(--src_pointer);
 	}
-	return (dest_pointer);
+	else
+	{
+		while (size-- > 0)
+			*(dest_pointer++) = *(src_pointer++);
+	}
+	return ((unsigned char *)destination);
 }

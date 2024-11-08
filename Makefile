@@ -1,6 +1,6 @@
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
-DEBUG = -g
+DEBUG = debug
 SRC = .
 INC_dir = .
 NAME = libft.a
@@ -31,6 +31,13 @@ SRC :=	ft_isalpha.c \
 		ft_calloc.c \
 		ft_strdup.c
 
+SRC2 :=	ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_putchar_fd.c  \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c
+
 SRC_bonus :=	ft_substr.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
@@ -44,15 +51,19 @@ SRC_bonus :=	ft_substr.c \
 				ft_putnbr_fd.c 
 
 OBJSC=$(SRC:.c=.o)
+OBJSC2=$(SRC2:.c=.o)
 OBJSC_bonus=$(SRC_bonus:.c=.o)
 
 all : $(SRC) $(NAME)
 
-$(NAME) : $(OBJSC)
-	ar -rcs $(NAME) $(OBJSC)
+$(NAME) : $(OBJSC) $(OBJSC2) $(INC)
+	ar -rcs $(NAME) $(OBJSC) $(OBJSC2)
+
+# %.o : %.c $(INC)
+# 	$(CC) $(CFLAGS) -c -o $@ $< -I $(INC)
 
 # bonus : $(OBJSC_bonus) $(OBJSC)
-# 	ar -rcs $(NAME) $(OBJSC)
+# 	ar -rcs $(NAME) $(OBJSC) $(OBJSC2) $(OBJSC_bonus)
 
 clean : 
 	rm -rf *.o
