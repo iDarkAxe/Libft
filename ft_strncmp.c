@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:16:03 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/08 11:46:50 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 16:27:04 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,8 @@ int	ft_strncmp(const char *first, const char *second, size_t length)
 	index = 0;
 	if (length == 0)
 		return (0);
-	while (index < (length - 1) && (first[index] == second[index])
-		&& first[index] != '\0')
+	while (index < (length - 1) && first[index] != '\0' && second[index] != '\0'
+		&& first[index] == second[index])
 		index++;
-	return (first[index] - second[index]);
+	return ((unsigned char)first[index] - (unsigned char)second[index]);
 }
-
-// int	ft_strncmp(char *s1, char *s2, unsigned int n)
-// {
-// 	unsigned int index;
-
-// 	index = 0;
-// 	if (n == 0)
-// 		return (0);
-// 	while ((s1[index] != '\0') && (s1[index] == s2[index]) && (index < (n - 1)))
-// 		index++;
-// 	return (s1[index] - s2[index]);
-// }

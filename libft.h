@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/08 18:21:58 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 16:33:06 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char			*ft_strdup(const char *source);
 
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s1, char const *set);
-
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
