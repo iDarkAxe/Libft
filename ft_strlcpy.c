@@ -6,9 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:58:19 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/06 15:26:22 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 14:00:53 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 /**
  * @brief Copy of src into dst, up to size bytes
@@ -16,12 +18,12 @@
  * @param dst
  * @param src
  * @param size
- * @return unsigned int size of src
+ * @return size_t size of src
  */
-unsigned int	ft_strlcpy(char *dst, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, char *src, size_t size)
 {
-	unsigned int	index;
-	unsigned int	src_len;
+	size_t	index;
+	size_t	src_len;
 
 	src_len = 0;
 	while (src[src_len] != '\0')

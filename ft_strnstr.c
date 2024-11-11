@@ -6,14 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:06:20 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/08 17:03:47 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 14:30:21 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 #include <stdio.h> //@TODO A SUPPRIMER
-
-static int	ft_strncmp(const char *first, const char *second, size_t length);
 
 //@WIP A TERMINER
 //@TODO rate tout les tests
@@ -49,19 +48,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return ((char *)big);
 }
 
-static int	ft_strncmp(const char *first, const char *second, size_t length)
-{
-	size_t	index;
-
-	index = 0;
-	if (length == 0)
-		return (0);
-	while ((first[index] != '\0') && (first[index] == second[index])
-		&& (index < (length - 1)))
-		index++;
-	return (first[index] - second[index]);
-}
-
 // #include <stdio.h>
 
 // int	main(void)
@@ -74,24 +60,4 @@ static int	ft_strncmp(const char *first, const char *second, size_t length)
 // 		printf("NULL");
 // 	else
 // 		printf("%s", str);
-// }
-
-// static int	ft_strncmp(const char *first, const char *second, size_t length)
-// {
-// 	size_t	index;
-
-// 	index = 0;
-// 	// printf("ici\n");
-// 	if (length == 0)
-// 		return (0);
-// 	while ((length - 1) > 0 && first[index] == second[index]
-// 		&& first[index] != '\0')
-// 	{
-// 		// printf("index%ld f:%c s:%c\n", index, first[index], second[index]);
-// 		length--;
-// 		index++;
-// 	}
-// 	if (length == 0 && first[index - 1] == second[index - 1])
-// 		return (first[index - 1] == second[index - 1]);
-// 	return (first[index] - second[index]);
 // }

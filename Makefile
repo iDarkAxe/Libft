@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SRCDIR = .
-OBJDIR = obj
+OBJDIR = .
 INCDIR = .
 NAME = libft.a
 
@@ -67,7 +67,7 @@ bonus : $(OBJS) $(OBJSBONUS)
 # Compilation des fichiers objets dans OBJDIR
 $(OBJDIR)/%.o: %.c $(INCS)
 	@mkdir -p $(OBJDIR)
-	$(CC) $(CFLAGS) -c -o $@ $< -I $(INCS)
+	$(CC) $(CFLAGS) -c -o $@ $< -I $(INCDIR)
 
 #Règles de nettoyage
 clean:

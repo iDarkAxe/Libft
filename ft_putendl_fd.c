@@ -6,11 +6,12 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:14:17 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/08 18:15:28 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 18:37:42 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 /**
  * @brief Écrit la chaîne de caractères ’s’ sur le descripteur de fichier,
@@ -20,10 +21,6 @@
  */
 void	ft_putendl_fd(char *s, int fd)
 {
-	while (*s != '\0')
-	{
-		write(fd, &s, 1);
-		s++;
-	}
+	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
