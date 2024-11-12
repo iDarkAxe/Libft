@@ -61,8 +61,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-bonus : $(OBJS) $(OBJSBONUS)
-	ar -rcs $(NAME) $(OBJS) $(OBJSBONUS)
+# bonus : $(OBJS) $(OBJSBONUS)
+# 	ar -rcs $(NAME) $(OBJS) $(OBJSBONUS)
 
 # Compilation des fichiers objets dans OBJDIR
 $(OBJDIR)/%.o: %.c $(INCS)
