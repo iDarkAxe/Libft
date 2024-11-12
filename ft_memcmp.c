@@ -6,12 +6,20 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:07:07 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 14:20:54 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 16:08:27 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Compare blocs par blocs les blocs mémoires, jusqu'à size blocs
+ * 
+ * @param src 
+ * @param set 
+ * @param size 
+ * @return int 
+ */
 int	ft_memcmp(const void *src, const void *set, size_t size)
 {
 	size_t			index;

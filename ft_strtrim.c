@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:59:56 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 16:42:27 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 16:39:35 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 /**
  * @brief Supprime tout les caracteres qui existent dans s et set,
-	s'il sont au debut de la string ou a la fin
+ *	s'ils sont au debut de la string ou a la fin
  *
  * @param s
  * @param set
@@ -60,32 +60,4 @@ char	*ft_strtrim(char const *s, char const *set)
 // 	// set = "z x\0";
 // 	pointer = ft_strtrim(s1, " ");
 // 	printf("retour %s", pointer);
-// }
-
-/**
- * @brief Count number of characters that exist in the two strings
- *
- * @param s
- * @param s2
- * @return size_t number of similarities
- */
-// static size_t	str_count_similarities(char const *s, char const *s2)
-// {
-// 	size_t	similarities;
-// 	size_t	index_set;
-
-// 	similarities = 0;
-// 	index_set = 0;
-// 	while (*s != '\0')
-// 	{
-// 		index_set = 0;
-// 		while (s2[index_set] != '\0')
-// 		{
-// 			if (*s == s2[index_set])
-// 				similarities++;
-// 			index_set++;
-// 		}
-// 		s++;
-// 	}
-// 	return (similarities);
 // }

@@ -6,15 +6,15 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:19:49 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 13:45:14 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 16:09:38 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
 /**
- * @brief
- *
+ * @brief Déplace les blocs mémoires en évitant l'overlapping,
+ * jusqu'à size blocs
  * @param destination
  * @param source
  * @param size
