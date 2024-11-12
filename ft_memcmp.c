@@ -6,8 +6,25 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:07:07 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/07 14:07:13 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 14:20:54 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-//@TODO A FAIRE
+#include <stddef.h>
+
+int	ft_memcmp(const void *src, const void *set, size_t size)
+{
+	size_t			index;
+	unsigned char	*src_pointer;
+	unsigned char	*set_pointer;
+
+	index = 0;
+	src_pointer = (unsigned char *)src;
+	set_pointer = (unsigned char *)set;
+	if (size == 0)
+		return (0);
+	while (index < (size - 1) && src_pointer[index] == set_pointer[index])
+		index++;
+	return ((unsigned char)src_pointer[index]
+		- (unsigned char)set_pointer[index]);
+}

@@ -6,13 +6,12 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:16:24 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 18:43:28 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 14:21:18 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-//@TODO REFAIRE un putnbr mais avec un filedescriptor
 /**
  * @brief Écrit l’entier ’n’ sur le descripteur de fichier donné
  *

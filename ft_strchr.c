@@ -6,13 +6,12 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:15:41 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/08 13:54:58 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 13:45:55 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-//@TODO rate un test sur libftTester
 /**
  * @brief Find first occurrence of searched_char
  *
@@ -33,7 +32,7 @@ char	*ft_strchr(const char *string, int searched_char)
 			return ((char *)&string[i]);
 		i++;
 	}
-	if (string[i] == searched_char)
+	if (string[i] == (char)searched_char)
 		return ((char *)&string[i]);
 	return (NULL);
 }

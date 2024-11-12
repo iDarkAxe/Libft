@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:07:24 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 13:21:31 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 14:57:33 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ void	*ft_calloc(size_t element_count, size_t element_size)
 	size_t			nbr_element;
 
 	nbr_element = element_size * element_count;
-	if (nbr_element == 0)
-		return (NULL);
 	pointer = malloc(nbr_element);
 	if (pointer == NULL)
 		return (NULL);

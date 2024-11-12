@@ -6,14 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:59:13 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 15:10:22 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 13:33:26 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-//@TODO MANQUE 2 tests
 /**
  * @brief Concatenate src into dst, up to size bytes
  *

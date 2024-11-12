@@ -6,59 +6,55 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:03:57 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/08 16:55:16 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 13:27:08 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
 
-//@WIP RATE UN TEST
 /**
- * @brief Create a copy of source into a new pointer at start, of size len
+ * @brief Create a copy of source into a new pointer, at start, of size len
  *	NEEDS to be freed
- * @param s
+ * @param src
  * @param start
  * @param len
  * @return char*
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *src, unsigned int start, size_t len)
 {
 	char	*pointer;
+	size_t	index;
 
+	index = 0;
+	if (start >= ft_strlen(src))
+		return (ft_strdup(""));
+	if (ft_strlen(&src[start]) < len)
+		len = ft_strlen(&src[start]);
 	pointer = malloc(sizeof(char) * (len + 1));
 	if (pointer == NULL)
 		return (NULL);
-	pointer += len + start;
-	s += len + start;
-	*pointer = '\0';
-	while (len > 0)
+	while (index < len && src[index + start] != '\0')
 	{
-		*(--pointer) = *(--s);
-		--len;
+		pointer[index] = src[index + start];
+		index++;
 	}
+	pointer[index] = '\0';
 	return (pointer);
 }
 
-// char	*ft_strdup(const char *source)
+// #include <stdio.h>
+// 
+// int		main(void)
 // {
-// 	char	*pointer;
-// 	size_t	count;
-// 	size_t	index;
+// 	char	str[] = "lorem ipsum dolor sit amet";
+// 	char	*strsub;
 
-// 	count = 0;
-// 	while (source[count] != '\0')
-// 		count++;
-// 	pointer = malloc(sizeof(char) * (count + 1));
-// 	if (pointer == NULL)
-// 		return (NULL);
-// 	index = 0;
-// 	while (count > 0)
-// 	{
-// 		pointer[index] = source[index];
-// 		index++;
-// 		count--;
-// 	}
-// 	pointer[index] = '\0';
-// 	return (pointer);
+// 	if (!(strsub = ft_substr(str, 7, 10)))
+// 			printf("NULL");
+// 		else
+// 			printf("%src", strsub);
+// 		if (str == strsub)
+// 			printf("\nA new string was not returned");
 // }

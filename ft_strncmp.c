@@ -6,13 +6,12 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:16:03 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/09 16:27:04 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 13:44:36 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-//@TODO RATE UN TEST
 /**
  * @brief Find differences between first and second
  *
