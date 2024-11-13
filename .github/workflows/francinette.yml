@@ -16,16 +16,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+        
+      - name: Install dependencies
+        run: sudo apt-get install -y make gcc valgrind
+              
       - name: Download Francinette
         run: |
-          git clone https://github.com/xicodomingues/francinette.git
-          cd francinette
-          python -m pip install -r requirements.txt
+          bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
 
       - name: Run Francinette
         run: |
-          ./francinette/tester.sh  > ./francinette_output.log 2>&1
+          francinette  > ./francinette_output.log 2>&1
       
       - name: Upload Francinette output as artifact
         uses: actions/upload-artifact@v4
