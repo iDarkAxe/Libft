@@ -1,0 +1,28 @@
+name: Francinette CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  francinette-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download Francinette
+        run: |
+          git clone https://github.com/xicodomingues/francinette.git
+          cd francinette
+          python -m pip install -r requirements.txt
+
+      - name: Run Francinette
+        run: |
+          cd francinette
+          python -m francinette [options]
