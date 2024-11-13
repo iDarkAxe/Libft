@@ -25,5 +25,10 @@ jobs:
 
       - name: Run Francinette
         run: |
-          cd francinette
-          python -m francinette [options]
+          francinette  > ../francinette_output.log 2>&1
+      
+      - name: Upload Francinette output as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: francinette_output
+          path: francinette_output.log
