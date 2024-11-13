@@ -6,14 +6,17 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:45:58 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 18:09:12 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/13 15:13:15 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdio.h> //@TODO A SUUPPRIMER
+#include <stdlib.h>
 
-static void ft_free_malloc(char **ptr_ptr, size_t count);
+static void		ft_free_malloc(char **ptr_ptr, size_t count);
+static char		*ft_strndup(const char *source, size_t len);
+static size_t	str_count_char(char const *s, char c);
 //@WIP A FAIRE
 
 /**
@@ -27,56 +30,166 @@ static void ft_free_malloc(char **ptr_ptr, size_t count);
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr_ptr;
+	char	*next_pointer;
 	size_t	count;
-	size_t	index;
 
-	index = 0;
 	count = 0;
-	ptr_ptr = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	while (s[index] != '\0')
+	ptr_ptr = malloc(sizeof(char *) * (str_count_char(s, c) + 1));
+	if (ptr_ptr == NULL)
+		return (NULL);
+	while (*s != '\0')
 	{
-		if (ft_strchr(&s[index], c) != NULL)
-			ptr_ptr[count++] = ft_substr(s, index, *(ft_strchr(&s[index + 1], c)) - s[index]);
-		if (count != 0 && ptr_ptr[count - 1] == NULL)
+		while (*s == c)
+			s++;
+		next_pointer = ft_strchr(s, c);
+		if (next_pointer == NULL)
+			next_pointer = (char *)s + ft_strlen(s);
+		ptr_ptr[count] = ft_strndup(s, next_pointer - s);
+		if (ptr_ptr[count++] == NULL)
 		{
-			ft_free_malloc(ptr_ptr, count);
+			ft_free_malloc(ptr_ptr, count - 1);
 			return (NULL);
 		}
-		index++;
+		s += next_pointer - s + 1;
 	}
+	ptr_ptr[count++] = ft_strndup(s, ft_strlen(s));
+	ptr_ptr[count] = NULL;
 	return (ptr_ptr);
 }
+// char	**ft_split(char const *s, char c)
+// {
+// 	char	**ptr_ptr;
+// 	char	*next_pointer;
+// 	size_t	count;
+
+// 	count = 0;
+// 	ptr_ptr = malloc(sizeof(char*) * (str_count_char(s, c) + 1));
+// 	if (!ptr_ptr)
+// 		return (NULL);
+
+// 	while (*s)
+// 	{
+// 		// Ignore les délimiteurs consécutifs
+// 		while (*s == c)
+// 			s++;
+
+// 		// Si la chaîne est vide après avoir sauté les délimiteurs, on sort
+// 		if (*s == '\0')
+// 			break;
+
+// 		// Trouve la prochaine occurrence du délimiteur
+// 		next_pointer = ft_strchr(s, c);
+// 		if (next_pointer == NULL)
+// 			next_pointer = (char *)s + ft_strlen(s); // Jusqu'à la fin de la chaîne
+
+// 		// Allouer et copier la sous-chaîne
+// 		ptr_ptr[count] = ft_strndup(s, next_pointer - s);
+// 		if (!ptr_ptr[count])
+// 		{
+// 			ft_free_malloc(ptr_ptr, count);
+// 			return (NULL);
+// 		}
+
+// 		// Avancer le pointeur
+// 		s = next_pointer;
+
+// 		count++;
+// 	}
+// 	ptr_ptr[count] = NULL;  // Terminer le tableau par NULL
+// 	return (ptr_ptr);
+// }
+
 
 /**
  * @brief Free mallocs
- * 
- * @param ptr_ptr 
- * @param count 
+ *
+ * @param ptr_ptr
+ * @param count
  */
-static void ft_free_malloc(char **ptr_ptr, size_t count)
+static void	ft_free_malloc(char **ptr_ptr, size_t count)
 {
 	while (count > 0)
-	{
-		free(ptr_ptr[count]);
-		count++;
-	}
+		free(ptr_ptr[--count]);
+	free(ptr_ptr[count]);
 }
 
 /**
  * @brief Count occurrence of c in string s
- * 
+ *
  * @param s string
  * @param c char
- * @return size_t 
+ * @return size_t
  */
+static size_t	str_count_char(char const *s, char c)
+{
+	size_t			count;
+	unsigned char	in_substring;
+
+	count = 0;
+	in_substring = 0;
+	while (*s != '\0')
+	{
+		if (*s == c && in_substring)
+		{
+			count++;
+			in_substring = 0;
+		}
+		else if (*s != c && !in_substring)
+		{
+			in_substring = 1;
+			count++;
+		}
+		s++;
+	}
+	return (count);
+}
+
+/**
+ * @brief Create a copy of source into a new pointer of size len
+ *	NEEDS to be freed
+ * @param source
+ * @return char*
+ */
+static char	*ft_strndup(const char *source, size_t len)
+{
+	char	*pointer;
+	size_t	index;
+
+	pointer = malloc(sizeof(char) * (len + 1));
+	if (pointer == NULL)
+		return (NULL);
+	index = 0;
+	while (index < len)
+	{
+		pointer[index] = source[index];
+		index++;
+	}
+	pointer[index] = '\0';
+	return (pointer);
+}
+
+// int main(void)
+// {
+// 	char **ptr = ft_split("lorem ipsum dolor sit amet, \
+//			consectetur adipiscing elit. Sed non risus. Suspendisse\n", ' ');
+// 	size_t index = 0;
+
+// 	while (ptr[index] != NULL)
+// 	{
+// 		ft_putendl_fd(ptr[index], 1);
+// 		index++;
+// 	}
+// }
+
+// BACKUP
 // static size_t	str_count_char(char const *s, char c)
 // {
 // 	size_t count;
-	
+
 // 	count = 0;
-// 	while (*s == '\0')
+// 	while (*s != '\0')
 // 	{
-// 		if (ft_strchr(s, c) != NULL)
+// 		if ((s + 1) != ft_strchr(s, c))
 // 			count++;
 // 		s++;
 // 	}

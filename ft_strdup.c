@@ -6,12 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:30:55 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/07 16:18:38 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/13 11:27:29 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
+#include "libft.h"
 
 /**
  * @brief Create a copy of source into a new pointer
@@ -25,9 +26,7 @@ char	*ft_strdup(const char *source)
 	size_t	count;
 	size_t	index;
 
-	count = 0;
-	while (source[count] != '\0')
-		count++;
+	count = ft_strlen(source);
 	pointer = malloc(sizeof(char) * (count + 1));
 	if (pointer == NULL)
 		return (NULL);

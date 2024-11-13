@@ -47,11 +47,12 @@ SRC2 = ft_substr.c \
        ft_putendl_fd.c \
        ft_putnbr_fd.c
 
-SRC_bonus = ft_lstnew
+SRCBONUS = ft_lstnew.c
+BSRC = $(SRCBONUS) $(SRC) $(SRC2)
 
 # Liste des fichiers objets (redirigés vers OBJDIR)
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o) $(SRC2:.c=.o))
-OBJSBONUS = $(addprefix $(OBJDIR)/, $(SRCBONUS:.c=.o))
+OBJSBONUS = $(addprefix $(OBJDIR)/, $(BSRC:.c=.o))
 INCS = $(addprefix $(INCDIR)/, $(INC))
 
 # Règles
@@ -62,7 +63,7 @@ $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 # bonus : $(OBJS) $(OBJSBONUS)
-# 	ar -rcs $(NAME) $(OBJS) $(OBJSBONUS)
+# 	@make --no-print-directory OBJS="$(OBJSBONUS)"
 
 # Compilation des fichiers objets dans OBJDIR
 $(OBJDIR)/%.o: %.c $(INCS)
