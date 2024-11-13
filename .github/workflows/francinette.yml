@@ -15,7 +15,7 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Download Francinette
         run: |
@@ -28,7 +28,7 @@ jobs:
           francinette  > ../francinette_output.log 2>&1
       
       - name: Upload Francinette output as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: francinette_output
           path: francinette_output.log
