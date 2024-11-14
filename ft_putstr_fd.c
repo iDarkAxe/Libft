@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:12:07 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 18:39:32 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/14 16:07:51 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@
  */
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s != '\0')
-		ft_putchar_fd(*s++, fd);
+	write(fd, s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:45:58 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/13 15:13:15 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/14 16:58:07 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 static void		ft_free_malloc(char **ptr_ptr, size_t count);
 static char		*ft_strndup(const char *source, size_t len);
+static char		*ft_strchr_end(const char *string, int searched_char);
 static size_t	str_count_char(char const *s, char c);
 //@WIP A FAIRE
 
@@ -23,6 +24,7 @@ static size_t	str_count_char(char const *s, char c);
  * @brief Alloue avec malloc et retourne un tableau de chaînes
  * de caractères obtenu en séparant ’s’ à l’aide du caractère ’c’,
  * utilisé comme délimiteur. Le tableau doit être terminé par NULL
+ *
  * @param s
  * @param c
  * @return char**
@@ -41,64 +43,38 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s == c)
 			s++;
-		next_pointer = ft_strchr(s, c);
-		if (next_pointer == NULL)
-			next_pointer = (char *)s + ft_strlen(s);
+		if (*s == '\0')
+			break ;
+		next_pointer = ft_strchr_end(s, c);
 		ptr_ptr[count] = ft_strndup(s, next_pointer - s);
 		if (ptr_ptr[count++] == NULL)
 		{
 			ft_free_malloc(ptr_ptr, count - 1);
 			return (NULL);
 		}
-		s += next_pointer - s + 1;
+		s = next_pointer + (*next_pointer == c);
 	}
-	ptr_ptr[count++] = ft_strndup(s, ft_strlen(s));
 	ptr_ptr[count] = NULL;
 	return (ptr_ptr);
 }
-// char	**ft_split(char const *s, char c)
-// {
-// 	char	**ptr_ptr;
-// 	char	*next_pointer;
-// 	size_t	count;
 
-// 	count = 0;
-// 	ptr_ptr = malloc(sizeof(char*) * (str_count_char(s, c) + 1));
-// 	if (!ptr_ptr)
-// 		return (NULL);
+/**
+ * @brief Work exactly like strchr, but return end of string
+ * if searched_char not found
+ *
+ * @param string
+ * @param searched_char
+ * @return char*
+ */
+char	*ft_strchr_end(const char *string, int searched_char)
+{
+	char	*pointer;
 
-// 	while (*s)
-// 	{
-// 		// Ignore les délimiteurs consécutifs
-// 		while (*s == c)
-// 			s++;
-
-// 		// Si la chaîne est vide après avoir sauté les délimiteurs, on sort
-// 		if (*s == '\0')
-// 			break;
-
-// 		// Trouve la prochaine occurrence du délimiteur
-// 		next_pointer = ft_strchr(s, c);
-// 		if (next_pointer == NULL)
-// 			next_pointer = (char *)s + ft_strlen(s); // Jusqu'à la fin de la chaîne
-
-// 		// Allouer et copier la sous-chaîne
-// 		ptr_ptr[count] = ft_strndup(s, next_pointer - s);
-// 		if (!ptr_ptr[count])
-// 		{
-// 			ft_free_malloc(ptr_ptr, count);
-// 			return (NULL);
-// 		}
-
-// 		// Avancer le pointeur
-// 		s = next_pointer;
-
-// 		count++;
-// 	}
-// 	ptr_ptr[count] = NULL;  // Terminer le tableau par NULL
-// 	return (ptr_ptr);
-// }
-
+	pointer = ft_strchr(string, searched_char);
+	if (pointer == NULL)
+		pointer = (char *)string + ft_strlen(string);
+	return (pointer);
+}
 
 /**
  * @brief Free mallocs
@@ -110,7 +86,7 @@ static void	ft_free_malloc(char **ptr_ptr, size_t count)
 {
 	while (count > 0)
 		free(ptr_ptr[--count]);
-	free(ptr_ptr[count]);
+	free(ptr_ptr);
 }
 
 /**
@@ -129,12 +105,9 @@ static size_t	str_count_char(char const *s, char c)
 	in_substring = 0;
 	while (*s != '\0')
 	{
-		if (*s == c && in_substring)
-		{
-			count++;
+		if (*s == c)
 			in_substring = 0;
-		}
-		else if (*s != c && !in_substring)
+		else if (!in_substring)
 		{
 			in_substring = 1;
 			count++;
@@ -164,22 +137,28 @@ static char	*ft_strndup(const char *source, size_t len)
 		pointer[index] = source[index];
 		index++;
 	}
-	pointer[index] = '\0';
+	pointer[len] = '\0';
 	return (pointer);
 }
 
-// int main(void)
-// {
-// 	char **ptr = ft_split("lorem ipsum dolor sit amet, \
-//			consectetur adipiscing elit. Sed non risus. Suspendisse\n", ' ');
-// 	size_t index = 0;
+int main(void)
+{
+	char **ptr = ft_split("lorem ipsum dolor sit amet, \
+			consectetur adipiscing elit. Sed non risus. Suspendisse\n", ' ');
+	char **tab = ft_split("tripouille", 0);
+	size_t index = 0;
 
-// 	while (ptr[index] != NULL)
-// 	{
-// 		ft_putendl_fd(ptr[index], 1);
-// 		index++;
-// 	}
-// }
+	// while (ptr[index] != NULL)
+	// {
+	// 	ft_putendl_fd(ptr[index], 1);
+	// 	index++;
+	// }
+	while (ptr[index] != NULL)
+	{
+		ft_putendl_fd(tab[index], 1);
+		index++;
+	}
+}
 
 // BACKUP
 // static size_t	str_count_char(char const *s, char c)
@@ -194,4 +173,48 @@ static char	*ft_strndup(const char *source, size_t len)
 // 		s++;
 // 	}
 // 	return (count);
+// }
+
+// char	**ft_split(char const *s, char c)
+// {
+// 	char	**ptr_ptr;
+// 	char	*next_pointer;
+// 	size_t	count;
+
+// 	count = 0;
+// 	ptr_ptr = malloc(sizeof(char*) * (str_count_char(s, c) + 1));
+// 	if (!ptr_ptr)
+// 		return (NULL);
+
+// 	while (*s)
+// 	{
+// 		// Ignore les délimiteurs consécutifs
+// 		while (*s == c)
+// 			s++;
+
+// 		// Si la chaîne est vide après avoir sauté les délimiteurs, on sort
+// 		if (*s == '\0')
+// 			break ;
+
+// 		// Trouve la prochaine occurrence du délimiteur
+// 		next_pointer = ft_strchr(s, c);
+// 		if (next_pointer == NULL)
+// 			next_pointer = (char *)s + ft_strlen(s);
+				// Jusqu'à la fin de la chaîne
+
+// 		// Allouer et copier la sous-chaîne
+// 		ptr_ptr[count] = ft_strndup(s, next_pointer - s);
+// 		if (!ptr_ptr[count])
+// 		{
+// 			ft_free_malloc(ptr_ptr, count);
+// 			return (NULL);
+// 		}
+
+// 		// Avancer le pointeur
+// 		s = next_pointer;
+
+// 		count++;
+// 	}
+// 	ptr_ptr[count] = NULL;  // Terminer le tableau par NULL
+// 	return (ptr_ptr);
 // }

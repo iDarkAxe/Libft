@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:59:56 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 16:39:35 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/14 16:36:11 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
  */
 char	*ft_strtrim(char const *s, char const *set)
 {
-	size_t	index;
 	char	*pointer;
+	size_t	index;
 	size_t	start;
 	size_t	end;
 
