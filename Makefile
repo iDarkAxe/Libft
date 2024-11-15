@@ -47,7 +47,16 @@ SRC2 = ft_substr.c \
        ft_putendl_fd.c \
        ft_putnbr_fd.c
 
-SRCBONUS = ft_lstnew.c
+SRCBONUS = ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
+
 BSRC = $(SRCBONUS) $(SRC) $(SRC2)
 
 # Liste des fichiers objets (redirigés vers OBJDIR)
@@ -62,21 +71,24 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-# bonus : $(OBJS) $(OBJSBONUS)
-# 	@make --no-print-directory OBJS="$(OBJSBONUS)"
+bonus : $(OBJS) $(OBJSBONUS)
+	@$(MAKE) --no-print-directory OBJS="$(OBJSBONUS)"
 
 # Compilation des fichiers objets dans OBJDIR
 $(OBJDIR)/%.o: %.c $(INCS)
 	@mkdir -p $(OBJDIR)
 	$(CC) $(CFLAGS) -c -o $@ $< -I $(INCDIR)
 
-#Règles de nettoyage
+# Règles de nettoyage
 clean:
 	rm -rf $(OBJDIR)/*.o
 
-fclean: clean
+fclean:
+	@$(MAKE) clean
 	rm -f $(NAME)
 
-re: fclean all
+re:
+	@$(MAKE) fclean
+	@$(MAKE) all
 
 .PHONY : all clean fclean re bonus

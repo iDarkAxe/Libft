@@ -6,14 +6,12 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:26:57 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/07 17:08:11 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 16:07:35 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-//@TODO crash ´your memcpy does not behave
-// well with NULL as both params with size´
 /**
  * @brief Set a memory zone with a value, count times
  *
@@ -24,18 +22,20 @@
  */
 void	*ft_memcpy(void *destination, const void *source, size_t size)
 {
-	unsigned char	*dest_pointer;
-	unsigned char	*src_pointer;
-	size_t			index;
+	char	*dest_pointer;
+	char	*src_pointer;
+	size_t	index;
 
-	dest_pointer = (unsigned char *)destination;
-	src_pointer = (unsigned char *)source;
+	dest_pointer = (char *)destination;
+	src_pointer = (char *)source;
 	index = 0;
+	if (destination == source)
+		return (destination);
 	while (size > 0)
 	{
-		dest_pointer[index] = (unsigned char)src_pointer[index];
+		dest_pointer[index] = (char)src_pointer[index];
 		index++;
 		size--;
 	}
-	return (dest_pointer);
+	return (destination);
 }
