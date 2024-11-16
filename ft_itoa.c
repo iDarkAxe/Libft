@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:27:43 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 18:06:30 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/16 16:33:10 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,53 @@ static unsigned char	count_numbers(int n)
 	}
 	return (count);
 }
+
+// #include "libft.h"
+// #include "unistd.h"
+// #include <ctype.h>
+
+// int main (void)
+// {
+// 	int number;
+
+// 	number = 6515649;
+// 	ft_putnbr_fd(number, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putstr_fd("6515649", 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putstr_fd(ft_itoa(number), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	number = 5111;
+// 	ft_putnbr_fd(number, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putstr_fd("5111", 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putstr_fd(ft_itoa(number), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	number = -2568;
+// 	ft_putnbr_fd(number, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putstr_fd("-2568", 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putstr_fd(ft_itoa(number), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	number = -97;
+// 	ft_putnbr_fd(number, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putstr_fd("-97", 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putstr_fd(ft_itoa(number), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// }

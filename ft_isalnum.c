@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:03:21 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 13:13:02 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/16 16:32:53 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,37 @@ int	ft_isalnum(int character)
 		return (1);
 	return (0);
 }
+
+// #include "libft.h"
+// #include "unistd.h"
+// #include <ctype.h>
+
+// int main (void)
+// {
+// 	char character;
+
+// 	character = 'c';
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putnbr_fd(isalnum(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putnbr_fd(ft_isalnum(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	character = '9';
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putnbr_fd(isalnum(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putnbr_fd(ft_isalnum(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	character = '\24';
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putnbr_fd(isalnum(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putnbr_fd(ft_isalnum(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// }

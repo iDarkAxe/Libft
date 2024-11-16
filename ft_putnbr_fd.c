@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:16:24 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 14:21:18 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/16 16:54:17 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,26 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		write(fd, &temp, 1);
 }
+
+// #include "libft.h"
+// #include <stdio.h>
+
+// int main(int argc, char **argv)
+// {
+// 	char str[100] = {0};
+// 	int number;
+// 	int fd;
+
+// 	fd = 1;
+// 	number = (int)51996519858184;
+// 	ft_putstr_fd("Resultat test   : ", fd);
+// 	ft_putnbr_fd(number, fd);
+// 	ft_putendl_fd("", fd);
+// 	printf("Resultat attendu   : %d\n", number);
+// 	ft_putendl_fd("", fd);
+// 	number = (int)5084;
+// 	ft_putstr_fd("Resultat test   : ", fd);
+// 	ft_putnbr_fd(number, fd);
+// 	ft_putendl_fd("", fd);
+// 	printf("Resultat attendu   : %d\n", number);
+// }

@@ -6,12 +6,12 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:49:30 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 13:10:42 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/16 17:02:25 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * @brief Transform all minuscules into majuscules
+ * @brief Transform minuscules into majuscules
  *
  * @param character
  * @return character in majuscule if was in minuscule
@@ -23,3 +23,44 @@ int	ft_toupper(int character)
 		return (character - 32);
 	return (character);
 }
+
+// #include "libft.h"
+// #include <ctype.h>
+
+// int main(void)
+// {
+// 	int character;
+// 	int test;
+
+// 	character = 'A';
+// 	ft_putstr_fd("Resultat Attendu : ", 1);
+// 	test = toupper(character);
+// 	ft_putchar_fd(test, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat Test : ", 1);
+// 	test = ft_toupper(character);
+// 	ft_putchar_fd(test, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+
+// 	character = 'a';
+// 	ft_putstr_fd("Resultat Attendu : ", 1);
+// 	test = toupper(character);
+// 	ft_putchar_fd(test, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat Test : ", 1);
+// 	test = ft_toupper(character);
+// 	ft_putchar_fd(test, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+
+// 	character = 'f';
+// 	ft_putstr_fd("Resultat Attendu : ", 1);
+// 	test = toupper(character);
+// 	ft_putchar_fd(test, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat Test : ", 1);
+// 	test = ft_toupper(character);
+// 	ft_putchar_fd(test, 1);
+// 	ft_putendl_fd("", 1);
+// }

@@ -6,11 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:50:20 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/05 13:13:16 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/16 16:33:04 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-// could return 1024 or 0x10000000000 instead of 1
+// could return 2048 or 0x100000000000 instead of 1
 /**
  * @brief Check if arg is a char
  *
@@ -23,3 +23,52 @@ int	ft_isdigit(int character)
 		return (1);
 	return (0);
 }
+// #include "libft.h"
+// #include "unistd.h"
+// #include <ctype.h>
+
+// int main (void)
+// {
+// 	char character;
+
+// 	character = '1';
+// 	ft_putnbr_fd(character, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putnbr_fd(isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putnbr_fd(ft_isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	character = '9';
+// 	ft_putnbr_fd(character, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putnbr_fd(isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putnbr_fd(ft_isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	character = 'e';
+// 	ft_putnbr_fd(character, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putnbr_fd(isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putnbr_fd(ft_isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// 	character = -97;
+// 	ft_putnbr_fd(character, 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat attendu : ", 1);
+// 	ft_putnbr_fd(isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putstr_fd("Resultat test   : ", 1);
+// 	ft_putnbr_fd(ft_isdigit(character), 1);
+// 	ft_putendl_fd("", 1);
+// 	ft_putendl_fd("     -----     ", 1);
+// }
