@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:16:03 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 13:44:36 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 10:53:28 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,37 @@ int	ft_strncmp(const char *first, const char *second, size_t length)
 		index++;
 	return ((unsigned char)first[index] - (unsigned char)second[index]);
 }
+// #include <string.h>
+// #include "libft.h"
+
+// int main(void)
+// {
+//     char str[100] = "ABCDefGHIJKLM";
+//     char str2[100] = "ABCDeFGHIJKLM";
+//     int fd = 1;
+
+//     ft_putstr_fd("Resultat attendu   : ", fd);
+//     ft_putnbr_fd(strncmp(str, str2, 2), fd);
+//     ft_putendl_fd("", fd);
+//     ft_putstr_fd("Resultat test   : ", fd);
+//     ft_putnbr_fd(ft_strncmp(str, str2, 2), fd);
+//     ft_putendl_fd("", fd);
+//     ft_putendl_fd("     -----     ", fd);
+
+//     ft_putstr_fd("Resultat attendu   : ", fd);
+//     ft_putnbr_fd(strncmp(str, str2, 6), fd);
+//     ft_putendl_fd("", fd);
+//     ft_putstr_fd("Resultat test   : ", fd);
+//     ft_putnbr_fd(ft_strncmp(str, str2, 6), fd);
+//     ft_putendl_fd("", fd);
+
+//     ft_putendl_fd("     -----     ", fd);
+//     ft_strlcpy(str, "abdEfghijkl", 5);
+//     ft_strlcpy(str2, "abdffghijkl", 5);
+//     ft_putstr_fd("Resultat attendu   : ", fd);
+//     ft_putnbr_fd(strncmp(str, str2, ft_strlen(str)), fd);
+//     ft_putendl_fd("", fd);
+//     ft_putstr_fd("Resultat test   : ", fd);
+//     ft_putnbr_fd(ft_strncmp(str, str2, ft_strlen(str)), fd);
+//     ft_putendl_fd("", fd);
+// }
