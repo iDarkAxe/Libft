@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:07:24 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 15:43:40 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 11:09:04 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-//@TODO MAIN
 /**
  * @brief Alloue une nouvelle zone memoire, et met les bits à zero
  *
