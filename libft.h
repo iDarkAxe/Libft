@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/15 19:09:08 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 18:44:19 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include "ft_put_fd.h"
 
 typedef struct s_list
 {
@@ -42,8 +43,10 @@ void	*ft_memchr(const void *memory_block, int searched_char, size_t size);
 int		ft_memcmp(const void *src, const void *set, size_t size);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+int		ft_atoi_base(char *str, char *base);
 void	*ft_calloc(size_t element_count, size_t element_size);
 char	*ft_strdup(const char *source);
+char	*ft_strndup(const char *source, size_t len);
 
 char	*ft_substr(char const *src, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -56,6 +59,11 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_bin(int nbr);
+void	ft_putnbr_poneyvif(int nbr);
+void	ft_putnbr_oct(int nbr);
+void	ft_putnbr_hex(int nbr, char height);
+void	ft_putnbr_base(int nbr, char *base);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

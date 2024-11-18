@@ -8,7 +8,8 @@ NAME = libft.a
 vpath %.c $(SRCDIR)
 
 # En-tête
-INC = libft.h
+INC = libft.h \
+      ft_put_fd.h
 
 # Fichiers sources
 SRC = ft_isalpha.c \
@@ -32,6 +33,7 @@ SRC = ft_isalpha.c \
       ft_memcmp.c \
       ft_strnstr.c \
       ft_atoi.c \
+      ft_atoi_base \
       ft_calloc.c \
       ft_strdup.c
 
@@ -45,7 +47,8 @@ SRC2 = ft_substr.c \
        ft_putchar_fd.c \
        ft_putstr_fd.c \
        ft_putendl_fd.c \
-       ft_putnbr_fd.c
+       ft_putnbr_fd.c \
+       ft_putnbr_base.c \
 
 SRCBONUS = ft_lstnew_bonus.c \
 		ft_lstadd_front_bonus.c \
