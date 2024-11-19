@@ -6,16 +6,16 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:43:34 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/18 19:31:42 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 11:38:55 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strlen(char *str);
-static int	base_check(char *base);
 static int	pos_base(char str, char *base);
 static int	is_in_base(char str, char *base);
+
+//@TODO TESTER si le ft_strlen en size_t fonctionne (previously int)
 
 /**
  * @brief Atoi with a particular base
@@ -33,7 +33,7 @@ int	ft_atoi_base(char *str, char *base)
 	value = 0;
 	i = 0;
 	sign = 1;
-	if (!base_check(base))
+	if (!ft_check_base_atoi(base))
 		return (0);
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
@@ -45,44 +45,14 @@ int	ft_atoi_base(char *str, char *base)
 	}
 	while (is_in_base(str[i], base))
 	{
-		value *= ft_strlen(base);
+		value *= (int)ft_strlen(base);
 		value += pos_base(str[i], base);
 		i++;
 	}
 	return (value * sign);
 }
 
-/**
- * @brief Check if base is valid
- * 
- * @param base 
- * @return int 
- */
-static int	base_check(char *base)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	if (ft_strlen(base) < 2)
-		return (0);
-	while (base[i])
-	{
-		j = 0;
-		while (base[j])
-		{
-			if ((base[j] == base[i] || base[j] == '+' || base[j] == '-'
-					|| (base[j] >= 9 && base[j] <= 13) || base[j] == ' ')
-				&& i != j)
-				return (0);
-			j++;
-		}
-		i++;
-	}
-	return (1);
-}
-
-//REFLECHIR A LE FAIRE AVEC STRCHR
+//@WIP REFLECHIR A LE FAIRE AVEC STRCHR
 /**
  * @brief Search a character in base 
  * 

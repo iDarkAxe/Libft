@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/18 18:44:19 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 11:40:32 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }				t_list;
-
+//@TODO Needs to be tidied like Makefile
 int		ft_isalpha(int character);
 int		ft_isdigit(int character);
 int		ft_isalnum(int character);
@@ -64,6 +64,8 @@ void	ft_putnbr_poneyvif(int nbr);
 void	ft_putnbr_oct(int nbr);
 void	ft_putnbr_hex(int nbr, char height);
 void	ft_putnbr_base(int nbr, char *base);
+int		ft_check_base_atoi(char *base);
+int		ft_check_base_putnbr(char *base);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

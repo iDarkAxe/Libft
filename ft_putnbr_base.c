@@ -6,20 +6,18 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:31:04 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/18 19:16:58 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 11:39:22 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-
-static int	check_base(char *base);
+#include <unistd.h>
 
 /**
  * @brief Putnbr with a particular base
- * 
- * @param nbr 
- * @param base 
+ *
+ * @param nbr
+ * @param base
  */
 void	ft_putnbr_base(int nbr, char *base)
 {
@@ -27,7 +25,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	long int	nb;
 
 	nb = nbr;
-	base_nbr = check_base(base);
+	base_nbr = ft_check_base_putnbr(base);
 	if (base_nbr < 1)
 		return ;
 	if (nb < 0)
@@ -45,78 +43,45 @@ void	ft_putnbr_base(int nbr, char *base)
 }
 
 /**
- * @brief Check if base is valid
- * 
- * @param base 
- * @return int 
- */
-static int	check_base(char *base)
-{
-	int		index;
-	int		base_length;
-	int		tested;
-
-	base_length = 0;
-	while (base[base_length] != '\0')
-		base_length++;
-	if (base[0] == '\0' || base_length == 1)
-		return (0);
-	tested = 0;
-	while (tested < base_length)
-	{
-		index = tested + 1;
-		while (index < base_length)
-		{
-			if (base[tested] == base[index] || base[tested] == '+'
-				|| base[tested] == '-' || base[index] == '-'
-				|| base[index] == '+')
-				return (0);
-			index++;
-		}
-		tested++;
-	}
-	return (base_length);
-}
-
-/**
  * @brief Putnbr for binary
- * 
- * @param nbr 
+ *
+ * @param nbr
  */
-void ft_putnbr_bin(int nbr)
+void	ft_putnbr_bin(int nbr)
 {
 	ft_putnbr_base(nbr, "01");
 }
 
 /**
  * @brief Putnbr for poneyvif
- * 
- * @param nbr 
+ *
+ * @param nbr
  */
-void ft_putnbr_poneyvif(int nbr)
-{
-	ft_putnbr_base(nbr, "poneyvif");
-}
+// void	ft_putnbr_poneyvif(int nbr)
+// {
+// 	ft_putnbr_base(nbr, "poneyvif");
+// }
 
 /**
  * @brief Putnbr for octal
- * 
- * @param nbr 
+ *
+ * @param nbr
  */
-void ft_putnbr_oct(int nbr)
+void	ft_putnbr_oct(int nbr)
 {
 	ft_putnbr_base(nbr, "01234567");
 }
 
 /**
  * @brief Putnbr for hex or HEX
- * 
- * @param nbr 
- * @param height 
+ *
+ * @param nbr
+ * @param height
  */
-void ft_putnbr_hex(int nbr, char height)
+void	ft_putnbr_hex(int nbr, char height)
 {
-	char base[17];
+	char	base[17];
+
 	if (height == 1 || height == 'x')
 		ft_strlcpy(base, "0123456789abcdef\0", 17);
 	else
