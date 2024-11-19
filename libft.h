@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/19 11:40:32 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 14:26:57 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <unistd.h>
 # include "ft_put_fd.h"
 
 typedef struct s_list
@@ -57,7 +58,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+ssize_t	ft_putnstr_fd(char *s, size_t len, int fd);
 void	ft_putendl_fd(char *s, int fd);
+ssize_t	ft_putnendl_fd(char *s, size_t len, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr_bin(int nbr);
 void	ft_putnbr_poneyvif(int nbr);

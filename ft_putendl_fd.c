@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:14:17 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 16:37:39 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 13:56:51 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,21 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
+}
+
+/**
+ * @brief Écrit la chaîne de caractères ’s’ sur le descripteur de fichier,
+ * suivi d'un retour a la ligne jusqu'à une taille donnée ou la longueur 
+ * de s si len est plus grand
+ * 
+ * @param s string
+ * @param len maximum char to be printed
+ * @param fd file descriptor
+ * @return ssize_t nombre de caractere qui ont été écrits
+ */
+ssize_t	ft_putnendl_fd(char *s, size_t len, int fd)
+{
+	return (ft_putnstr_fd(s, len, fd) + write(fd, "\n", 1));
 }
 
 // #include "libft.h"
