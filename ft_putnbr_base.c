@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:31:04 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/19 11:39:22 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/20 21:33:25 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,32 @@
  *
  * @param nbr
  * @param base
+ * @return ssize_t number of char printed
  */
-void	ft_putnbr_base(int nbr, char *base)
+ssize_t	ft_putnbr_base(int nbr, char *base)
 {
 	int			base_nbr;
 	long int	nb;
+	ssize_t		temp;
 
+	temp = 0;
 	nb = nbr;
 	base_nbr = ft_check_base_putnbr(base);
 	if (base_nbr < 1)
-		return ;
+		return (0);
 	if (nb < 0)
 	{
 		nb = -nb;
-		write(1, "-", 1);
+		temp += write(1, "-", 1);
 	}
 	if (nb >= base_nbr)
 	{
-		ft_putnbr_base(nb / base_nbr, base);
-		ft_putnbr_base(nb % base_nbr, base);
+		temp += ft_putnbr_base(nb / base_nbr, base);
+		temp += ft_putnbr_base(nb % base_nbr, base);
 	}
 	else
-		write(1, &base[nb], 1);
+		temp += write(1, &base[nb], 1);
+	return (temp);
 }
 
 /**
@@ -47,9 +51,9 @@ void	ft_putnbr_base(int nbr, char *base)
  *
  * @param nbr
  */
-void	ft_putnbr_bin(int nbr)
+ssize_t	ft_putnbr_bin(int nbr)
 {
-	ft_putnbr_base(nbr, "01");
+	return (ft_putnbr_base(nbr, "01"));
 }
 
 /**
@@ -67,9 +71,9 @@ void	ft_putnbr_bin(int nbr)
  *
  * @param nbr
  */
-void	ft_putnbr_oct(int nbr)
+ssize_t	ft_putnbr_oct(int nbr)
 {
-	ft_putnbr_base(nbr, "01234567");
+	return (ft_putnbr_base(nbr, "01234567"));
 }
 
 /**
@@ -78,7 +82,7 @@ void	ft_putnbr_oct(int nbr)
  * @param nbr
  * @param height
  */
-void	ft_putnbr_hex(int nbr, char height)
+ssize_t	ft_putnbr_hex(int nbr, char height)
 {
 	char	base[17];
 
@@ -86,15 +90,5 @@ void	ft_putnbr_hex(int nbr, char height)
 		ft_strlcpy(base, "0123456789abcdef\0", 17);
 	else
 		ft_strlcpy(base, "0123456789ABCDEF\0", 17);
-	ft_putnbr_base(nbr, base);
+	return (ft_putnbr_base(nbr, base));
 }
-
-// int	main(void)
-// {
-// 	//char	base_bin[] = "01";
-// 	//char	base_oct[] = "poneyvif";
-// 	//char	base_dec[] = "0123456789";
-// 	//char	base_hex[] = "0123456789abcdef";
-// 	write(1, "ici:", 4);
-// 	ft_putnbr_base(1598, "-2");
-// }

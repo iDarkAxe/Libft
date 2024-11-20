@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:16:24 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 16:54:17 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/20 21:32:10 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,53 +17,31 @@
  *
  * @param n
  * @param fd
+ * @return ssize_t number of char printed
  */
-void	ft_putnbr_fd(int n, int fd)
+ssize_t	ft_putnbr_fd(int n, int fd)
 {
-	int	temp;
+	int		temp;
+	ssize_t	count_printed;
 
+	count_printed = 0;
 	if (n < 0)
 	{
 		if (n == -2147483648)
-		{
-			write(fd, "-2147483648", 11);
-			return ;
-		}
+			return (write(fd, "-2147483648", 11));
 		else
 		{
 			n = -n;
-			write(fd, "-", 1);
+			count_printed += write(fd, "-", 1);
 		}
 	}
 	temp = n % 10 + '0';
 	if (n >= 10)
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		count_printed += ft_putnbr_fd(n / 10, fd);
+		count_printed += ft_putnbr_fd(n % 10, fd);
 	}
 	else
-		write(fd, &temp, 1);
+		return (write(fd, &temp, 1));
+	return (count_printed);
 }
-
-// #include "libft.h"
-// #include <stdio.h>
-
-// int main(int argc, char **argv)
-// {
-// 	char str[100] = {0};
-// 	int number;
-// 	int fd;
-
-// 	fd = 1;
-// 	number = (int)51996519858184;
-// 	ft_putstr_fd("Resultat test   : ", fd);
-// 	ft_putnbr_fd(number, fd);
-// 	ft_putendl_fd("", fd);
-// 	printf("Resultat attendu   : %d\n", number);
-// 	ft_putendl_fd("", fd);
-// 	number = (int)5084;
-// 	ft_putstr_fd("Resultat test   : ", fd);
-// 	ft_putnbr_fd(number, fd);
-// 	ft_putendl_fd("", fd);
-// 	printf("Resultat attendu   : %d\n", number);
-// }

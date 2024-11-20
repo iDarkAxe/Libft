@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:14:17 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/19 13:56:51 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/20 21:31:21 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
  * suivi d'un retour a la ligne
  * @param s string
  * @param fd file descriptor
+ * @return ssize_t number of char printed
  */
-void	ft_putendl_fd(char *s, int fd)
+ssize_t	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	return (ft_putstr_fd(s, fd) + write(fd, "\n", 1));
 }
 
 /**
@@ -39,30 +39,3 @@ ssize_t	ft_putnendl_fd(char *s, size_t len, int fd)
 {
 	return (ft_putnstr_fd(s, len, fd) + write(fd, "\n", 1));
 }
-
-// #include "libft.h"
-// // A TESTER avec la commande ./a.out 1>stdout.txt 2>stderr.txt
-// // ET cat stdout.txt
-// // ET cat stderr.txt
-// // par defaut, le terminal affiche stdout et stderr au meme endroit
-// int main(int argc, char **argv)
-// {
-// 	char str[100] = {0};
-// 	char *pointer = "Je suis une phrase et c'est long";
-// 	char *pointer2 = "Je suis une erreur";
-// 	int searched_char;
-// 	int fd;
-
-// 	fd = 1;
-// 	ft_putstr_fd("Resultat test   : ", fd);
-// 	ft_putendl_fd(pointer, fd);
-// 	ft_putendl_fd(pointer, fd);
-// 	ft_putendl_fd("", fd);
-// 	ft_putendl_fd("     -----     ", fd);
-// 	fd = 2;
-// 	ft_putstr_fd("Resultat test   : ", fd);
-// 	ft_putendl_fd(pointer2, fd);
-// 	ft_putendl_fd(pointer2, fd);
-// 	ft_putendl_fd("", fd);
-// 	ft_putendl_fd("     -----     ", fd);
-// }
