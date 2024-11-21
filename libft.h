@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/21 12:50:10 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/21 21:58:40 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stddef.h>
 # include <unistd.h>
-# include "ft_put_fd.h"
 
 typedef struct s_list
 {
@@ -55,6 +54,9 @@ char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
+// SORTING arrays
+void	ft_rev_int(int *tab, size_t size);
+
 // MEMORY related functions
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *destination, const void *source, size_t size);
@@ -63,6 +65,17 @@ void	*ft_memmove(void *destination, const void *source, size_t size);
 void	*ft_memchr(const void *memory_block, int searched_char, size_t size);
 int		ft_memcmp(const void *src, const void *set, size_t size);
 void	*ft_calloc(size_t element_count, size_t element_size);
+
+// SWAP related functions
+void	ft_swap_int(int *a, int *b);
+void	ft_swap_char(char *a, char *b);
+void	ft_swap_str(char **a, char **b);
+void	ft_swap_mem(void **a, void **b);
+//SPECIAL SWAPS
+void	ft_swap_int_no_temp(int *a, int *b);
+void	ft_swap_char_no_temp(char *a, char *b);
+void	ft_swap_str_no_temp(char **a, char **b);
+void	ft_swap_mem_no_temp(void **a, void **b);
 
 // PRINT related functions
 ssize_t	ft_putchar_fd(char c, int fd);
