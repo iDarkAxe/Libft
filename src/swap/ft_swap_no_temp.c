@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:48:40 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/21 21:17:26 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/22 09:57:40 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  * @param a 
  * @param b 
  */
-void ft_swap_int_no_temp(int *a, int *b)
+void	ft_swap_int_no_temp(int *a, int *b)
 {
 	*a = *a ^ *b;
 	*b = *a ^ *b;
@@ -31,11 +31,12 @@ void ft_swap_int_no_temp(int *a, int *b)
  * @param a 
  * @param b 
  */
-void ft_swap_char_no_temp(char *a, char *b)
+void	ft_swap_char_no_temp(char *a, char *b)
 {
 	*a = *a ^ *b;
 	*b = *a ^ *b;
 	*a = *a ^ *b;
 }
 
-//SWAPPING strs without temp shouldn't be possible as you should XOR all blocks and a(len) needs to equal b(len)
+//SWAPPING strs without temp shouldn't be possible as you should XOR 
+// all blocks and a(len) needs to equal b(len)

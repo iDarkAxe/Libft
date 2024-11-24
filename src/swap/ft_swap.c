@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 20:36:14 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/21 22:01:12 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2024/11/22 09:57:24 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * @param a 
  * @param b 
  */
-void ft_swap_int(int *a, int *b)
+void	ft_swap_int(int *a, int *b)
 {
 	int	temp;
 
@@ -31,7 +31,7 @@ void ft_swap_int(int *a, int *b)
  * @param a 
  * @param b 
  */
-void ft_swap_char(char *a, char *b)
+void	ft_swap_char(char *a, char *b)
 {
 	char	temp;
 
@@ -46,10 +46,10 @@ void ft_swap_char(char *a, char *b)
  * @param a 
  * @param b 
  */
-void ft_swap_str(char **a, char **b)
+void	ft_swap_str(char **a, char **b)
 {
 	char	*temp;
-	
+
 	temp = *a;
 	*a = *b;
 	*b = temp;
@@ -61,9 +61,10 @@ void ft_swap_str(char **a, char **b)
  * @param a 
  * @param b 
  */
-void ft_swap_mem(void **a, void **b)
+void	ft_swap_mem(void **a, void **b)
 {
 	void	*temp;
+
 	temp = *a;
 	*a = *b;
 	*b = temp;
