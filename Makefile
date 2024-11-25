@@ -1,10 +1,15 @@
 .PHONY : all clean fclean re bonus
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-
 NAME = libft.a
 
-# Directories
+
+#############################################################################################
+#                                                                                           #
+#                                         DIRECTORIES                                       #
+#                                                                                           #
+#############################################################################################
+# Source directories
 P_SRC = src/
 P_MEM = mem/
 P_CHAR = char/
@@ -14,14 +19,22 @@ P_SORT = sort/
 P_SWAP = swap/
 P_LST = lst/
 
+# Object directories
 P_OBJ = .obj/
+
+# Header directories
 P_INC = ./
 
-# En-tête
+#############################################################################################
+#                                                                                           #
+#                                           FILES                                           #
+#                                                                                           #
+#############################################################################################
+# Headers
 INC = \
 	libft.h
 
-# Fichiers sources
+# Source files
 SRC = \
 	ft_atoi.c \
 	ft_atoi_base.c \
@@ -88,6 +101,11 @@ SRC_LST = \
 	ft_lstiter_bonus.c \
 	ft_lstmap_bonus.c
 
+#############################################################################################
+#                                                                                           #
+#                                        MANIPULATION                                       #
+#                                                                                           #
+#############################################################################################
 SRCS =	\
 	$(addprefix $(P_SRC), $(SRC)) \
 	$(addprefix $(P_SRC)$(P_MEM), $(SRC_MEM)) \
@@ -97,36 +115,34 @@ SRCS =	\
 	$(addprefix $(P_SRC)$(P_SORT), $(SRC_SORT)) \
 	$(addprefix $(P_SRC)$(P_SWAP), $(SRC_SWAP)) 
 
-P_SRCS = \
-	$(P_SRC) \
-	$(P_SRC)$(P_MEM) \
-	$(P_SRC)$(P_CHAR) \
-	$(P_SRC)$(P_STR) \
-	$(P_SRC)$(P_PRINT) \
-	$(P_SRC)$(P_SORT) \
-	$(P_SRC)$(P_SWAP) 
-
-# Liste des fichiers objets (redirigés vers P_OBJ)
+# List of object files (redirect to P_OBJ)
 OBJS = $(subst $(P_SRC), $(P_OBJ), $(SRCS:.c=.o))
 P_OBJS = $(subst $(P_SRC), $(P_OBJ), $(SRCS))
 
-# Liste des fichiers header avec leurs chemins relatifs
+# List of header files
 INCS = $(addprefix $(P_INC)/, $(INC))
 
-# Règles
+
+#############################################################################################
+#                                                                                           #
+#                                          RULES                                            #
+#                                                                                           #
+#############################################################################################
 all: $(NAME)
 
-# Créer la bibliothèque avec les objets
+# Create static library 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $^
 
-$(P_OBJ)%.o: $(P_SRC)%.c $(INCS) | $(P_OBJ)
+$(P_OBJ)%.o: $(P_SRC)%.c $(INCS)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -I $(P_INC) -c $< -o $@
 
-$(P_OBJ): 
-	@mkdir -p $(P_OBJS)
-
+#############################################################################################
+#                                                                                           #
+#                                      Other RULES                                          #
+#                                                                                           #
+#############################################################################################
 # Rules for clean up
 clean:
 	rm -rfd $(P_OBJ)
@@ -141,5 +157,42 @@ re:
 
 # Debugging
 debug:
-	@echo "SRCS: $(SRCS)"
-	@echo "OBJS: $(OBJS)"
+	@echo "$(Red)Project: \n\t$(Blue)$(NAME)$(Color_Off)"
+	@echo ""
+	@echo "$(Red)SRCS: \n\t$(Blue)$(SRCS)$(Color_Off)"
+	@echo ""
+	@echo "$(Red)OBJS: \n\t$(Blue)$(OBJS)$(Color_Off)"
+
+# Aliases
+clear: clean
+fclear: fclean
+flcean: fclean
+flcear: fclean
+
+#############################################################################################
+#                                                                                           #
+#                                         COSMETIC                                          #
+#                                                                                           #
+#############################################################################################
+# Reset
+Color_Off=\033[0m       # Text Reset
+
+# Regular Colors
+Black=\033[0;30m
+Red=\033[0;31m
+Green=\033[0;32m
+Yellow=\033[0;33m
+Blue=\033[0;34m
+Purple=\033[0;35m
+Cyan=\033[0;36m
+White=\033[0;37m
+
+# Background
+On_Black=\033[40m
+On_Red=\033[41m
+On_Green=\033[42m
+On_Yellow=\033[43m
+On_Blue=\033[44m
+On_Purple=\033[45m
+On_Cyan=\033[46m
+On_White=\033[47m
