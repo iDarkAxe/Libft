@@ -1,0 +1,72 @@
+.TH "src/print/ft_putendl_fd.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/print/ft_putendl_fd.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <unistd\&.h>\fP
+.br
+\fR#include 'libft\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "ssize_t \fBft_putendl_fd\fP (char *s, int fd)"
+.br
+.RI "Print the string 's' on the file descriptor, followed by a newline\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnendl_fd\fP (char *s, size_t len, int fd)"
+.br
+.RI "Print the string 's' on the file descriptor, followed by a newline until a given size or the length of s if len is greater\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "ssize_t ft_putendl_fd (char * s, int fd)"
+
+.PP
+Print the string 's' on the file descriptor, followed by a newline\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to print 
+.br
+\fIfd\fP file descriptor 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ssize_t number of char printed 
+.RE
+.PP
+
+.PP
+Definition at line \fB23\fP of file \fBft_putendl_fd\&.c\fP\&.
+.SS "ssize_t ft_putnendl_fd (char * s, size_t len, int fd)"
+
+.PP
+Print the string 's' on the file descriptor, followed by a newline until a given size or the length of s if len is greater\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to print 
+.br
+\fIlen\fP maximum char to be printed 
+.br
+\fIfd\fP file descriptor 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ssize_t nombre de caractere qui ont été écrits 
+.RE
+.PP
+
+.PP
+Definition at line \fB37\fP of file \fBft_putendl_fd\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

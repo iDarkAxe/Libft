@@ -1,0 +1,113 @@
+.TH "src/str/ft_split.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/str/ft_split.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBft_free_malloc\fP (char **ptr_ptr, size_t count)"
+.br
+.RI "Free mallocs\&. "
+.ti -1c
+.RI "char ** \fBft_split\fP (char const *s, char c)"
+.br
+.RI "Allocates with a malloc and returns an array of strings obtained by separating ’s’ using the character ’c’, used as a delimiter\&. The array must be terminated by NULL\&. "
+.ti -1c
+.RI "static char * \fBft_strchr_end\fP (const char *string, int searched_char)"
+.br
+.RI "Work exactly like strchr, but return end of string if searched_char not found\&. "
+.ti -1c
+.RI "static size_t \fBstr_count_char\fP (char const *s, char c)"
+.br
+.RI "Count occurrence of c in string s\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static void ft_free_malloc (char ** ptr_ptr, size_t count)\fR [static]\fP"
+
+.PP
+Free mallocs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIptr_ptr\fP pointer to pointer 
+.br
+\fIcount\fP number of pointers 
+.RE
+.PP
+
+.PP
+Definition at line \fB80\fP of file \fBft_split\&.c\fP\&.
+.SS "char ** ft_split (char const * s, char c)"
+
+.PP
+Allocates with a malloc and returns an array of strings obtained by separating ’s’ using the character ’c’, used as a delimiter\&. The array must be terminated by NULL\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to print 
+.br
+\fIc\fP char used as a delimiter 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char** array of strings 
+.RE
+.PP
+
+.PP
+Definition at line \fB29\fP of file \fBft_split\&.c\fP\&.
+.SS "static char * ft_strchr_end (const char * string, int searched_char)\fR [static]\fP"
+
+.PP
+Work exactly like strchr, but return end of string if searched_char not found\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP string to search in 
+.br
+\fIsearched_char\fP char to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* pointer to the first occurence of searched_char 
+.RE
+.PP
+
+.PP
+Definition at line \fB64\fP of file \fBft_split\&.c\fP\&.
+.SS "static size_t str_count_char (char const * s, char c)\fR [static]\fP"
+
+.PP
+Count occurrence of c in string s\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to search in 
+.br
+\fIc\fP char to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+size_t number of occurence 
+.RE
+.PP
+
+.PP
+Definition at line \fB94\fP of file \fBft_split\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

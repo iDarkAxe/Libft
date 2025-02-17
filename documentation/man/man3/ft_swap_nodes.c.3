@@ -1,0 +1,88 @@
+.TH "src/lst/manipulation/ft_swap_nodes.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/lst/manipulation/ft_swap_nodes.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBt_list\fP * \fBfind_prev\fP (\fBt_list\fP *start, \fBt_list\fP *node)"
+.br
+.RI "Find the previous node of a node in a linked list\&. "
+.ti -1c
+.RI "void \fBft_swap_nodes\fP (\fBt_list\fP **start, \fBt_list\fP *lst1, \fBt_list\fP *lst2)"
+.br
+.RI "Swap two nodes in a linked list (swap nodes, not content) "
+.ti -1c
+.RI "static void \fBswap_pointers\fP (\fBt_list\fP **start, \fBt_list\fP *prev, \fBt_list\fP *old, \fBt_list\fP *new)"
+.br
+.RI "Swap two pointers in a linked list\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static \fBt_list\fP * find_prev (\fBt_list\fP * start, \fBt_list\fP * node)\fR [static]\fP"
+
+.PP
+Find the previous node of a node in a linked list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP head of the linked list 
+.br
+\fInode\fP node to find the previous node 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* node found 
+.RE
+.PP
+
+.PP
+Definition at line \fB46\fP of file \fBft_swap_nodes\&.c\fP\&.
+.SS "void ft_swap_nodes (\fBt_list\fP ** start, \fBt_list\fP * lst1, \fBt_list\fP * lst2)"
+
+.PP
+Swap two nodes in a linked list (swap nodes, not content) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP head of the linked list 
+.br
+\fIlst1\fP First node to swap 
+.br
+\fIlst2\fP Second node to swap 
+.RE
+.PP
+
+.PP
+Definition at line \fB22\fP of file \fBft_swap_nodes\&.c\fP\&.
+.SS "static void swap_pointers (\fBt_list\fP ** start, \fBt_list\fP * prev, \fBt_list\fP * old, \fBt_list\fP * new)\fR [static]\fP"
+
+.PP
+Swap two pointers in a linked list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP start of the linked list 
+.br
+\fIprev\fP previous node 
+.br
+\fIold\fP old node 
+.br
+\fInew\fP new node 
+.RE
+.PP
+
+.PP
+Definition at line \fB68\fP of file \fBft_swap_nodes\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

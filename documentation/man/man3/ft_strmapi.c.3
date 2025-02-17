@@ -1,0 +1,48 @@
+.TH "src/str/ft_strmapi.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/str/ft_strmapi.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBft_strmapi\fP (char const *s, char(*f)(unsigned int, char))"
+.br
+.RI "Apply the function ’f’ to each character of the string ’s’, passing its index as first argument and the character itself as second argument\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "char * ft_strmapi (char const * s, char(* f )(unsigned int, char))"
+
+.PP
+Apply the function ’f’ to each character of the string ’s’, passing its index as first argument and the character itself as second argument\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to iterate 
+.br
+\fIf\fP function to apply 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* new string 
+.RE
+.PP
+
+.PP
+Definition at line \fB26\fP of file \fBft_strmapi\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

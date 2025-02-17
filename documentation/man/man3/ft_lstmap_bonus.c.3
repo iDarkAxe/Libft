@@ -1,0 +1,96 @@
+.TH "src/lst/ft_lstmap_bonus.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/lst/ft_lstmap_bonus.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBt_list\fP * \fBelement_content_failed\fP (\fBt_list\fP *list_start, void(*del)(void *))"
+.br
+.RI "Verify if element_content assignment has failed, and clear list if failed\&. "
+.ti -1c
+.RI "static \fBt_list\fP * \fBelement_failed\fP (\fBt_list\fP *list_start, void *element_content, void(*del)(void *))"
+.br
+.RI "Verify if element assignment has failed, and clear list if failed\&. "
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstmap\fP (\fBt_list\fP *lst, void *(*f)(void *), void(*del)(void *))"
+.br
+.RI "Iterated on the linked list 'list' and apply the function 'f' on the content of each element\&. Create a new list resulting from the successive applications of 'f'\&. The function 'del' is there to destroy the content of an element if necessary\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static \fBt_list\fP * element_content_failed (\fBt_list\fP * list_start, void(* del )(void *))\fR [static]\fP"
+
+.PP
+Verify if element_content assignment has failed, and clear list if failed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist_start\fP list to clear 
+.br
+\fIdel\fP function to apply to delete all the content of the element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* NULL 
+.RE
+.PP
+
+.PP
+Definition at line \fB63\fP of file \fBft_lstmap_bonus\&.c\fP\&.
+.SS "static \fBt_list\fP * element_failed (\fBt_list\fP * list_start, void * element_content, void(* del )(void *))\fR [static]\fP"
+
+.PP
+Verify if element assignment has failed, and clear list if failed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist_start\fP list to clear 
+.br
+\fIelement_content\fP element content to free 
+.br
+\fIdel\fP function to apply to delete all the content of the element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* NULL 
+.RE
+.PP
+
+.PP
+Definition at line \fB78\fP of file \fBft_lstmap_bonus\&.c\fP\&.
+.SS "\fBt_list\fP * ft_lstmap (\fBt_list\fP * lst, void *(* f )(void *), void(* del )(void *))"
+
+.PP
+Iterated on the linked list 'list' and apply the function 'f' on the content of each element\&. Create a new list resulting from the successive applications of 'f'\&. The function 'del' is there to destroy the content of an element if necessary\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.br
+\fIf\fP function to apply to the content of each element 
+.br
+\fIdel\fP function to apply to delete all the content of the element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* new list modified by f 
+.RE
+.PP
+
+.PP
+Definition at line \fB32\fP of file \fBft_lstmap_bonus\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

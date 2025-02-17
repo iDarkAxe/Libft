@@ -1,0 +1,44 @@
+.TH "src/lst/ft_lstnew_bonus.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/lst/ft_lstnew_bonus.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstnew\fP (void *content)"
+.br
+.RI "Allocate (with malloc(3)) and return a new element\&. The variable member 'content' is initialized with the value of the parameter 'content'\&. The variable 'next' is initialized to NULL\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBt_list\fP * ft_lstnew (void * content)"
+
+.PP
+Allocate (with malloc(3)) and return a new element\&. The variable member 'content' is initialized with the value of the parameter 'content'\&. The variable 'next' is initialized to NULL\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP content to add to the new element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* new element 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBft_lstnew_bonus\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

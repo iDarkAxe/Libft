@@ -1,0 +1,92 @@
+.TH "src/ft_atoi_base.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ft_atoi_base.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBft_atoi_base\fP (char *str, char *base)"
+.br
+.RI "Atoi with a particular base\&. "
+.ti -1c
+.RI "static int \fBis_in_base\fP (char str, char *base)"
+.br
+.RI "Check if the base is valid\&. "
+.ti -1c
+.RI "static int \fBpos_base\fP (char character, char *base)"
+.br
+.RI "Search a character in base\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int ft_atoi_base (char * str, char * base)"
+
+.PP
+Atoi with a particular base\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP String to convert 
+.br
+\fIbase\fP Base to use for conversion 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int converted number 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBft_atoi_base\&.c\fP\&.
+.SS "static int is_in_base (char str, char * base)\fR [static]\fP"
+
+.PP
+Check if the base is valid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP string to check 
+.br
+\fIbase\fP base to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 1 if valid, 0 if not 
+.RE
+.PP
+
+.PP
+Definition at line \fB77\fP of file \fBft_atoi_base\&.c\fP\&.
+.SS "static int pos_base (char character, char * base)\fR [static]\fP"
+
+.PP
+Search a character in base\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to search 
+.br
+\fIbase\fP base to search in 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int position of the character in the base 
+.RE
+.PP
+
+.PP
+Definition at line \fB60\fP of file \fBft_atoi_base\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

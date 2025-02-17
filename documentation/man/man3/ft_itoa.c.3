@@ -1,0 +1,66 @@
+.TH "src/ft_itoa.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ft_itoa.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static unsigned char \fBcount_numbers\fP (int n)"
+.br
+.RI "Count the number of digits in the integer 'n'\&. "
+.ti -1c
+.RI "char * \fBft_itoa\fP (int n)"
+.br
+.RI "Return a string representing the integer 'n' received as argument\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static unsigned char count_numbers (int n)\fR [static]\fP"
+
+.PP
+Count the number of digits in the integer 'n'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP integer to count 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+unsigned char number of digits in the integer 'n' 
+.RE
+.PP
+
+.PP
+Definition at line \fB57\fP of file \fBft_itoa\&.c\fP\&.
+.SS "char * ft_itoa (int n)"
+
+.PP
+Return a string representing the integer 'n' received as argument\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP integer to convert 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* string representing the integer 'n' 
+.RE
+.PP
+
+.PP
+Definition at line \fB24\fP of file \fBft_itoa\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

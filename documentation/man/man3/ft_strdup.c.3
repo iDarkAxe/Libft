@@ -1,0 +1,70 @@
+.TH "src/str/ft_strdup.c" 3 "Mon Feb 17 2025 19:18:19" "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/str/ft_strdup.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stddef\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+\fR#include 'libft\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBft_strdup\fP (const char *source)"
+.br
+.RI "Create a copy of source into a new pointer NEEDS to be freed\&. "
+.ti -1c
+.RI "char * \fBft_strndup\fP (const char *source, size_t len)"
+.br
+.RI "Create a copy of source into a new pointer of size len NEEDS to be freed\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "char * ft_strdup (const char * source)"
+
+.PP
+Create a copy of source into a new pointer NEEDS to be freed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP string to copy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* pointer to the new string 
+.RE
+.PP
+
+.PP
+Definition at line \fB24\fP of file \fBft_strdup\&.c\fP\&.
+.SS "char * ft_strndup (const char * source, size_t len)"
+
+.PP
+Create a copy of source into a new pointer of size len NEEDS to be freed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP string to copy 
+.br
+\fIlen\fP size of the new string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* pointer to the new string 
+.RE
+.PP
+
+.PP
+Definition at line \fB53\fP of file \fBft_strdup\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.
