@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:30:55 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:26:49 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 19:08:50 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char	*ft_strdup(const char *source)
  *	NEEDS to be freed
 
  * @param source string to copy
+ * @param len size of the new string
  * @return char* pointer to the new string
  */
 char	*ft_strndup(const char *source, size_t len)

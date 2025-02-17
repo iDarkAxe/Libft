@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:07:33 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:08:19 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 19:07:19 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	and clear list if failed
  *
  * @param list_start list to clear
- * @param element_content element content to free
  * @param del function to apply to delete all the content of the element
  * @return t_list* NULL
  */
@@ -72,7 +71,6 @@ static t_list	*element_content_failed(t_list *list_start,
  * @brief Verify if element assignment has failed, and clear list if failed
  *
  * @param list_start list to clear
- * @param element element to free
  * @param element_content element content to free
  * @param del function to apply to delete all the content of the element
  * @return t_list* NULL

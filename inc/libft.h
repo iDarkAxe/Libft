@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 12:37:40 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:41:49 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@
 # include <stddef.h>
 # include <unistd.h>
 
+/**
+ * @brief Structure for linked list
+ */
 typedef struct s_list
 {
-	void			*content;
-	struct s_list	*next;
+	void			*content; /**< Pointer to the data stored in the node */
+	struct s_list	*next; /**< Pointer to the next node in the list */
 }				t_list;
 //@TODO Needs to be tidied like Makefile
 

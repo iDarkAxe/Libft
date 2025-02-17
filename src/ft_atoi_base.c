@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:43:34 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:18:32 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 19:09:10 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_atoi_base(char *str, char *base)
 /**
  * @brief Search a character in base 
  * 
- * @param char character to search
+ * @param character character to search
  * @param base base to search in
  * @return int position of the character in the base
  */

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:31:04 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:23:28 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 19:10:13 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,6 @@ ssize_t	ft_putnbr_bin(int nbr)
 {
 	return (ft_putnbr_base(nbr, "01"));
 }
-
-/**
- * @brief Putnbr for poneyvif
- *
- * @param nbr
- */
-// void	ft_putnbr_poneyvif(int nbr)
-// {
-// 	ft_putnbr_base(nbr, "poneyvif");
-// }
 
 /**
  * @brief Putnbr for octal
