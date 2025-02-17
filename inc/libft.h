@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/21 21:58:40 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 12:37:40 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int		ft_isascii(int character);
 int		ft_isprint(int character);
 int		ft_toupper(int character);
 int		ft_tolower(int character);
+int		ft_isspace(int character);
+int		ft_iswhitespace(int character);
 
 // STR related functions
 size_t	ft_strlen(const char *the_string);
@@ -103,4 +105,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void	ft_swap_nodes(t_list **start, t_list *lst1, t_list *lst2);
 #endif

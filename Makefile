@@ -18,12 +18,13 @@ P_PRINT = print/
 P_SORT = sort/
 P_SWAP = swap/
 P_LST = lst/
+P_LST_MANIPULATION = manipulation/
 
 # Object directories
 P_OBJ = .obj/
 
 # Header directories
-P_INC = ./
+P_INC = inc/
 
 #############################################################################################
 #                                                                                           #
@@ -56,7 +57,8 @@ SRC_CHAR = \
 	ft_isascii.c \
 	ft_isprint.c \
 	ft_toupper.c \
-	ft_tolower.c 
+	ft_tolower.c \
+	ft_isspace.c 
 
 SRC_STR = \
 	ft_strlen.c \
@@ -101,6 +103,9 @@ SRC_LST = \
 	ft_lstiter_bonus.c \
 	ft_lstmap_bonus.c
 
+SRC_LST_MANIPULATION = \
+	ft_swap_nodes.c 
+
 #############################################################################################
 #                                                                                           #
 #                                        MANIPULATION                                       #
@@ -137,6 +142,36 @@ $(NAME): $(OBJS)
 $(P_OBJ)%.o: $(P_SRC)%.c $(INCS)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -I $(P_INC) -c $< -o $@
+
+#############################################################################################
+#                                                                                           #
+#                           RULES for stupidily shorter library                             #
+#                                                                                           #
+#############################################################################################
+# Just create the library but it contains nothing
+lib:
+	ar -rcs $(NAME)
+
+char: $(addprefix $(P_OBJ)$(P_CHAR), $(SRC_CHAR:.c=.o))
+	ar -rcs $(NAME) $^
+
+mem: $(addprefix $(P_OBJ)$(P_MEM), $(SRC_MEM:.c=.o))
+	ar -rcs $(NAME) $^
+
+str: $(addprefix $(P_OBJ)$(P_STR), $(SRC_STR:.c=.o))
+	ar -rcs $(NAME) $^
+
+print: $(addprefix $(P_OBJ)$(P_PRINT), $(SRC_PRINT:.c=.o))
+	ar -rcs $(NAME) $^
+
+sort: $(addprefix $(P_OBJ)$(P_SORT), $(SRC_SORT:.c=.o))
+	ar -rcs $(NAME) $^
+
+swap: $(addprefix $(P_OBJ)$(P_SWAP), $(SRC_SWAP:.c=.o))
+	ar -rcs $(NAME) $^
+
+lst: $(addprefix $(P_OBJ)$(P_LST), $(SRC_LST:.c=.o))
+	ar -rcs $(NAME) $^
 
 #############################################################################################
 #                                                                                           #
