@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:03:21 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 16:32:53 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 17:04:01 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 /**
  * @brief Check if arg is a char or a digit
  *
- * @param character
+ * @param character character to check
  * @return int 0 not char, anything else is char or digit
  */
 int	ft_isalnum(int character)

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:08:43 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/21 11:33:53 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:02:16 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include <stdlib.h>
 
 /**
- * @brief Supprime et libère la mémoire de l’élément passé en paramètre, 
- * et de tous les éléments qui suivent, à l’aide de ’del’ et de free(3)
- * Enfin, le pointeur initial doit être mis à NULL.
+ * @brief Deletes and free the memory of the element passed as a parameter,
+ * and all the elements that follow, using 'del' and free(3)
+ * Finally, the initial pointer must be set to NULL.
  * 
- * @param lst 
- * @param del 
+ * @param lst head of the linked list
+ * @param del function to apply to delete all the content of the element
  */
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:55:29 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/15 17:57:21 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:06:48 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 #include <stdlib.h>
 
 /**
- * @brief Alloue (avec malloc(3)) et renvoie un nouvel élément. 
- * La variable membre ’content’ est initialisée à l’aide de la valeur 
- * du paramètre ’content’. La variable ’next’ est initialisée à NULL.
+ * @brief Allocate (with malloc(3)) and return a new element.
+ * The variable member 'content' is initialized with the value
+ * of the parameter 'content'.
+ * The variable 'next' is initialized to NULL.
  * 
- * @param content 
- * @return t_list* 
+ * @param content content to add to the new element
+ * @return t_list* new element
  */
 t_list	*ft_lstnew(void *content)
 {

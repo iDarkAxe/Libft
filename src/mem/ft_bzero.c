@@ -6,17 +6,17 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:33:04 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 16:32:48 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:09:04 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
 /**
- * @brief Met à 0, les n premiers octets de la string
+ * @brief Set at 0, the n first bytes at the pointer adress
  *
- * @param s
- * @param n
+ * @param s pointer to the memory to set
+ * @param n number of bytes to set at 0
  */
 void	ft_bzero(void *s, size_t n)
 {

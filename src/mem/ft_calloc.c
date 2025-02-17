@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:07:24 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/18 11:09:04 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:09:38 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 #include <stdint.h>
 
 /**
- * @brief Alloue une nouvelle zone memoire, et met les bits à zero
+ * @brief Allocates a new memory zone, and set all bits to zero
  *
- * @param element_count
- * @param element_size
- * @return void*
+ * @param element_count number of elements
+ * @param element_size size of each element
+ * @return void* pointer to the new memory zone
  */
 void	*ft_calloc(size_t element_count, size_t element_size)
 {

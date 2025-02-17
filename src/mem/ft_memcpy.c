@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:26:57 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/15 16:07:35 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:11:39 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 /**
  * @brief Set a memory zone with a value, count times
  *
- * @param pointer
- * @param value
- * @param count
- * @return void*
+ * @param pointer memory zone to set
+ * @param value value to set
+ * @param count number of times to set the value
+ * @return void* pointer to the memory zone
  */
 void	*ft_memcpy(void *destination, const void *source, size_t size)
 {

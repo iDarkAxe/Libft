@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:29:02 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/07 14:39:41 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:12:23 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 /**
  * @brief Set a memory zone with a value, count times
  *
- * @param pointer
- * @param value
- * @param count
- * @return void*
+ * @param pointer memory zone to set
+ * @param value value to set
+ * @param count number of times to set the value
+ * @return void* pointer to the memory zone
  */
 void	*ft_memset(void *pointer, int value, size_t count)
 {

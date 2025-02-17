@@ -6,17 +6,17 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:57:39 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/15 18:04:29 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:01:24 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Ajoute l’élément ’new’ au début de la liste.
+ * @brief Adds the element ’new’ at the start of the list.
  * 
- * @param lst 
- * @param new 
+ * @param lst head of the linked list
+ * @param new new node to add
  */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

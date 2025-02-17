@@ -6,14 +6,14 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 11:58:57 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 11:53:56 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 17:04:33 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * @brief Check if arg is a whitespace
  *
- * @param character
+ * @param character character to check
  * @return int 0 not space, anything else is a whitespace
  */
 int	ft_isspace(int character)

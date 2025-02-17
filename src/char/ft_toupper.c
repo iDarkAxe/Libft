@@ -6,14 +6,14 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:49:30 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 17:02:25 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 17:04:38 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * @brief Transform minuscules into majuscules
  *
- * @param character
+ * @param character character to check
  * @return character in majuscule if was in minuscule
  * OR character isn´t minuscule
  */

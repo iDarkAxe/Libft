@@ -6,19 +6,19 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:07:07 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 16:08:27 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:11:16 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
 /**
- * @brief Compare blocs par blocs les blocs mémoires, jusqu'à size blocs
+ * @brief Compares the first size bytes of the memory areas src and set.
  * 
- * @param src 
- * @param set 
- * @param size 
- * @return int 
+ * @param src source memory block
+ * @param set set memory block
+ * @param size size of the memory block
+ * @return int difference between the first different byte
  */
 int	ft_memcmp(const void *src, const void *set, size_t size)
 {

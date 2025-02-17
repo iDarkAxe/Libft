@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:07:33 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 14:52:49 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:08:19 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@ static t_list	*element_failed(t_list *list_start,
 					void *element_content, void (*del)(void *));
 
 /**
- * @brief Itère sur la liste ’lst’ et applique la fonction ’f ’au contenu
- * de chaque élément. Crée une nouvelle liste résultant des applications
- * successives de ’f’. La fonction ’del’ est là pour détruire le contenu
- * d’un élément si nécessaire.
+ * @brief Iterated on the linked list 'list' and apply the function 'f'
+ * on the content of each element. Create a new list resulting 
+ * from the successive applications of 'f'. 
+ * The function 'del' is there to destroy the content of an element if
+ * necessary.
  *
- * @param lst
- * @param f
- * @param del
- * @return t_list*
+ * @param lst head of the linked list
+ * @param f function to apply to the content of each element
+ * @param del function to apply to delete all the content of the element
+ * @return t_list* new list modified by f
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -55,10 +56,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
  * @brief Verify if element_content assignment has failed,
 	and clear list if failed
  *
- * @param list_start
- * @param element_content
- * @param del
- * @return t_list*
+ * @param list_start list to clear
+ * @param element_content element content to free
+ * @param del function to apply to delete all the content of the element
+ * @return t_list* NULL
  */
 static t_list	*element_content_failed(t_list *list_start,
 		void (*del)(void *))
@@ -70,11 +71,11 @@ static t_list	*element_content_failed(t_list *list_start,
 /**
  * @brief Verify if element assignment has failed, and clear list if failed
  *
- * @param list_start
- * @param element
- * @param element_content
- * @param del
- * @return t_list*
+ * @param list_start list to clear
+ * @param element element to free
+ * @param element_content element content to free
+ * @param del function to apply to delete all the content of the element
+ * @return t_list* NULL
  */
 static t_list	*element_failed(t_list *list_start,
 		void *element_content, void (*del)(void *))

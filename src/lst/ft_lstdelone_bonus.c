@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:08:51 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/15 19:02:50 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:03:08 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include <stdlib.h>
 
 /**
- * @brief Libère la mémoire de l’élément passé en argument en utilisant
- * la fonction ’del’ puis avec free(3). 
- * La mémoire de ’next’ ne doit pas être free.
+ * @brief Free the memory of the element passed as a parameter
+ * using the function 'del' and free(3).
+ * The memory of next must not be freed.
  * 
- * @param lst 
- * @param del 
+ * @param lst head of the linked list
+ * @param del function to apply to delete all the content of the element
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

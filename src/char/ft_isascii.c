@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:23:43 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 16:33:00 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 17:04:17 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 /**
  * @brief Check if arg is in ascii table
  *
- * @param character
+ * @param character character to check
  * @return int 0 not in ascii table, anything else if in ascii table
  */
 int	ft_isascii(int character)
