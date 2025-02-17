@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:59:13 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 13:33:26 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:28:28 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 /**
  * @brief Concatenate src into dst, up to size bytes
  *
- * @param dst
- * @param src
- * @param size
- * @return unsigned int
+ * @param dst destination string
+ * @param src source string
+ * @param size size of the destination string
+ * @return unsigned int size of the new string
  */
 size_t	ft_strlcat(char *dst, char *src, size_t size)
 {

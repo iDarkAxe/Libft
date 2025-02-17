@@ -6,17 +6,17 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:16:24 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/20 21:32:10 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:23:51 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 /**
- * @brief Écrit l’entier ’n’ sur le descripteur de fichier donné
+ * @brief Print the integer ’n’ on the given file descriptor
  *
- * @param n
- * @param fd
+ * @param n integer to print
+ * @param fd file descriptor
  * @return ssize_t number of char printed
  */
 ssize_t	ft_putnbr_fd(int n, int fd)

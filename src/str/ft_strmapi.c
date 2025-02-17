@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:46:19 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 18:35:17 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:29:15 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 #include <stdlib.h>
 
 /**
- * @brief Applique la fonction ’f’ à chaque caractère de la chaîne de
- * caractères ’s’, passant son index comme premier argument et le caractère
- * lui-même comme second argument.
- * @param s
- * @param f
- * @return char*
+ * @brief Apply the function ’f’ to each character of the string ’s’,
+ * passing its index as first argument and the character itself as second
+ * argument.
+ *
+ * @param s string to iterate
+ * @param f function to apply
+ * @return char* new string
  */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:03:57 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 13:27:08 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:30:58 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@
 /**
  * @brief Create a copy of source into a new pointer, at start, of size len
  *	NEEDS to be freed
- * @param src
- * @param start
- * @param len
- * @return char*
+
+ * @param src string to copy
+ * @param start start of the copy
+ * @param len size of the copy
+ * @return char* new string
  */
 char	*ft_substr(char const *src, unsigned int start, size_t len)
 {

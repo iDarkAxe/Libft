@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:43:34 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/19 11:38:55 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:18:32 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 static int	pos_base(char str, char *base);
 static int	is_in_base(char str, char *base);
 
-//@TODO TESTER si le ft_strlen en size_t fonctionne (previously int)
-
 /**
  * @brief Atoi with a particular base
  * 
- * @param str 
- * @param base 
- * @return int 
+ * @param str String to convert
+ * @param base Base to use for conversion
+ * @return int converted number
  */
 int	ft_atoi_base(char *str, char *base)
 {
@@ -52,30 +50,36 @@ int	ft_atoi_base(char *str, char *base)
 	return (value * sign);
 }
 
-//@WIP REFLECHIR A LE FAIRE AVEC STRCHR
 /**
  * @brief Search a character in base 
  * 
- * @param str 
- * @param base 
- * @return int 
+ * @param char character to search
+ * @param base base to search in
+ * @return int position of the character in the base
  */
 static int	pos_base(char character, char *base)
 {
 	int	i;
 
 	i = 0;
-	while (character != base[i])
+	while (base[i] != '\0' && base[i] != character)
 		i++;
 	return (i);
 }
 
+/**
+ * @brief Check if the base is valid
+ * 
+ * @param str string to check
+ * @param base base to check
+ * @return int 1 if valid, 0 if not
+ */
 static int	is_in_base(char str, char *base)
 {
 	int	i;
 
 	i = 0;
-	while (base[i])
+	while (base[i] != '\0')
 	{
 		if (str == base[i])
 			return (1);

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:14:17 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/20 21:31:21 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:23:03 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "libft.h"
 
 /**
- * @brief Écrit la chaîne de caractères ’s’ sur le descripteur de fichier,
- * suivi d'un retour a la ligne
- * @param s string
+ * @brief Print the string 's' on the file descriptor, followed by a newline
+ * 
+ * @param s string to print
  * @param fd file descriptor
  * @return ssize_t number of char printed
  */
@@ -26,11 +26,10 @@ ssize_t	ft_putendl_fd(char *s, int fd)
 }
 
 /**
- * @brief Écrit la chaîne de caractères ’s’ sur le descripteur de fichier,
- * suivi d'un retour a la ligne jusqu'à une taille donnée ou la longueur 
- * de s si len est plus grand
+ * @brief Print the string 's' on the file descriptor, followed by a newline
+ * until a given size or the length of s if len is greater
  * 
- * @param s string
+ * @param s string to print
  * @param len maximum char to be printed
  * @param fd file descriptor
  * @return ssize_t nombre de caractere qui ont été écrits

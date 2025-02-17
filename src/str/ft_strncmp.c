@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:16:03 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/18 10:53:28 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:29:36 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 /**
  * @brief Find differences between first and second
  *
- * @param first
- * @param second
- * @param length
+ * @param first first string to compare
+ * @param second second string to compare
+ * @param length number of characters to compare
  * @return int value of first - second
  */
 

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:45:58 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/15 16:13:17 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:26:18 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ static char		*ft_strchr_end(const char *string, int searched_char);
 static size_t	str_count_char(char const *s, char c);
 
 /**
- * @brief Alloue avec malloc et retourne un tableau de chaînes
- * de caractères obtenu en séparant ’s’ à l’aide du caractère ’c’,
- * utilisé comme délimiteur. Le tableau doit être terminé par NULL
+ * @brief Allocates with a malloc and returns an array of strings
+ * obtained by separating ’s’ using the character ’c’,
+ * used as a delimiter. The array must be terminated by NULL
  *
- * @param s
- * @param c
- * @return char**
+ * @param s string to print
+ * @param c char used as a delimiter
+ * @return char** array of strings
  */
 char	**ft_split(char const *s, char c)
 {
@@ -57,9 +57,9 @@ char	**ft_split(char const *s, char c)
  * @brief Work exactly like strchr, but return end of string
  * if searched_char not found
  *
- * @param string
- * @param searched_char
- * @return char*
+ * @param string string to search in
+ * @param searched_char char to search
+ * @return char* pointer to the first occurence of searched_char
  */
 static char	*ft_strchr_end(const char *string, int searched_char)
 {
@@ -74,8 +74,8 @@ static char	*ft_strchr_end(const char *string, int searched_char)
 /**
  * @brief Free mallocs
  *
- * @param ptr_ptr
- * @param count
+ * @param ptr_ptr pointer to pointer
+ * @param count number of pointers
  */
 static void	ft_free_malloc(char **ptr_ptr, size_t count)
 {
@@ -87,9 +87,9 @@ static void	ft_free_malloc(char **ptr_ptr, size_t count)
 /**
  * @brief Count occurrence of c in string s
  *
- * @param s string
- * @param c char
- * @return size_t
+ * @param s string to search in
+ * @param c char to search
+ * @return size_t number of occurence
  */
 static size_t	str_count_char(char const *s, char c)
 {

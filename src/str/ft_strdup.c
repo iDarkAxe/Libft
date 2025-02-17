@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:30:55 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/18 17:24:31 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:26:49 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 /**
  * @brief Create a copy of source into a new pointer
  *	NEEDS to be freed
- * @param source
- * @return char*
+
+ * @param source string to copy
+ * @return char* pointer to the new string
  */
 char	*ft_strdup(const char *source)
 {
@@ -44,8 +45,9 @@ char	*ft_strdup(const char *source)
 /**
  * @brief Create a copy of source into a new pointer of size len
  *	NEEDS to be freed
- * @param source
- * @return char*
+
+ * @param source string to copy
+ * @return char* pointer to the new string
  */
 char	*ft_strndup(const char *source, size_t len)
 {

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:58:40 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 14:51:08 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:28:16 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 #include <stdlib.h>
 
 /**
- * @brief Alloue une nouvelle chaine, et retourne le resultat de 
- * la concatenation de s1 et s2
- * @param s1 
- * @param s2 
- * @return char* 
+ * @brief Allocates a new string, and returns the result of
+ * a concatenation of s1 and s2 
+
+ * @param s1 string 1
+ * @param s2 string 2
+ * @return char* new string
  */
 char	*ft_strjoin(char const *s1, char const *s2)
 {

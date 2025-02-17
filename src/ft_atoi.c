@@ -6,15 +6,15 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:34:53 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 16:33:28 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:16:01 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * @brief Convert string to int, and handle number
  *
- * @param nptr
- * @return int
+ * @param nptr string to convert
+ * @return int number
  */
 int	ft_atoi(const char *nptr)
 {

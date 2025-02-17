@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:31:04 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/20 21:33:25 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:23:28 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 /**
  * @brief Putnbr with a particular base
  *
- * @param nbr
- * @param base
+ * @param nbr number to print
+ * @param base base to use
  * @return ssize_t number of char printed
  */
 ssize_t	ft_putnbr_base(int nbr, char *base)
@@ -49,7 +49,7 @@ ssize_t	ft_putnbr_base(int nbr, char *base)
 /**
  * @brief Putnbr for binary
  *
- * @param nbr
+ * @param nbr number to print
  */
 ssize_t	ft_putnbr_bin(int nbr)
 {
@@ -69,7 +69,7 @@ ssize_t	ft_putnbr_bin(int nbr)
 /**
  * @brief Putnbr for octal
  *
- * @param nbr
+ * @param nbr number to print
  */
 ssize_t	ft_putnbr_oct(int nbr)
 {
@@ -79,8 +79,8 @@ ssize_t	ft_putnbr_oct(int nbr)
 /**
  * @brief Putnbr for hex or HEX
  *
- * @param nbr
- * @param height
+ * @param nbr number to print
+ * @param height 1 for hex, 0 for HEX
  */
 ssize_t	ft_putnbr_hex(int nbr, char height)
 {

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:59:56 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/14 16:36:11 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:30:45 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 #include <stdio.h>
 
 /**
- * @brief Supprime tout les caracteres qui existent dans s et set,
- *	s'ils sont au debut de la string ou a la fin
+ * @brief Deletes all characters that exist in s and set,
+ * if they are at the beginning of the string or at the end
  *
- * @param s
- * @param set
- * @return char*
+ * @param s string to trim
+ * @param set string of characters to trim
+ * @return char* new string
  */
 char	*ft_strtrim(char const *s, char const *set)
 {

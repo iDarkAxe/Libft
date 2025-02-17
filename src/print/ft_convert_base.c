@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:57:01 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/19 11:16:31 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:21:28 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 /**
  * @brief Check if base is valid for atoi_base
  * 
- * @param base 
- * @return int 
+ * @param base base to check
+ * @return int 1 if valid, 0 if not
  */
 int	ft_check_base_atoi(char *base)
 {
@@ -45,8 +45,8 @@ int	ft_check_base_atoi(char *base)
 /**
  * @brief Check if base is valid for putnbr_base
  *
- * @param base
- * @return int
+ * @param base base to check
+ * @return int 1 if valid, 0 if not
  */
 int	ft_check_base_putnbr(char *base)
 {

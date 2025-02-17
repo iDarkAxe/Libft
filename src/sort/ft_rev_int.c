@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 21:40:44 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/22 09:56:39 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:20:51 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 /**
  * @brief Reverse an array of ints
  * 
- * @param tab 
- * @param size 
+ * @param tab adress of the first element of the array
+ * @param size number of elements in the array
  */
 void	ft_rev_int(int *tab, size_t size)
 {

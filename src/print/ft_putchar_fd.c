@@ -6,16 +6,16 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:09:32 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/20 21:30:56 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:21:47 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 /**
- * @brief Ecrit le caractere 'c' sur le descripteur de fichier
+ * @brief Print the character 'c' on the file descriptor
  *
- * @param c character
+ * @param c character to print
  * @param fd file descriptor
  * @return ssize_t number of char printed
  */

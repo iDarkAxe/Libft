@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 21:10:56 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/20 21:46:27 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:24:12 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 /**
  * @brief Print pointer adress
  * 
- * @param ptr 
- * @return ssize_t 
+ * @param ptr pointer to print
+ * @return ssize_t number of char printed
  */
 ssize_t	ft_putpointer_fd(void *ptr)
 {

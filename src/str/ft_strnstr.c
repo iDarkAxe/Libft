@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:06:20 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/18 10:54:46 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:30:04 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 * @brief Search a substring in a bigger string,
 	up to len position in string
 *
-* @param big
-* @param little
-* @param len
-* @return char*
+* @param big string to search in
+* @param little	string to search
+* @param len max size of big
+* @return char* pointer to the first occurence of little in big
 */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -44,6 +44,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return (NULL);
 	return ((char *)&big[0]);
 }
+
 // #include <string.h>
 // #include "libft.h"
 

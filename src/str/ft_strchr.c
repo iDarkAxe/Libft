@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:15:41 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/12 13:45:55 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:26:26 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 /**
  * @brief Find first occurrence of searched_char
  *
- * @param string
- * @param searched_char
+ * @param string string to search in
+ * @param searched_char char to search
  * @return char* index of Char found
  */
 char	*ft_strchr(const char *string, int searched_char)

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:58:19 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/11 14:00:53 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:28:40 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 /**
  * @brief Copy of src into dst, up to size bytes
  *
- * @param dst
- * @param src
- * @param size
+ * @param dst destination string
+ * @param src source string
+ * @param size size of the destination string
  * @return size_t size of src
  */
 size_t	ft_strlcpy(char *dst, char *src, size_t size)

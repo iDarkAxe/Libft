@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:27:43 by ppontet           #+#    #+#             */
-/*   Updated: 2024/11/16 16:33:10 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/02/17 18:15:47 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 static unsigned char	count_numbers(int n);
 
 /**
- * @brief Retourne une chaîne de caractères représentant l’entier ’n’
- * reçu en argument
- * @param n
- * @return char*
+ * @brief Return a string representing the integer 'n' received as argument
+ * 
+ * @param n integer to convert
+ * @return char* string representing the integer 'n'
  */
 char	*ft_itoa(int n)
 {
@@ -48,6 +48,12 @@ char	*ft_itoa(int n)
 	return (pointer);
 }
 
+/**
+ * @brief Count the number of digits in the integer 'n'
+ * 
+ * @param n integer to count
+ * @return unsigned char number of digits in the integer 'n'
+ */
 static unsigned char	count_numbers(int n)
 {
 	unsigned char	count;
