@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:28:50 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/12 13:55:29 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlen(const char *the_string)
 	size_t	count;
 
 	count = 0;
-	while (the_string[count] != '\0')
+	while (the_string != NULL && the_string[count] != '\0')
 		count++;
 	return (count);
 }

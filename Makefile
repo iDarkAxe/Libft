@@ -73,6 +73,8 @@ SRC_STR = \
 	ft_striteri.c \
 	ft_substr.c \
 	ft_strjoin.c \
+	ft_strjoins.c \
+	ft_strjoins_va.c \
 	ft_strtrim.c \
 	ft_split.c 
 

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:41:49 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/12 14:19:06 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		ft_iswhitespace(int character);
 
 // STR related functions
 size_t	ft_strlen(const char *the_string);
-size_t	ft_strlcpy(char *dst, char *src, unsigned int size);
+size_t	ft_strlcpy(char *dst, char *src, size_t size);
 size_t	ft_strlcat(char *dst, char *src, size_t size);
 char	*ft_strchr(const char *string, int searched_char);
 char	*ft_strrchr(const char *string, int searched_char);
@@ -54,6 +54,8 @@ char	*ft_strdup(const char *source);
 char	*ft_strndup(const char *source, size_t len);
 char	*ft_substr(char const *src, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoins(char **str);
+// char	*ft_strjoins_va(char const *str, ...);
 char	*ft_strtrim(char const *s, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
