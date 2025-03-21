@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
+#include <unistd.h>
 
 /**
  * @brief Print the string 's' on the file descriptor
@@ -28,12 +28,12 @@ ssize_t	ft_putstr_fd(char *s, int fd)
 /**
  * @brief Print the string 's' on the file descriptor until a given size
  * or the length of s if len is greater
- * 
+ *
  * @param s string to print
  * @param len maximum char to be printed
  * @param fd  nombre de caractere qui ont été écrits
  * @return ssize_t nombre de caractere qui ont été écrits
- */	
+ */
 ssize_t	ft_putnstr_fd(char *s, size_t len, int fd)
 {
 	if (len > ft_strlen(s))

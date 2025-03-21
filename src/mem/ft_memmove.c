@@ -6,15 +6,17 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:19:49 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:12:12 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:41:23 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+void	*ft_memmove(void *destination, const void *source, size_t size);
+
 /**
  * @brief Moves the memory blocks avoiding overlapping, until size blocks
- * 
+ *
  * @param destination destination memory block
  * @param source source memory block
  * @param size size of the memory block

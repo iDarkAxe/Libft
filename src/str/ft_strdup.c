@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
-#include "libft.h"
 
 /**
  * @brief Create a copy of source into a new pointer

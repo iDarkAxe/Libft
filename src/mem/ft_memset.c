@@ -6,12 +6,14 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:29:02 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:12:23 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:06:33 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdio.h>
+
+void	*ft_memset(void *pointer, int value, size_t count);
 
 /**
  * @brief Set a memory zone with a value, count times

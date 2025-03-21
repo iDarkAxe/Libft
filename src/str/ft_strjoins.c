@@ -20,7 +20,7 @@ static size_t	count_len_array(char *str[]);
  * @brief Allocates a new string, and returns the result of
  * a concatenation of all the strings from the array
  * last argument needs to be NULL.
- * 
+ *
  * @param str Array of strings
  * @return char* new string
  */

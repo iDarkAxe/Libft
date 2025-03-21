@@ -6,9 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:32:05 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 17:04:31 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:40:27 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_isprint(int character);
 
 // could return 16384 or 0x10000000000000 instead of 1
 /**

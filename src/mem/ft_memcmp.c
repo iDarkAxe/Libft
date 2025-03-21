@@ -6,15 +6,17 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:07:07 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:11:16 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:41:12 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+int	ft_memcmp(const void *src, const void *set, size_t size);
+
 /**
  * @brief Compares the first size bytes of the memory areas src and set.
- * 
+ *
  * @param src source memory block
  * @param set set memory block
  * @param size size of the memory block

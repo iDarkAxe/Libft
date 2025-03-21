@@ -6,9 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:03:21 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 17:04:01 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:40:38 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_isalnum(int character);
 
 // could return 1024 or 0x10000000000 instead of 1
 /**

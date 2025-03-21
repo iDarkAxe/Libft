@@ -6,9 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:50:20 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 17:04:26 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:40:52 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_isdigit(int character);
 
 // could return 2048 or 0x100000000000 instead of 1
 /**

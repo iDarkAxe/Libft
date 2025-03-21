@@ -6,16 +6,18 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:06:29 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:10:31 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:05:49 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+void	*ft_memchr(const void *memory_block, int searched_char, size_t size);
+
 /**
- * @brief Research the first occurence of a value typed int, 
+ * @brief Research the first occurence of a value typed int,
  * but interpreted as a char in a memory block.
- * 
+ *
  * @param memory_block memory block to search in
  * @param searched_char value to search
  * @param size size of the memory block

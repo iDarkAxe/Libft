@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:31:04 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 19:10:13 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:36:26 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
  * @param base base to use
  * @return ssize_t number of char printed
  */
-ssize_t	ft_putnbr_base(int nbr, char *base)
+ssize_t	ft_putnbr_base(int nbr, const char *base)
 {
-	int			base_nbr;
+	size_t		base_nbr;
 	long int	nb;
 	ssize_t		temp;
 
@@ -36,10 +36,10 @@ ssize_t	ft_putnbr_base(int nbr, char *base)
 		nb = -nb;
 		temp += write(1, "-", 1);
 	}
-	if (nb >= base_nbr)
+	if (nb >= (long int)base_nbr)
 	{
-		temp += ft_putnbr_base(nb / base_nbr, base);
-		temp += ft_putnbr_base(nb % base_nbr, base);
+		temp += ft_putnbr_base((int)(nb / (long int)base_nbr), base);
+		temp += ft_putnbr_base((int)(nb % (long int)base_nbr), base);
 	}
 	else
 		temp += write(1, &base[nb], 1);

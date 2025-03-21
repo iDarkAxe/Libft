@@ -46,7 +46,7 @@ char	*ft_substr(char const *src, unsigned int start, size_t len)
 }
 
 // #include <stdio.h>
-// 
+//
 // int		main(void)
 // {
 // 	char	str[] = "lorem ipsum dolor sit amet";

@@ -6,11 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:26:57 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 19:07:54 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:06:08 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+
+void	*ft_memcpy(void *destination, const void *source, size_t size);
 
 /**
  * @brief Set a memory zone with a value, count times

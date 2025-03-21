@@ -6,16 +6,16 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:45:58 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:26:18 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:41:17 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static void		ft_free_malloc(char **ptr_ptr, size_t count);
-static char		*ft_strchr_end(const char *string, int searched_char);
-static size_t	str_count_char(char const *s, char c);
+static void			ft_free_malloc(char **ptr_ptr, size_t count);
+static const char	*ft_strchr_end(const char *string, int searched_char);
+static size_t		str_count_char(char const *s, char c);
 
 /**
  * @brief Allocates with a malloc and returns an array of strings
@@ -41,7 +41,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s == c && *s != '\0')
 			s++;
-		ptr_ptr[count] = ft_substr(s, 0, ft_strchr_end(s, c) - s);
+		ptr_ptr[count] = ft_substr(s, 0, (size_t)(ft_strchr_end(s, c) - s));
 		if (ptr_ptr[count++] == NULL)
 		{
 			ft_free_malloc(ptr_ptr, count - 1);
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char c)
  * @param searched_char char to search
  * @return char* pointer to the first occurence of searched_char
  */
-static char	*ft_strchr_end(const char *string, int searched_char)
+static const char	*ft_strchr_end(const char *string, int searched_char)
 {
 	char	*pointer;
 

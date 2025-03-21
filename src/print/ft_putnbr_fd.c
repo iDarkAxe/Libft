@@ -6,11 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:16:24 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:23:51 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:33:15 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+ssize_t	ft_putnbr_fd(int n, int fd);
 
 /**
  * @brief Print the integer ’n’ on the given file descriptor

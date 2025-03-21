@@ -15,7 +15,7 @@
 
 /**
  * @brief Allocates a new string, and returns the result of
- * a concatenation of s1 and s2 
+ * a concatenation of s1 and s2
 
  * @param s1 string 1
  * @param s2 string 2

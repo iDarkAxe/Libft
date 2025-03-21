@@ -6,11 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:16:03 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:29:36 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:15:50 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+
+int	ft_strncmp(const char *first, const char *second, size_t length);
 
 /**
  * @brief Find differences between first and second

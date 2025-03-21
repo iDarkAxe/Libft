@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 09:56:50 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/12 14:18:25 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:18:09 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <stdlib.h>
 
 static size_t	count_len_va(va_list list);
+char			*ft_strjoins_va(char const *str, ...);
 
 /**
  * @brief Allocates a new string, and returns the result of
