@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 13:28:49 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/26 15:46:10 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stddef.h>
 # include <unistd.h>
+
+typedef enum e_bool
+{
+	FALSE = 0,
+	TRUE = 1
+}	t_bool;
 
 /**
  * @brief Structure for linked list
