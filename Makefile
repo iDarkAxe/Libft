@@ -1,8 +1,10 @@
 .PHONY : all clean fclean re bonus
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+DEPENDANCIES = -MMD -MP
+NO_DIR = --no-print-directory
+MAKE := $(MAKE) -j $(NO_DIR)
 NAME = libft.a
-
 
 #############################################################################################
 #                                                                                           #
@@ -11,6 +13,7 @@ NAME = libft.a
 #############################################################################################
 # Source directories
 P_SRC = src/
+# Sub-directories
 P_MEM = mem/
 P_CHAR = char/
 P_STR = str/
@@ -126,54 +129,27 @@ SRCS =	\
 OBJS = $(subst $(P_SRC), $(P_OBJ), $(SRCS:.c=.o))
 P_OBJS = $(subst $(P_SRC), $(P_OBJ), $(SRCS))
 
+# List of depedencies
+DEPS = $(OBJS:%.o=%.d)
+
 # List of header files
 INCS = $(addprefix $(P_INC)/, $(INC))
-
 
 #############################################################################################
 #                                                                                           #
 #                                          RULES                                            #
 #                                                                                           #
 #############################################################################################
-all: $(NAME)
+all:
+	@$(MAKE) $(NAME)
 
 # Create static library 
-$(NAME): $(OBJS)
-	ar -rcs $(NAME) $^
+$(NAME): $(OBJS) $(INCS)
+	ar -rcs $(NAME) $(OBJS)
 
 $(P_OBJ)%.o: $(P_SRC)%.c $(INCS)
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -I $(P_INC) -c $< -o $@
-
-#############################################################################################
-#                                                                                           #
-#                           RULES for stupidily shorter library                             #
-#                                                                                           #
-#############################################################################################
-# Just create the library but it contains nothing
-lib:
-	ar -rcs $(NAME)
-
-char: $(addprefix $(P_OBJ)$(P_CHAR), $(SRC_CHAR:.c=.o))
-	ar -rcs $(NAME) $^
-
-mem: $(addprefix $(P_OBJ)$(P_MEM), $(SRC_MEM:.c=.o))
-	ar -rcs $(NAME) $^
-
-str: $(addprefix $(P_OBJ)$(P_STR), $(SRC_STR:.c=.o))
-	ar -rcs $(NAME) $^
-
-print: $(addprefix $(P_OBJ)$(P_PRINT), $(SRC_PRINT:.c=.o))
-	ar -rcs $(NAME) $^
-
-sort: $(addprefix $(P_OBJ)$(P_SORT), $(SRC_SORT:.c=.o))
-	ar -rcs $(NAME) $^
-
-swap: $(addprefix $(P_OBJ)$(P_SWAP), $(SRC_SWAP:.c=.o))
-	ar -rcs $(NAME) $^
-
-lst: $(addprefix $(P_OBJ)$(P_LST), $(SRC_LST:.c=.o))
-	ar -rcs $(NAME) $^
+	$(CC) $(CFLAGS) $(DEPENDANCIES) -I $(P_INC) -c $< -o $@
 
 #############################################################################################
 #                                                                                           #
@@ -183,28 +159,62 @@ lst: $(addprefix $(P_OBJ)$(P_LST), $(SRC_LST:.c=.o))
 # Rules for clean up
 clean:
 	rm -rfd $(P_OBJ)
+	rm -rfd $(OBJS)
+	rm -rfd $(DEPS)
 
-fclean:
-	@$(MAKE) --no-print-directory clean
+clean-lib:
+	rm -rfd $(P_LIB)
+
+clean-bin:
 	rm -f $(NAME)
 
-re:
-	@$(MAKE) --no-print-directory fclean
-	@$(MAKE) --no-print-directory all
+clean-obj:
+	@$(MAKE) clean
 
-# Debugging
-debug:
-	@echo "$(Red)Project: \n\t$(Blue)$(NAME)$(Color_Off)"
-	@echo ""
-	@echo "$(Red)SRCS: \n\t$(Blue)$(SRCS)$(Color_Off)"
-	@echo ""
-	@echo "$(Red)OBJS: \n\t$(Blue)$(OBJS)$(Color_Off)"
+fclean:
+	@$(MAKE) clean-obj
+	@$(MAKE) clean-lib
+	@$(MAKE) clean-bin
+
+re:
+	@$(MAKE) fclean
+	@$(MAKE) all
 
 # Aliases
 clear: clean
 fclear: fclean
 flcean: fclean
 flcear: fclean
+
+#############################################################################################
+#                                                                                           #
+#                                           DEBUG                                           #
+#                                                                                           #
+#############################################################################################
+# Debugging print
+debug-print:
+	@$(MAKE) debug-print-project
+	@$(MAKE) debug-print-separator
+
+debug-print-separator:
+	@echo ""
+	@echo "$(On_Yellow)____________________$(Color_Off)"
+	@echo ""
+
+define check_var
+	@if [ "$(strip $(1))" = "" ]; then \
+		echo "$(Red)No $(2) found$(Color_Off)"; \
+	else \
+		echo "$(Red)$(2): \n\t$(Blue)$(1)$(Color_Off)"; \
+	fi
+endef
+
+debug-print-project:
+	$(call check_var,$(NAME),"Project")
+	$(call check_var,$(SRCS),"SRCS")
+	$(call check_var,$(OBJS),"OBJS")
+	$(call check_var,$(INCS),"INCS")
+	$(call check_var,$(LIBS),"LIBS")
 
 #############################################################################################
 #                                                                                           #

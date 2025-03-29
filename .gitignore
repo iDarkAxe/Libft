@@ -1,7 +1,12 @@
 main
 .idea/*
 .vscode/*
+
+**/*.obj
 **/*.o
+**/*.d
+
 **/a.out
 **/*.sw*
 libft.a
+**/*.a
