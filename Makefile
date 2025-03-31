@@ -151,6 +151,10 @@ $(P_OBJ)%.o: $(P_SRC)%.c $(INCS)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(DEPENDANCIES) -I $(P_INC) -c $< -o $@
 
+# Debugging rules
+debug:
+	@$(MAKE) $(NAME) CFLAGS="$(CFLAGS) -g3"
+
 #############################################################################################
 #                                                                                           #
 #                                      Other RULES                                          #
