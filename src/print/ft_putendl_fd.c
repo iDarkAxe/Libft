@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:14:17 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:23:03 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/06 11:50:04 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @param fd file descriptor
  * @return ssize_t number of char printed
  */
-ssize_t	ft_putendl_fd(char *s, int fd)
+ssize_t	ft_putendl_fd(const char *s, int fd)
 {
 	return (ft_putstr_fd(s, fd) + write(fd, "\n", 1));
 }
@@ -34,7 +34,7 @@ ssize_t	ft_putendl_fd(char *s, int fd)
  * @param fd file descriptor
  * @return ssize_t nombre de caractere qui ont été écrits
  */
-ssize_t	ft_putnendl_fd(char *s, size_t len, int fd)
+ssize_t	ft_putnendl_fd(const char *s, size_t len, int fd)
 {
 	return (ft_putnstr_fd(s, len, fd) + write(fd, "\n", 1));
 }

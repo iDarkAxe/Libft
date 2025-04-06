@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 21:10:56 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 12:26:45 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/06 11:51:23 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * @param ptr pointer to print
  * @return ssize_t number of char printed
  */
-ssize_t	ft_putpointer_fd(void *ptr)
+ssize_t	ft_putpointer_fd(const void *ptr)
 {
 	if (!ptr)
 		return (write(1, "(nil)", 5));

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/26 15:46:10 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/06 11:49:35 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,11 +92,11 @@ void		ft_swap_str_no_temp(char **a, char **b);
 void		ft_swap_mem_no_temp(void **a, void **b);
 
 // PRINT related functions
-ssize_t		ft_putchar_fd(char c, int fd);
-ssize_t		ft_putstr_fd(char *s, int fd);
-ssize_t		ft_putnstr_fd(char *s, size_t len, int fd);
-ssize_t		ft_putendl_fd(char *s, int fd);
-ssize_t		ft_putnendl_fd(char *s, size_t len, int fd);
+ssize_t		ft_putchar_fd(const char c, int fd);
+ssize_t		ft_putstr_fd(const char *s, int fd);
+ssize_t		ft_putnstr_fd(const char *s, size_t len, int fd);
+ssize_t		ft_putendl_fd(const char *s, int fd);
+ssize_t		ft_putnendl_fd(const char *s, size_t len, int fd);
 ssize_t		ft_putnbr_fd(int n, int fd);
 ssize_t		ft_putnbr_bin(int nbr);
 void		ft_putnbr_poneyvif(int nbr);
@@ -105,7 +105,7 @@ ssize_t		ft_putnbr_hex(int nbr, char height);
 ssize_t		ft_putnbr_base(int nbr, const char *base);
 size_t		ft_check_base_atoi(const char *base);
 size_t		ft_check_base_putnbr(const char *base);
-ssize_t		ft_putpointer_fd(void *ptr);
+ssize_t		ft_putpointer_fd(const void *ptr);
 
 // LST related functions
 t_list		*ft_lstnew(void *content);
