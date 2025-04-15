@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:45:58 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 13:41:17 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/15 11:41:06 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static const char	*ft_strchr_end(const char *string, int searched_char)
 
 	pointer = ft_strchr(string, searched_char);
 	if (pointer == NULL)
-		pointer = (char *)string + ft_strlen(string);
+		return (&string[ft_strlen(string)]);
 	return (pointer);
 }
 

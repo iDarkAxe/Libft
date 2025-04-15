@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/04/06 11:49:35 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/15 11:45:48 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void		ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *destination, const void *source, size_t size);
 void		*ft_memset(void *pointer, int value, size_t count);
 void		*ft_memmove(void *destination, const void *source, size_t size);
-void		*ft_memchr(const void *memory_block, int searched_char,
+const void	*ft_memchr(const void *memory_block, int searched_char,
 				size_t size);
 int			ft_memcmp(const void *src, const void *set, size_t size);
 void		*ft_calloc(size_t element_count, size_t element_size);
@@ -88,8 +88,8 @@ void		ft_swap_mem(void **a, void **b);
 // SPECIAL SWAPS
 void		ft_swap_int_no_temp(int *a, int *b);
 void		ft_swap_char_no_temp(char *a, char *b);
-void		ft_swap_str_no_temp(char **a, char **b);
-void		ft_swap_mem_no_temp(void **a, void **b);
+// void		ft_swap_str_no_temp(char **a, char **b);
+// void		ft_swap_mem_no_temp(void **a, void **b);
 
 // PRINT related functions
 ssize_t		ft_putchar_fd(const char c, int fd);
@@ -99,7 +99,7 @@ ssize_t		ft_putendl_fd(const char *s, int fd);
 ssize_t		ft_putnendl_fd(const char *s, size_t len, int fd);
 ssize_t		ft_putnbr_fd(int n, int fd);
 ssize_t		ft_putnbr_bin(int nbr);
-void		ft_putnbr_poneyvif(int nbr);
+// void		ft_putnbr_poneyvif(int nbr);
 ssize_t		ft_putnbr_oct(int nbr);
 ssize_t		ft_putnbr_hex(int nbr, char height);
 ssize_t		ft_putnbr_base(int nbr, const char *base);
@@ -118,4 +118,5 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void		ft_swap_nodes(t_list **start, t_list *lst1, t_list *lst2);
+
 #endif

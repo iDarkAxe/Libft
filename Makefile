@@ -145,11 +145,19 @@ all:
 
 # Create static library 
 $(NAME): $(OBJS) $(INCS)
-	ar -rcs $(NAME) $(OBJS)
+	@if ar -rcs $(NAME) $(OBJS); then \
+		echo "$(Green)Creating library $@$(Color_Off)"; \
+	else \
+		echo "$(Red)Error creating $@$(Color_Off)"; \
+	fi
 
 $(P_OBJ)%.o: $(P_SRC)%.c $(INCS)
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) $(DEPENDANCIES) -I $(P_INC) -c $< -o $@
+	@if $(CC) $(CFLAGS) $(DEPENDANCIES) -I $(P_INC) -c $< -o $@; then \
+		echo "$(Cyan)Compiling $<$(Color_Off)"; \
+	else \
+		echo "$(Red)Error creating $@$(Color_Off)"; \
+	fi
 
 # Debugging rules
 debug:
