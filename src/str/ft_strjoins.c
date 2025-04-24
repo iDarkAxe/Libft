@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 09:56:50 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/12 14:18:54 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/24 15:19:55 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,38 +21,42 @@ static size_t	count_len_array(char *str[]);
  * a concatenation of all the strings from the array
  * last argument needs to be NULL.
  *
- * @param str Array of strings
+ * @param array Array of strings
  * @return char* new string
  */
-char	*ft_strjoins(char **str)
+char	*ft_strjoins(char **array)
 {
 	size_t	count;
 	size_t	index;
 	size_t	size;
 	char	*new_str;
 
-	new_str = malloc(sizeof(char) * (count_len_array(str) + 1));
+	if (array == NULL || array[0] == NULL)
+		return (NULL);
+	new_str = malloc(sizeof(char) * (count_len_array(array) + 1));
+	if (new_str == NULL)
+		return (NULL);
 	index = 0;
 	count = 0;
-	while (str != NULL && str[count] != NULL)
+	while (array != NULL && array[count] != NULL)
 	{
-		size = ft_strlen(str[count]);
-		ft_memcpy(&new_str[index], str[count++], size);
+		size = ft_strlen(array[count]);
+		ft_memcpy(&new_str[index], array[count++], size);
 		index += size;
 	}
 	new_str[index] = '\0';
 	return (new_str);
 }
 
-static size_t	count_len_array(char *str[])
+static size_t	count_len_array(char *array[])
 {
 	size_t	count;
 	size_t	index;
 
 	count = 0;
 	index = 0;
-	while (str != NULL && str[index] != NULL)
-		count += ft_strlen(str[index++]);
+	while (array != NULL && array[index] != NULL)
+		count += ft_strlen(array[index++]);
 	return (count);
 }
 
