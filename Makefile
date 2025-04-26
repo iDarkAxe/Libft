@@ -6,6 +6,8 @@ NO_DIR = --no-print-directory
 MAKE := $(MAKE) -j $(NO_DIR)
 NAME = libft.a
 
+CC_DEBUG = clang
+CC_DEBUG_CFLAGS = -g3 -D DEBUG=1 -Weverything -Wno-padded -pedantic -O2 -Wwrite-strings -Wconversion -fsanitize=address -fsanitize=leak -Wno-suggest-override -Wno-suggest-destructor-override -Wno-incompatible-pointer-types-discards-qualifiers
 #############################################################################################
 #                                                                                           #
 #                                         DIRECTORIES                                       #
@@ -162,6 +164,10 @@ $(P_OBJ)%.o: $(P_SRC)%.c $(INCS)
 # Debugging rules
 debug:
 	@$(MAKE) $(NAME) CFLAGS="$(CFLAGS) -g3"
+
+debug-cc:
+	@$(MAKE) $(NAME) CFLAGS="$(CC_DEBUG_CFLAGS)" CC="$(CC_DEBUG)" Cyan="$(Yellow)" Green="$(Purple)"
+
 
 #############################################################################################
 #                                                                                           #

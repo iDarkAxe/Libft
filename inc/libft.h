@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/04/15 11:45:48 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/26 13:04:22 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int			ft_iswhitespace(int character);
 
 // STR related functions
 size_t		ft_strlen(const char *the_string);
+size_t		ft_strlen_char(const char *the_string, int character);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 char		*ft_strchr(const char *string, int searched_char);
