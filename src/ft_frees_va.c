@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:58:40 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/20 12:44:44 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/27 13:02:26 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void	ft_frees_va(void *ptr, ...)
 {
 	va_list	arg_ptr;
 	void	*temp;
-	size_t	index;
 
-	index = 0;
 	va_start(arg_ptr, ptr);
 	free(ptr);
 	while (1)
