@@ -96,6 +96,7 @@ SRC_PRINT = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_putnbr_base.c \
+	ft_putnbr_base_hex.c \
 	ft_convert_base.c \
 	ft_putpointer_fd.c
 	

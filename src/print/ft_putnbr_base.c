@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:31:04 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 12:36:26 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/05/10 12:09:10 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,8 @@ ssize_t	ft_putnbr_oct(int nbr)
  */
 ssize_t	ft_putnbr_hex(int nbr, char height)
 {
-	char	base[17];
-
 	if (height == 1 || height == 'x')
-		ft_strlcpy(base, "0123456789abcdef\0", 17);
+		return (ft_putnbr_base(nbr, "0123456789abcdef"));
 	else
-		ft_strlcpy(base, "0123456789ABCDEF\0", 17);
-	return (ft_putnbr_base(nbr, base));
+		return (ft_putnbr_base(nbr, "0123456789ABCDEF"));
 }

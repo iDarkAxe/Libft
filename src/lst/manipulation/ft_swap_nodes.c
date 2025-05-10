@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 12:15:44 by ppontet           #+#    #+#             */
-/*   Updated: 2025/04/27 12:37:30 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/05/10 12:13:57 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static t_list	*find_prev(t_list *start, t_list *node);
 static void		swap_pointers(t_list **start, t_list *prev, t_list *old,
-						  t_list *new);
+					t_list *new);
+
 /**
  * @brief Swap two nodes in a linked list (swap nodes, not content)
  *

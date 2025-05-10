@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/04/26 13:04:22 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/05/10 12:15:44 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ typedef enum e_bool
 {
 	FALSE = 0,
 	TRUE = 1
-}	t_bool;
+}			t_bool;
 
 /**
  * @brief Structure for linked list
  */
 typedef struct s_list
 {
-	void			*content; /**< Pointer to the data stored in the node */
-	struct s_list	*next; /**< Pointer to the next node in the list */
+	void			*content;	/**< Pointer to the data stored in the node */
+	struct s_list	*next;		/**< Pointer to the next node in the list */
 }			t_list;
 //@TODO Needs to be tidied like Makefile
 
@@ -98,11 +98,14 @@ ssize_t		ft_putstr_fd(const char *s, int fd);
 ssize_t		ft_putnstr_fd(const char *s, size_t len, int fd);
 ssize_t		ft_putendl_fd(const char *s, int fd);
 ssize_t		ft_putnendl_fd(const char *s, size_t len, int fd);
-ssize_t		ft_putnbr_fd(int n, int fd);
+ssize_t		ft_putnbr_fd(long long n, int fd);
+
 ssize_t		ft_putnbr_bin(int nbr);
 // void		ft_putnbr_poneyvif(int nbr);
 ssize_t		ft_putnbr_oct(int nbr);
 ssize_t		ft_putnbr_hex(int nbr, char height);
+ssize_t		ft_putnbr_hex_fd(unsigned int nbr, char height, int fd);
+ssize_t		ft_putptr_fd(unsigned long nbr, int fd);
 ssize_t		ft_putnbr_base(int nbr, const char *base);
 size_t		ft_check_base_atoi(const char *base);
 size_t		ft_check_base_putnbr(const char *base);
