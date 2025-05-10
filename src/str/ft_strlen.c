@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2025/04/26 13:10:45 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/05/10 15:30:44 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ size_t	ft_strlen_char(const char *the_string, int character)
 	count = 0;
 	while (the_string != NULL && the_string[index] != '\0')
 	{
-		if (the_string[index] != (char)character)
+		if (the_string[index] == (char)character)
 			count++;
 		index++;
 	}
