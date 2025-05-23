@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2025/05/10 15:30:44 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/05/23 11:29:37 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ size_t	ft_strlen(const char *the_string)
 {
 	size_t	count;
 
+	if (the_string == NULL)
+		return (0);
 	count = 0;
-	while (the_string != NULL && the_string[count] != '\0')
+	while (the_string[count] != '\0')
 		count++;
 	return (count);
 }
@@ -42,9 +44,11 @@ size_t	ft_strlen_char(const char *the_string, int character)
 	size_t	count;
 	size_t	index;
 
+	if (the_string == NULL)
+		return (0);
 	index = 0;
 	count = 0;
-	while (the_string != NULL && the_string[index] != '\0')
+	while (the_string[index] != '\0')
 	{
 		if (the_string[index] == (char)character)
 			count++;
