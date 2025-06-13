@@ -6,11 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:33:04 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:09:04 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:06:03 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+
+void	ft_bzero(void *s, size_t n);
 
 /**
  * @brief Set at 0, the n first bytes at the pointer adress

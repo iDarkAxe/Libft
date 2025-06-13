@@ -6,14 +6,14 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:59:56 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:30:45 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:33:23 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * @brief Deletes all characters that exist in s and set,

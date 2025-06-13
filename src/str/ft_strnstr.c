@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:06:20 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:30:04 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:11:16 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 * @param len max size of big
 * @return char* pointer to the first occurence of little in big
 */
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+const char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	little_size;
 	size_t	count;
@@ -30,19 +30,19 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	count = 0;
 	little_size = ft_strlen(little);
 	if (little_size == 0 || little == big)
-		return ((char *)&big[0]);
+		return (&big[0]);
 	if (len == 0 || *big == '\0' || ft_strlen(big) < little_size
 		|| len < little_size)
 		return (NULL);
 	while (big[count] != '\0' && count <= (len - little_size))
 	{
 		if (ft_strncmp(&big[count], little, little_size) == 0)
-			return ((char *)&big[count]);
+			return (&big[count]);
 		count++;
 	}
 	if (count > (len - little_size))
 		return (NULL);
-	return ((char *)&big[0]);
+	return (&big[0]);
 }
 
 // #include <string.h>
@@ -62,7 +62,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 //     result = ft_strnstr(str, str2, ft_strlen(str));
 //     if (result != NULL)
 //         ft_putstr_fd(result, fd);
-//     else 
+//     else
 //         ft_putstr_fd("NULL", fd);
 //     ft_putendl_fd("", fd);
 //     ft_putendl_fd("     -----     ", fd);
@@ -75,7 +75,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 //     result = ft_strnstr(str, str2, ft_strlen(str));
 //     if (result != NULL)
 //         ft_putstr_fd(result, fd);
-//     else 
+//     else
 //         ft_putstr_fd("NULL", fd);
 //     ft_putendl_fd("", fd);
 //     ft_putendl_fd("     -----     ", fd);
@@ -86,14 +86,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 //     result = strstr(str, str2);
 //     if (result != NULL)
 //         ft_putstr_fd(result, fd);
-//     else 
+//     else
 //         ft_putstr_fd("NULL", fd);
 //     ft_putendl_fd("", fd);
 //     ft_putstr_fd("Resultat test   : ", fd);
 //     result = ft_strnstr(str, str2, 1);
 //     if (result != NULL)
 //         ft_putstr_fd(result, fd);
-//     else 
+//     else
 //         ft_putstr_fd("NULL", fd);
 //     ft_putendl_fd("", fd);
 // }

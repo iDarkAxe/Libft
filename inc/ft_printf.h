@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 16:28:57 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 13:16:02 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/19 14:33:31 by ppontet           #+#    #+#             */
+/*   Updated: 2025/05/10 12:20:33 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-/**
- * @brief Iterate the function f on string s
- *
- * @param s string to iterate
- * @param f function to apply
- */
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
-{
-	unsigned int	i;
+# include "libft.h"
+# include <stddef.h>
+# include <unistd.h>
 
-	i = 0;
-	if (!(*s != 0 && f != 0))
-		return ;
-	while (*s != '\0')
-	{
-		f(i++, s++);
-	}
-	return ;
-}
+int		ft_printf(const char *str, ...);
+int		ft_dprintf(int fd, const char *str, ...);
+
+#endif

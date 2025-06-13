@@ -12,8 +12,8 @@
 
 #include "libft.h"
 #include <stddef.h>
-#include <stdlib.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 /**
  * @brief Allocates a new memory zone, and set all bits to zero
@@ -24,13 +24,13 @@
  */
 void	*ft_calloc(size_t element_count, size_t element_size)
 {
-	void			*pointer;
-	size_t			nbr_element;
+	void	*pointer;
+	size_t	nbr_element;
 
 	if (element_size == 0 || element_count == 0)
 		return (malloc(0));
-	if (SIZE_MAX / element_size < element_count
-		|| SIZE_MAX / element_count < element_size)
+	if (SIZE_MAX / element_size < element_count || SIZE_MAX
+		/ element_count < element_size)
 		return (NULL);
 	nbr_element = element_size * element_count;
 	pointer = malloc(nbr_element);

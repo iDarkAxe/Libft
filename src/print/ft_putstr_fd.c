@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:12:07 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:25:05 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/05/10 12:11:52 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@
  * @param fd file descriptor
  * @return ssize_t nombre de caractere qui ont été écrits
  */
-ssize_t	ft_putstr_fd(char *s, int fd)
+ssize_t	ft_putstr_fd(const char *s, int fd)
 {
+	if (s == NULL)
+		return (write(fd, "(null)", 6));
 	return (write(fd, s, ft_strlen(s)));
 }
 
@@ -34,8 +36,10 @@ ssize_t	ft_putstr_fd(char *s, int fd)
  * @param fd  nombre de caractere qui ont été écrits
  * @return ssize_t nombre de caractere qui ont été écrits
  */	
-ssize_t	ft_putnstr_fd(char *s, size_t len, int fd)
+ssize_t	ft_putnstr_fd(const char *s, size_t len, int fd)
 {
+	if (s == NULL)
+		return (write(fd, "(null)", 6));
 	if (len > ft_strlen(s))
 		return (write(fd, s, ft_strlen(s)));
 	else

@@ -6,9 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:34:53 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:16:01 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:06:49 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_atoi(const char *nptr);
 
 /**
  * @brief Convert string to int, and handle number
@@ -61,7 +63,7 @@ int	ft_atoi(const char *nptr)
 // 		ft_putendl_fd("", 1);
 // 		ft_putendl_fd("     -----     ", 1);
 // 	}
-// 	else 
+// 	else
 // 	{
 // 		nbr = " 22246635";
 // 		ft_putendl_fd(nbr, 1);

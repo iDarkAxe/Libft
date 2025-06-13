@@ -6,13 +6,15 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:03:21 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 17:04:01 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/09 15:16:43 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isalnum(int character);
+
 // could return 1024 or 0x10000000000 instead of 1
 /**
- * @brief Check if arg is a char or a digit
+ * @brief Check if arg is a char or a digit (alphanumeric)
  *
  * @param character character to check
  * @return int 0 not char, anything else is char or digit

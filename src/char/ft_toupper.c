@@ -6,9 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:49:30 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 17:04:38 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:40:19 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_toupper(int character);
 
 /**
  * @brief Transform minuscules into majuscules

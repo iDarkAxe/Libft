@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int.c                                       :+:      :+:    :+:   */
+/*   ft_frees_va.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/21 21:40:44 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 12:26:58 by ppontet          ###   ########lyon.fr   */
+/*   Created: 2024/11/08 16:58:40 by ppontet           #+#    #+#             */
+/*   Updated: 2025/06/13 23:52:36 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+#include <stdarg.h>
+#include <stdlib.h>
 
-void	ft_rev_int(int *tab, size_t size);
+void	ft_frees_va(void *ptr, ...);
 
 /**
- * @brief Reverse an array of ints
- *
- * @param tab adress of the first element of the array
- * @param size number of elements in the array
+ * @brief Frees multiple pointers using va_list
+ * 
+ * @param ptr first pointer
  */
-void	ft_rev_int(int *tab, size_t size)
+void	ft_frees_va(void *ptr, ...)
 {
-	int		temp;
-	size_t	index;
+	va_list	arg_ptr;
+	void	*temp;
 
-	index = 0;
-	while (index < (size / 2))
+	va_start(arg_ptr, ptr);
+	free(ptr);
+	while (1)
 	{
-		temp = tab[index];
-		tab[index] = tab[size - index - 1];
-		tab[size - index - 1] = temp;
-		index++;
+		temp = va_arg(arg_ptr, void *);
+		if (temp == NULL)
+			break ;
+		free(temp);
 	}
+	va_end(arg_ptr);
 }

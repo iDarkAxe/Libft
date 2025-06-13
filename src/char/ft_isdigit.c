@@ -6,16 +6,18 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:50:20 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 17:04:26 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/09 11:37:18 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isdigit(int character);
+
 // could return 2048 or 0x100000000000 instead of 1
 /**
- * @brief Check if arg is a char
+ * @brief Check if arg is a digit
  *
  * @param character character to check
- * @return int 0 not char, anything else is char
+ * @return int 0 not digit, anything else is digit
  */
 int	ft_isdigit(int character)
 {

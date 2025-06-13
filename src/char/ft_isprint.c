@@ -6,13 +6,15 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:32:05 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 17:04:31 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/04/09 15:16:57 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isprint(int character);
+
 // could return 16384 or 0x10000000000000 instead of 1
 /**
- * @brief Check if arg is in ascii table
+ * @brief Check if arg is in ascii table and printable
  *
  * @param character character to check
  * @return int 0 not in ascii table, anything else if in ascii table

@@ -17,7 +17,7 @@ static int	is_in_base(char str, char *base);
 
 /**
  * @brief Atoi with a particular base
- * 
+ *
  * @param str String to convert
  * @param base Base to use for conversion
  * @return int converted number
@@ -51,8 +51,8 @@ int	ft_atoi_base(char *str, char *base)
 }
 
 /**
- * @brief Search a character in base 
- * 
+ * @brief Search a character in base
+ *
  * @param character character to search
  * @param base base to search in
  * @return int position of the character in the base
@@ -69,7 +69,7 @@ static int	pos_base(char character, char *base)
 
 /**
  * @brief Check if the base is valid
- * 
+ *
  * @param str string to check
  * @param base base to check
  * @return int 1 if valid, 0 if not

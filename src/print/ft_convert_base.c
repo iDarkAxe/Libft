@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:57:01 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:21:28 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 12:34:49 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 /**
  * @brief Check if base is valid for atoi_base
- * 
+ *
  * @param base base to check
  * @return int 1 if valid, 0 if not
  */
-int	ft_check_base_atoi(char *base)
+size_t	ft_check_base_atoi(const char *base)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (ft_strlen(base) <= 1)
@@ -48,11 +48,11 @@ int	ft_check_base_atoi(char *base)
  * @param base base to check
  * @return int 1 if valid, 0 if not
  */
-int	ft_check_base_putnbr(char *base)
+size_t	ft_check_base_putnbr(const char *base)
 {
-	int	index;
-	int	base_length;
-	int	tested;
+	size_t	index;
+	size_t	base_length;
+	size_t	tested;
 
 	base_length = ft_strlen(base);
 	if (base[0] == '\0' || base_length <= 1)

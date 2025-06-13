@@ -6,11 +6,13 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:58:19 by ppontet           #+#    #+#             */
-/*   Updated: 2025/02/17 18:28:40 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/03/21 13:16:00 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+
+size_t	ft_strlcpy(char *dst, char *src, size_t size);
 
 /**
  * @brief Copy of src into dst, up to size bytes
