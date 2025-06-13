@@ -1,0 +1,5 @@
+<map id="ft_check_base_atoi" name="ft_check_base_atoi">
+<area shape="rect" id="Node000001" title="Check if base is valid for atoi_base." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000002" href="$group__STR.html#ga6c1dabdae84313b5bd949b685125bb27" title="Len of string without &#39;\0&#39;." alt="" coords="200,5,275,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,15,187,15,187,21,152,21"/>
+</map>

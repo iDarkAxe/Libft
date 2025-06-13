@@ -1,0 +1,5 @@
+<map id="ft_putnstr_fd" name="ft_putnstr_fd">
+<area shape="rect" id="Node000001" title="Print the string &#39;s&#39; on the file descriptor until a given size or the length of s if len is greater." alt="" coords="5,5,109,31"/>
+<area shape="rect" id="Node000002" href="$group__STR.html#ga6c1dabdae84313b5bd949b685125bb27" title="Len of string without &#39;\0&#39;." alt="" coords="157,5,232,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,15,143,15,143,21,110,21"/>
+</map>

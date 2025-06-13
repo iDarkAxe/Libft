@@ -1,0 +1,5 @@
+<map id="ft_lstclear" name="ft_lstclear">
+<area shape="rect" id="Node000001" title="Deletes and free the memory of the element passed as a parameter, and all the elements that follow,..." alt="" coords="5,5,92,31"/>
+<area shape="rect" id="Node000002" href="$group__LST.html#gac2b881501f9ee2f3ed5718f6d9ebee7c" title="Free the memory of the element passed as a parameter using the function &#39;del&#39; and free(3)...." alt="" coords="140,5,239,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,15,126,15,126,21,92,21"/>
+</map>

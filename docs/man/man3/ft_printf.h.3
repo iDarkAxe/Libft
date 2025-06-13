@@ -1,0 +1,70 @@
+.TH "inc/ft_printf.h" 3 "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/ft_printf.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'libft\&.h'\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+\fR#include <unistd\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBft_printf\fP (const char *str,\&.\&.\&.)"
+.br
+.RI "Works similarly as printf without handling size format\&. "
+.ti -1c
+.RI "int \fBft_dprintf\fP (int fd, const char *str,\&.\&.\&.)"
+.br
+.RI "Works similarly as printf without handling size format\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int ft_dprintf (int fd, const char * str,  \&.\&.\&.)"
+
+.PP
+Works similarly as printf without handling size format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor 
+.br
+\fIstr\fP String to be printed 
+.br
+\fI\&.\&.\&.\fP Variadic arguments 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Returns the number of characters printed or -1 if error 
+.RE
+.PP
+
+.SS "int ft_printf (const char * str,  \&.\&.\&.)"
+
+.PP
+Works similarly as printf without handling size format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP String to be printed 
+.br
+\fI\&.\&.\&.\fP Variadic arguments 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Returns the number of characters printed or -1 if error 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

@@ -1,0 +1,7 @@
+<map id="ft_strnstr" name="ft_strnstr">
+<area shape="rect" id="Node000001" title="Search a substring in a bigger string, up to len position in string." alt="" coords="5,31,85,56"/>
+<area shape="rect" id="Node000002" href="$group__STR.html#ga6c1dabdae84313b5bd949b685125bb27" title="Len of string without &#39;\0&#39;." alt="" coords="141,5,216,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,33,127,25,128,30,86,38"/>
+<area shape="rect" id="Node000003" href="$group__STR.html#gab16cefef58ab34d5525a7e2b83b7afed" title="Find differences between first and second." alt="" coords="133,55,224,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="86,48,120,54,119,59,85,53"/>
+</map>

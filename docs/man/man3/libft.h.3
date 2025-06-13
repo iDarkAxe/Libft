@@ -1,0 +1,360 @@
+.TH "inc/libft.h" 3 "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/libft.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stddef\&.h>\fP
+.br
+\fR#include <unistd\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBs_list\fP"
+.br
+.RI "Structure for linked list\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFX_VA\fP   0"
+.br
+.RI "Activate the variadic functions 1 is activated, 0 is desactivated\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBe_bool\fP \fBt_bool\fP"
+.br
+.RI "Basic type to mimic stdbool\&. "
+.ti -1c
+.RI "typedef struct \fBs_list\fP \fBt_list\fP"
+.br
+.RI "Structure for linked list\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBe_bool\fP { \fBFALSE\fP = 0, \fBTRUE\fP = 1 }"
+.br
+.RI "Basic type to mimic stdbool\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBft_atoi\fP (const char *nptr)"
+.br
+.RI "Convert string to int, and handle number\&. "
+.ti -1c
+.RI "int \fBft_atoi_base\fP (char *str, char *base)"
+.br
+.RI "Atoi with a particular base\&. "
+.ti -1c
+.RI "char * \fBft_itoa\fP (int n)"
+.br
+.RI "Return a string representing the integer 'n' received as argument\&. "
+.ti -1c
+.RI "int \fBft_isalpha\fP (int character)"
+.br
+.RI "Check if arg is a char alphabetic\&. "
+.ti -1c
+.RI "int \fBft_isdigit\fP (int character)"
+.br
+.RI "Check if arg is a digit\&. "
+.ti -1c
+.RI "int \fBft_isalnum\fP (int character)"
+.br
+.RI "Check if arg is a char or a digit (alphanumeric) "
+.ti -1c
+.RI "int \fBft_isascii\fP (int character)"
+.br
+.RI "Check if arg is in ascii table\&. "
+.ti -1c
+.RI "int \fBft_isprint\fP (int character)"
+.br
+.RI "Check if arg is in ascii table and printable\&. "
+.ti -1c
+.RI "int \fBft_toupper\fP (int character)"
+.br
+.RI "Transform minuscules into majuscules\&. "
+.ti -1c
+.RI "int \fBft_tolower\fP (int character)"
+.br
+.RI "Transform majuscules into minuscules\&. "
+.ti -1c
+.RI "int \fBft_isspace\fP (int character)"
+.br
+.RI "Check if arg is a whitespace\&. "
+.ti -1c
+.RI "int \fBft_iswhitespace\fP (int character)"
+.br
+.RI "Alternative name for ft_isspace\&. "
+.ti -1c
+.RI "size_t \fBft_strlen\fP (const char *the_string)"
+.br
+.RI "Len of string without '\\0'\&. "
+.ti -1c
+.RI "size_t \fBft_strlen_char\fP (const char *the_string, int character)"
+.br
+.RI "Number of occurrence of character in the string\&. "
+.ti -1c
+.RI "size_t \fBft_strlcpy\fP (char *dst, const char *src, size_t size)"
+.br
+.ti -1c
+.RI "size_t \fBft_strlcat\fP (char *dst, const char *src, size_t size)"
+.br
+.RI "Concatenate src into dst, up to size bytes\&. "
+.ti -1c
+.RI "char * \fBft_strchr\fP (const char *string, int searched_char)"
+.br
+.RI "Find first occurrence of searched_char\&. "
+.ti -1c
+.RI "char * \fBft_strrchr\fP (const char *string, int searched_char)"
+.br
+.RI "Find last occurrence of searched_char\&. "
+.ti -1c
+.RI "int \fBft_strncmp\fP (const char *first, const char *second, size_t length)"
+.br
+.RI "Find differences between first and second\&. "
+.ti -1c
+.RI "const char * \fBft_strnstr\fP (const char *big, const char *little, size_t len)"
+.br
+.RI "Search a substring in a bigger string, up to len position in string\&. "
+.ti -1c
+.RI "char * \fBft_strdup\fP (const char *source)"
+.br
+.RI "Create a copy of source into a new pointer NEEDS to be freed\&. "
+.ti -1c
+.RI "char * \fBft_strndup\fP (const char *source, size_t len)"
+.br
+.RI "Create a copy of source into a new pointer of size len NEEDS to be freed\&. "
+.ti -1c
+.RI "char * \fBft_substr\fP (char const *src, unsigned int start, size_t len)"
+.br
+.RI "Create a copy of source into a new pointer, at start, of size len NEEDS to be freed\&. "
+.ti -1c
+.RI "char * \fBft_strjoin\fP (char const *s1, char const *s2)"
+.br
+.RI "Allocates a new string, and returns the result of a concatenation of s1 and s2\&. "
+.ti -1c
+.RI "char * \fBft_strjoins\fP (char **str)"
+.br
+.RI "Allocates a new string, and returns the result of a concatenation of all the strings from the array last argument needs to be NULL\&. "
+.ti -1c
+.RI "char * \fBft_strtrim\fP (char const *s, char const *set)"
+.br
+.RI "Deletes all characters that exist in s and set, if they are at the beginning of the string or at the end\&. "
+.ti -1c
+.RI "char ** \fBft_split\fP (char const *s, char c)"
+.br
+.RI "Allocates with a malloc and returns an array of strings obtained by separating ’s’ using the character ’c’, used as a delimiter\&. The array must be terminated by NULL\&. "
+.ti -1c
+.RI "char * \fBft_strmapi\fP (char const *s, char(*f)(unsigned int, char))"
+.br
+.RI "Apply the function ’f’ to each character of the string ’s’, passing its index as first argument and the character itself as second argument\&. "
+.ti -1c
+.RI "void \fBft_striteri\fP (char *s, void(*f)(unsigned int, char *))"
+.br
+.RI "Iterate the function f on string s\&. "
+.ti -1c
+.RI "void \fBft_rev_int\fP (int *tab, size_t size)"
+.br
+.RI "Reverse an array of ints\&. "
+.ti -1c
+.RI "void \fBft_bzero\fP (void *s, size_t n)"
+.br
+.RI "Set at 0, the n first bytes at the pointer adress\&. "
+.ti -1c
+.RI "void * \fBft_memcpy\fP (void *destination, const void *source, size_t size)"
+.br
+.RI "Set a memory zone with a value, count times\&. "
+.ti -1c
+.RI "void * \fBft_memset\fP (void *pointer, int value, size_t count)"
+.br
+.RI "Set a memory zone with a value, count times\&. "
+.ti -1c
+.RI "void * \fBft_memmove\fP (void *destination, const void *source, size_t size)"
+.br
+.RI "Moves the memory blocks avoiding overlapping, until size blocks\&. "
+.ti -1c
+.RI "const void * \fBft_memchr\fP (const void *memory_block, int searched_char, size_t size)"
+.br
+.RI "Research the first occurence of a value typed int, but interpreted as a char in a memory block\&. "
+.ti -1c
+.RI "int \fBft_memcmp\fP (const void *src, const void *set, size_t size)"
+.br
+.RI "Compares the first size bytes of the memory areas src and set\&. "
+.ti -1c
+.RI "void * \fBft_calloc\fP (size_t element_count, size_t element_size)"
+.br
+.RI "Allocates a new memory zone, and set all bits to zero\&. "
+.ti -1c
+.RI "void \fBft_swap_int\fP (int *a, int *b)"
+.br
+.RI "Swap 2 int values\&. "
+.ti -1c
+.RI "void \fBft_swap_char\fP (char *a, char *b)"
+.br
+.RI "Swap 2 char values\&. "
+.ti -1c
+.RI "void \fBft_swap_str\fP (char **a, char **b)"
+.br
+.RI "Swap 2 string addresses\&. "
+.ti -1c
+.RI "void \fBft_swap_mem\fP (void **a, void **b)"
+.br
+.RI "Swap 2 memory adresses\&. "
+.ti -1c
+.RI "void \fBft_swap_int_no_temp\fP (int *a, int *b)"
+.br
+.RI "Works similarly as ft_swap_int but doens't use temporary variable SHOULD NOT BE USED IF a and b points at the same adress\&. "
+.ti -1c
+.RI "void \fBft_swap_char_no_temp\fP (char *a, char *b)"
+.br
+.RI "Works similarly as ft_swap_char but doens't use temporary variable SHOULD NOT BE USED IF a and b points at the same adress\&. "
+.ti -1c
+.RI "ssize_t \fBft_putchar_fd\fP (const char c, int fd)"
+.br
+.RI "Print the character 'c' on the file descriptor\&. "
+.ti -1c
+.RI "ssize_t \fBft_putstr_fd\fP (const char *s, int fd)"
+.br
+.RI "Print the string 's' on the file descriptor\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnstr_fd\fP (const char *s, size_t len, int fd)"
+.br
+.RI "Print the string 's' on the file descriptor until a given size or the length of s if len is greater\&. "
+.ti -1c
+.RI "ssize_t \fBft_putendl_fd\fP (const char *s, int fd)"
+.br
+.RI "Print the string 's' on the file descriptor, followed by a newline\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnendl_fd\fP (const char *s, size_t len, int fd)"
+.br
+.RI "Print the string 's' on the file descriptor, followed by a newline until a given size or the length of s if len is greater\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnbr_fd\fP (long long n, int fd)"
+.br
+.RI "Write the int 'n' on the given file descriptor\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnbr_bin\fP (int nbr)"
+.br
+.RI "Putnbr for binary\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnbr_oct\fP (int nbr)"
+.br
+.RI "Putnbr for octal\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnbr_hex\fP (int nbr, char height)"
+.br
+.RI "Putnbr for hex or HEX\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnbr_hex_fd\fP (unsigned int nbr, char height, int fd)"
+.br
+.RI "Putnbr for hex or HEX\&. "
+.ti -1c
+.RI "ssize_t \fBft_putptr_fd\fP (unsigned long nbr, int fd)"
+.br
+.RI "Print pointer adress\&. "
+.ti -1c
+.RI "ssize_t \fBft_putnbr_base\fP (int nbr, const char *base)"
+.br
+.RI "Putnbr with a particular base\&. "
+.ti -1c
+.RI "size_t \fBft_check_base_atoi\fP (const char *base)"
+.br
+.RI "Check if base is valid for atoi_base\&. "
+.ti -1c
+.RI "size_t \fBft_check_base_putnbr\fP (const char *base)"
+.br
+.RI "Check if base is valid for putnbr_base\&. "
+.ti -1c
+.RI "ssize_t \fBft_putpointer_fd\fP (const void *ptr)"
+.br
+.RI "Print pointer adress\&. "
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstnew\fP (void *content)"
+.br
+.RI "Allocate (with malloc(3)) and return a new element\&. The variable member 'content' is initialized with the value of the parameter 'content'\&. The variable 'next' is initialized to NULL\&. "
+.ti -1c
+.RI "void \fBft_lstadd_front\fP (\fBt_list\fP **lst, \fBt_list\fP *new)"
+.br
+.RI "Adds the element ’new’ at the start of the list\&. "
+.ti -1c
+.RI "int \fBft_lstsize\fP (\fBt_list\fP *lst)"
+.br
+.RI "Count the number of elements in a list\&. "
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstlast\fP (\fBt_list\fP *lst)"
+.br
+.RI "Returns the last element of the list\&. "
+.ti -1c
+.RI "void \fBft_lstadd_back\fP (\fBt_list\fP **lst, \fBt_list\fP *new)"
+.br
+.RI "Adds the element ’new’ at the end of the list\&. "
+.ti -1c
+.RI "void \fBft_lstdelone\fP (\fBt_list\fP *lst, void(*del)(void *))"
+.br
+.RI "Free the memory of the element passed as a parameter using the function 'del' and free(3)\&. The memory of next must not be freed\&. "
+.ti -1c
+.RI "void \fBft_lstclear\fP (\fBt_list\fP **lst, void(*del)(void *))"
+.br
+.RI "Deletes and free the memory of the element passed as a parameter, and all the elements that follow, using 'del' and free(3) Finally, the initial pointer must be set to NULL\&. "
+.ti -1c
+.RI "void \fBft_lstiter\fP (\fBt_list\fP *lst, void(*f)(void *))"
+.br
+.RI "Iterate on the linked list 'lst' and apply the function 'f' on the content of each element\&. "
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstmap\fP (\fBt_list\fP *lst, void *(*f)(void *), void(*del)(void *))"
+.br
+.RI "Iterated on the linked list 'list' and apply the function 'f' on the content of each element\&. Create a new list resulting from the successive applications of 'f'\&. The function 'del' is there to destroy the content of an element if necessary\&. "
+.ti -1c
+.RI "void \fBft_swap_nodes\fP (\fBt_list\fP **start, \fBt_list\fP *lst1, \fBt_list\fP *lst2)"
+.br
+.RI "Swap two nodes in a linked list (swap nodes, not content) "
+.ti -1c
+.RI "void \fBft_frees\fP (void **ptr)"
+.br
+.RI "Frees multiple pointers\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FX_VA   0"
+
+.PP
+Activate the variadic functions 1 is activated, 0 is desactivated\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBe_bool\fP \fBt_bool\fP"
+
+.PP
+Basic type to mimic stdbool\&. 
+.SS "typedef struct \fBs_list\fP \fBt_list\fP"
+
+.PP
+Structure for linked list\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBe_bool\fP"
+
+.PP
+Basic type to mimic stdbool\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIFALSE \fP
+.TP
+\f(BITRUE \fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

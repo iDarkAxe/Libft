@@ -1,0 +1,184 @@
+.TH "Memory" 3 "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Memory \- Memory functions
+.PP
+ \- Memory functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBft_bzero\fP (void *s, size_t n)"
+.br
+.RI "Set at 0, the n first bytes at the pointer adress\&. "
+.ti -1c
+.RI "void * \fBft_memcpy\fP (void *destination, const void *source, size_t size)"
+.br
+.RI "Set a memory zone with a value, count times\&. "
+.ti -1c
+.RI "void * \fBft_memset\fP (void *pointer, int value, size_t count)"
+.br
+.RI "Set a memory zone with a value, count times\&. "
+.ti -1c
+.RI "void * \fBft_memmove\fP (void *destination, const void *source, size_t size)"
+.br
+.RI "Moves the memory blocks avoiding overlapping, until size blocks\&. "
+.ti -1c
+.RI "const void * \fBft_memchr\fP (const void *memory_block, int searched_char, size_t size)"
+.br
+.RI "Research the first occurence of a value typed int, but interpreted as a char in a memory block\&. "
+.ti -1c
+.RI "int \fBft_memcmp\fP (const void *src, const void *set, size_t size)"
+.br
+.RI "Compares the first size bytes of the memory areas src and set\&. "
+.ti -1c
+.RI "void * \fBft_calloc\fP (size_t element_count, size_t element_size)"
+.br
+.RI "Allocates a new memory zone, and set all bits to zero\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Memory functions\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "void ft_bzero (void * s, size_t n)"
+
+.PP
+Set at 0, the n first bytes at the pointer adress\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP pointer to the memory to set 
+.br
+\fIn\fP number of bytes to set at 0 
+.RE
+.PP
+
+.SS "void * ft_calloc (size_t element_count, size_t element_size)"
+
+.PP
+Allocates a new memory zone, and set all bits to zero\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_count\fP number of elements 
+.br
+\fIelement_size\fP size of each element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void* pointer to the new memory zone 
+.RE
+.PP
+
+.SS "const void * ft_memchr (const void * memory_block, int searched_char, size_t size)"
+
+.PP
+Research the first occurence of a value typed int, but interpreted as a char in a memory block\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImemory_block\fP memory block to search in 
+.br
+\fIsearched_char\fP value to search 
+.br
+\fIsize\fP size of the memory block 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void* pointer to the first occurence of the value or NULL if not found 
+.RE
+.PP
+
+.SS "int ft_memcmp (const void * src, const void * set, size_t size)"
+
+.PP
+Compares the first size bytes of the memory areas src and set\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP source memory block 
+.br
+\fIset\fP set memory block 
+.br
+\fIsize\fP size of the memory block 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int difference between the first different byte 
+.RE
+.PP
+
+.SS "void * ft_memcpy (void * destination, const void * source, size_t size)"
+
+.PP
+Set a memory zone with a value, count times\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdestination\fP memory zone to paste 
+.br
+\fIsource\fP memory zone to copy 
+.br
+\fIsize\fP number of times to set the value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void* pointer to the memory zone 
+.RE
+.PP
+
+.SS "void * ft_memmove (void * destination, const void * source, size_t size)"
+
+.PP
+Moves the memory blocks avoiding overlapping, until size blocks\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdestination\fP destination memory block 
+.br
+\fIsource\fP source memory block 
+.br
+\fIsize\fP size of the memory block 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void* pointer to the destination memory block 
+.RE
+.PP
+
+.SS "void * ft_memset (void * pointer, int value, size_t count)"
+
+.PP
+Set a memory zone with a value, count times\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpointer\fP memory zone to set 
+.br
+\fIvalue\fP value to set 
+.br
+\fIcount\fP number of times to set the value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void* pointer to the memory zone 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

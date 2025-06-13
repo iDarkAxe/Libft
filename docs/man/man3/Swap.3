@@ -1,0 +1,127 @@
+.TH "Swap" 3 "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Swap \- Swap functions
+.PP
+ \- Swap functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBft_swap_int\fP (int *a, int *b)"
+.br
+.RI "Swap 2 int values\&. "
+.ti -1c
+.RI "void \fBft_swap_char\fP (char *a, char *b)"
+.br
+.RI "Swap 2 char values\&. "
+.ti -1c
+.RI "void \fBft_swap_str\fP (char **a, char **b)"
+.br
+.RI "Swap 2 string addresses\&. "
+.ti -1c
+.RI "void \fBft_swap_mem\fP (void **a, void **b)"
+.br
+.RI "Swap 2 memory adresses\&. "
+.ti -1c
+.RI "void \fBft_swap_int_no_temp\fP (int *a, int *b)"
+.br
+.RI "Works similarly as ft_swap_int but doens't use temporary variable SHOULD NOT BE USED IF a and b points at the same adress\&. "
+.ti -1c
+.RI "void \fBft_swap_char_no_temp\fP (char *a, char *b)"
+.br
+.RI "Works similarly as ft_swap_char but doens't use temporary variable SHOULD NOT BE USED IF a and b points at the same adress\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Swap functions\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "void ft_swap_char (char * a, char * b)"
+
+.PP
+Swap 2 char values\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP first value 
+.br
+\fIb\fP second value 
+.RE
+.PP
+
+.SS "void ft_swap_char_no_temp (char * a, char * b)"
+
+.PP
+Works similarly as ft_swap_char but doens't use temporary variable SHOULD NOT BE USED IF a and b points at the same adress\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP first value 
+.br
+\fIb\fP second value 
+.RE
+.PP
+
+.SS "void ft_swap_int (int * a, int * b)"
+
+.PP
+Swap 2 int values\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP first value 
+.br
+\fIb\fP second value 
+.RE
+.PP
+
+.SS "void ft_swap_int_no_temp (int * a, int * b)"
+
+.PP
+Works similarly as ft_swap_int but doens't use temporary variable SHOULD NOT BE USED IF a and b points at the same adress\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP first value 
+.br
+\fIb\fP second value 
+.RE
+.PP
+
+.SS "void ft_swap_mem (void ** a, void ** b)"
+
+.PP
+Swap 2 memory adresses\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP first value 
+.br
+\fIb\fP second value 
+.RE
+.PP
+
+.SS "void ft_swap_str (char ** a, char ** b)"
+
+.PP
+Swap 2 string addresses\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP first value 
+.br
+\fIb\fP second value 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

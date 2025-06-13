@@ -1,0 +1,7 @@
+<map id="ft_strtrim" name="ft_strtrim">
+<area shape="rect" id="Node000001" title="Deletes all characters that exist in s and set, if they are at the beginning of the string or at the ..." alt="" coords="5,31,88,56"/>
+<area shape="rect" id="Node000002" href="$group__STR.html#gaac28b966a034a143ba76ddda5478f61f" title="Find first occurrence of searched_char." alt="" coords="136,5,211,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,32,122,26,123,31,89,38"/>
+<area shape="rect" id="Node000003" href="$group__STR.html#ga6c1dabdae84313b5bd949b685125bb27" title="Len of string without &#39;\0&#39;." alt="" coords="136,55,211,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,49,123,55,122,60,88,54"/>
+</map>

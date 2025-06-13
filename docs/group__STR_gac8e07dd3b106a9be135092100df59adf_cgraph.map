@@ -1,0 +1,8 @@
+<map id="ft_substr" name="ft_substr">
+<area shape="rect" id="Node000001" title="Create a copy of source into a new pointer, at start, of size len NEEDS to be freed." alt="" coords="5,31,84,56"/>
+<area shape="rect" id="Node000002" href="$group__STR.html#gab284bcc7050ca7c180a666d6bba7ce93" title="Create a copy of source into a new pointer NEEDS to be freed." alt="" coords="132,5,211,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,33,118,26,119,31,85,38"/>
+<area shape="rect" id="Node000003" href="$group__STR.html#ga6c1dabdae84313b5bd949b685125bb27" title="Len of string without &#39;\0&#39;." alt="" coords="259,31,333,56"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="84,41,244,41,244,46,84,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,23,246,30,244,36,211,29"/>
+</map>

@@ -1,0 +1,213 @@
+.TH "LST" 3 "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LST \- Linked lists functions
+.PP
+ \- LST functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstnew\fP (void *content)"
+.br
+.RI "Allocate (with malloc(3)) and return a new element\&. The variable member 'content' is initialized with the value of the parameter 'content'\&. The variable 'next' is initialized to NULL\&. "
+.ti -1c
+.RI "void \fBft_lstadd_front\fP (\fBt_list\fP **lst, \fBt_list\fP *new)"
+.br
+.RI "Adds the element ’new’ at the start of the list\&. "
+.ti -1c
+.RI "int \fBft_lstsize\fP (\fBt_list\fP *lst)"
+.br
+.RI "Count the number of elements in a list\&. "
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstlast\fP (\fBt_list\fP *lst)"
+.br
+.RI "Returns the last element of the list\&. "
+.ti -1c
+.RI "void \fBft_lstadd_back\fP (\fBt_list\fP **lst, \fBt_list\fP *new)"
+.br
+.RI "Adds the element ’new’ at the end of the list\&. "
+.ti -1c
+.RI "void \fBft_lstdelone\fP (\fBt_list\fP *lst, void(*del)(void *))"
+.br
+.RI "Free the memory of the element passed as a parameter using the function 'del' and free(3)\&. The memory of next must not be freed\&. "
+.ti -1c
+.RI "void \fBft_lstclear\fP (\fBt_list\fP **lst, void(*del)(void *))"
+.br
+.RI "Deletes and free the memory of the element passed as a parameter, and all the elements that follow, using 'del' and free(3) Finally, the initial pointer must be set to NULL\&. "
+.ti -1c
+.RI "void \fBft_lstiter\fP (\fBt_list\fP *lst, void(*f)(void *))"
+.br
+.RI "Iterate on the linked list 'lst' and apply the function 'f' on the content of each element\&. "
+.ti -1c
+.RI "\fBt_list\fP * \fBft_lstmap\fP (\fBt_list\fP *lst, void *(*f)(void *), void(*del)(void *))"
+.br
+.RI "Iterated on the linked list 'list' and apply the function 'f' on the content of each element\&. Create a new list resulting from the successive applications of 'f'\&. The function 'del' is there to destroy the content of an element if necessary\&. "
+.ti -1c
+.RI "void \fBft_swap_nodes\fP (\fBt_list\fP **start, \fBt_list\fP *lst1, \fBt_list\fP *lst2)"
+.br
+.RI "Swap two nodes in a linked list (swap nodes, not content) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+LST functions\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "void ft_lstadd_back (\fBt_list\fP ** lst, \fBt_list\fP * new)"
+
+.PP
+Adds the element ’new’ at the end of the list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.br
+\fInew\fP new node to add 
+.RE
+.PP
+
+.SS "void ft_lstadd_front (\fBt_list\fP ** lst, \fBt_list\fP * new)"
+
+.PP
+Adds the element ’new’ at the start of the list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.br
+\fInew\fP new node to add 
+.RE
+.PP
+
+.SS "void ft_lstclear (\fBt_list\fP ** lst, void(* del )(void *))"
+
+.PP
+Deletes and free the memory of the element passed as a parameter, and all the elements that follow, using 'del' and free(3) Finally, the initial pointer must be set to NULL\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.br
+\fIdel\fP function to apply to delete all the content of the element 
+.RE
+.PP
+
+.SS "void ft_lstdelone (\fBt_list\fP * lst, void(* del )(void *))"
+
+.PP
+Free the memory of the element passed as a parameter using the function 'del' and free(3)\&. The memory of next must not be freed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.br
+\fIdel\fP function to apply to delete all the content of the element 
+.RE
+.PP
+
+.SS "void ft_lstiter (\fBt_list\fP * lst, void(* f )(void *))"
+
+.PP
+Iterate on the linked list 'lst' and apply the function 'f' on the content of each element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.br
+\fIf\fP function to apply to the content of each element 
+.RE
+.PP
+
+.SS "\fBt_list\fP * ft_lstlast (\fBt_list\fP * lst)"
+
+.PP
+Returns the last element of the list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* last element of the list 
+.RE
+.PP
+
+.SS "\fBt_list\fP * ft_lstmap (\fBt_list\fP * lst, void *(* f )(void *), void(* del )(void *))"
+
+.PP
+Iterated on the linked list 'list' and apply the function 'f' on the content of each element\&. Create a new list resulting from the successive applications of 'f'\&. The function 'del' is there to destroy the content of an element if necessary\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP head of the linked list 
+.br
+\fIf\fP function to apply to the content of each element 
+.br
+\fIdel\fP function to apply to delete all the content of the element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* new list modified by f 
+.RE
+.PP
+
+.SS "\fBt_list\fP * ft_lstnew (void * content)"
+
+.PP
+Allocate (with malloc(3)) and return a new element\&. The variable member 'content' is initialized with the value of the parameter 'content'\&. The variable 'next' is initialized to NULL\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP content to add to the new element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+t_list* new element 
+.RE
+.PP
+
+.SS "int ft_lstsize (\fBt_list\fP * lst)"
+
+.PP
+Count the number of elements in a list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlst\fP list to count 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int number of elements in the list 
+.RE
+.PP
+
+.SS "void ft_swap_nodes (\fBt_list\fP ** start, \fBt_list\fP * lst1, \fBt_list\fP * lst2)"
+
+.PP
+Swap two nodes in a linked list (swap nodes, not content) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP head of the linked list 
+.br
+\fIlst1\fP First node to swap 
+.br
+\fIlst2\fP Second node to swap 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

@@ -1,0 +1,379 @@
+.TH "STR" 3 "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+STR \- String functions
+.PP
+ \- String functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "size_t \fBft_strlen\fP (const char *the_string)"
+.br
+.RI "Len of string without '\\0'\&. "
+.ti -1c
+.RI "size_t \fBft_strlen_char\fP (const char *the_string, int character)"
+.br
+.RI "Number of occurrence of character in the string\&. "
+.ti -1c
+.RI "size_t \fBft_strlcpy\fP (char *dst, const char *src, size_t size)"
+.br
+.ti -1c
+.RI "size_t \fBft_strlcat\fP (char *dst, const char *src, size_t size)"
+.br
+.RI "Concatenate src into dst, up to size bytes\&. "
+.ti -1c
+.RI "char * \fBft_strchr\fP (const char *string, int searched_char)"
+.br
+.RI "Find first occurrence of searched_char\&. "
+.ti -1c
+.RI "char * \fBft_strrchr\fP (const char *string, int searched_char)"
+.br
+.RI "Find last occurrence of searched_char\&. "
+.ti -1c
+.RI "int \fBft_strncmp\fP (const char *first, const char *second, size_t length)"
+.br
+.RI "Find differences between first and second\&. "
+.ti -1c
+.RI "const char * \fBft_strnstr\fP (const char *big, const char *little, size_t len)"
+.br
+.RI "Search a substring in a bigger string, up to len position in string\&. "
+.ti -1c
+.RI "char * \fBft_strdup\fP (const char *source)"
+.br
+.RI "Create a copy of source into a new pointer NEEDS to be freed\&. "
+.ti -1c
+.RI "char * \fBft_strndup\fP (const char *source, size_t len)"
+.br
+.RI "Create a copy of source into a new pointer of size len NEEDS to be freed\&. "
+.ti -1c
+.RI "char * \fBft_substr\fP (char const *src, unsigned int start, size_t len)"
+.br
+.RI "Create a copy of source into a new pointer, at start, of size len NEEDS to be freed\&. "
+.ti -1c
+.RI "char * \fBft_strjoin\fP (char const *s1, char const *s2)"
+.br
+.RI "Allocates a new string, and returns the result of a concatenation of s1 and s2\&. "
+.ti -1c
+.RI "char * \fBft_strjoins\fP (char **str)"
+.br
+.RI "Allocates a new string, and returns the result of a concatenation of all the strings from the array last argument needs to be NULL\&. "
+.ti -1c
+.RI "char * \fBft_strtrim\fP (char const *s, char const *set)"
+.br
+.RI "Deletes all characters that exist in s and set, if they are at the beginning of the string or at the end\&. "
+.ti -1c
+.RI "char ** \fBft_split\fP (char const *s, char c)"
+.br
+.RI "Allocates with a malloc and returns an array of strings obtained by separating ’s’ using the character ’c’, used as a delimiter\&. The array must be terminated by NULL\&. "
+.ti -1c
+.RI "char * \fBft_strmapi\fP (char const *s, char(*f)(unsigned int, char))"
+.br
+.RI "Apply the function ’f’ to each character of the string ’s’, passing its index as first argument and the character itself as second argument\&. "
+.ti -1c
+.RI "void \fBft_striteri\fP (char *s, void(*f)(unsigned int, char *))"
+.br
+.RI "Iterate the function f on string s\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+String functions\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "char ** ft_split (char const * s, char c)"
+
+.PP
+Allocates with a malloc and returns an array of strings obtained by separating ’s’ using the character ’c’, used as a delimiter\&. The array must be terminated by NULL\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to print 
+.br
+\fIc\fP char used as a delimiter 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char** array of strings 
+.RE
+.PP
+
+.SS "char * ft_strchr (const char * string, int searched_char)"
+
+.PP
+Find first occurrence of searched_char\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP string to search in 
+.br
+\fIsearched_char\fP char to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* index of Char found 
+.RE
+.PP
+
+.SS "char * ft_strdup (const char * source)"
+
+.PP
+Create a copy of source into a new pointer NEEDS to be freed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP string to copy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* pointer to the new string 
+.RE
+.PP
+
+.SS "void ft_striteri (char * s, void(* f )(unsigned int, char *))"
+
+.PP
+Iterate the function f on string s\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to iterate 
+.br
+\fIf\fP function to apply 
+.RE
+.PP
+
+.SS "char * ft_strjoin (char const * s1, char const * s2)"
+
+.PP
+Allocates a new string, and returns the result of a concatenation of s1 and s2\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs1\fP string 1 
+.br
+\fIs2\fP string 2 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* new string 
+.RE
+.PP
+
+.SS "char * ft_strjoins (char ** array)"
+
+.PP
+Allocates a new string, and returns the result of a concatenation of all the strings from the array last argument needs to be NULL\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray\fP Array of strings 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* new string 
+.RE
+.PP
+
+.SS "size_t ft_strlcat (char * dst, const char * src, size_t size)"
+
+.PP
+Concatenate src into dst, up to size bytes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdst\fP destination string 
+.br
+\fIsrc\fP source string 
+.br
+\fIsize\fP size of the destination string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+unsigned int size of the new string 
+.RE
+.PP
+
+.SS "size_t ft_strlcpy (char * dst, const char * src, size_t size)"
+
+.SS "size_t ft_strlen (const char * the_string)"
+
+.PP
+Len of string without '\\0'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthe_string\fP string to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+size_t len of the string 
+.RE
+.PP
+
+.SS "size_t ft_strlen_char (const char * the_string, int character)"
+
+.PP
+Number of occurrence of character in the string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthe_string\fP string to check 
+.br
+\fIcharacter\fP character to count 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+size_t len of the string 
+.RE
+.PP
+
+.SS "char * ft_strmapi (char const * s, char(* f )(unsigned int, char))"
+
+.PP
+Apply the function ’f’ to each character of the string ’s’, passing its index as first argument and the character itself as second argument\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to iterate 
+.br
+\fIf\fP function to apply 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* new string 
+.RE
+.PP
+
+.SS "int ft_strncmp (const char * first, const char * second, size_t length)"
+
+.PP
+Find differences between first and second\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirst\fP first string to compare 
+.br
+\fIsecond\fP second string to compare 
+.br
+\fIlength\fP number of characters to compare 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int value of first - second 
+.RE
+.PP
+
+.SS "char * ft_strndup (const char * source, size_t len)"
+
+.PP
+Create a copy of source into a new pointer of size len NEEDS to be freed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP string to copy 
+.br
+\fIlen\fP size of the new string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* pointer to the new string 
+.RE
+.PP
+
+.SS "const char * ft_strnstr (const char * big, const char * little, size_t len)"
+
+.PP
+Search a substring in a bigger string, up to len position in string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbig\fP string to search in 
+.br
+\fIlittle\fP string to search 
+.br
+\fIlen\fP max size of big 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* pointer to the first occurence of little in big 
+.RE
+.PP
+
+.SS "char * ft_strrchr (const char * string, int searched_char)"
+
+.PP
+Find last occurrence of searched_char\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP string to search in 
+.br
+\fIsearched_char\fP character to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* pointer to the last occurrence of searched_char 
+.RE
+.PP
+
+.SS "char * ft_strtrim (char const * s, char const * set)"
+
+.PP
+Deletes all characters that exist in s and set, if they are at the beginning of the string or at the end\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP string to trim 
+.br
+\fIset\fP string of characters to trim 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* new string 
+.RE
+.PP
+
+.SS "char * ft_substr (char const * src, unsigned int start, size_t len)"
+
+.PP
+Create a copy of source into a new pointer, at start, of size len NEEDS to be freed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP string to copy 
+.br
+\fIstart\fP start of the copy 
+.br
+\fIlen\fP size of the copy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* new string 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.

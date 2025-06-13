@@ -1,0 +1,205 @@
+.TH "Char" 3 "Libft" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Char \- Char functions
+.PP
+ \- Char functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBft_isalpha\fP (int character)"
+.br
+.RI "Check if arg is a char alphabetic\&. "
+.ti -1c
+.RI "int \fBft_isdigit\fP (int character)"
+.br
+.RI "Check if arg is a digit\&. "
+.ti -1c
+.RI "int \fBft_isalnum\fP (int character)"
+.br
+.RI "Check if arg is a char or a digit (alphanumeric) "
+.ti -1c
+.RI "int \fBft_isascii\fP (int character)"
+.br
+.RI "Check if arg is in ascii table\&. "
+.ti -1c
+.RI "int \fBft_isprint\fP (int character)"
+.br
+.RI "Check if arg is in ascii table and printable\&. "
+.ti -1c
+.RI "int \fBft_toupper\fP (int character)"
+.br
+.RI "Transform minuscules into majuscules\&. "
+.ti -1c
+.RI "int \fBft_tolower\fP (int character)"
+.br
+.RI "Transform majuscules into minuscules\&. "
+.ti -1c
+.RI "int \fBft_isspace\fP (int character)"
+.br
+.RI "Check if arg is a whitespace\&. "
+.ti -1c
+.RI "int \fBft_iswhitespace\fP (int character)"
+.br
+.RI "Alternative name for ft_isspace\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Char functions\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "int ft_isalnum (int character)"
+
+.PP
+Check if arg is a char or a digit (alphanumeric) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 0 not char, anything else is char or digit 
+.RE
+.PP
+
+.SS "int ft_isalpha (int character)"
+
+.PP
+Check if arg is a char alphabetic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 0 not char, anything else is char 
+.RE
+.PP
+
+.SS "int ft_isascii (int character)"
+
+.PP
+Check if arg is in ascii table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 0 not in ascii table, anything else if in ascii table 
+.RE
+.PP
+
+.SS "int ft_isdigit (int character)"
+
+.PP
+Check if arg is a digit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 0 not digit, anything else is digit 
+.RE
+.PP
+
+.SS "int ft_isprint (int character)"
+
+.PP
+Check if arg is in ascii table and printable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 0 not in ascii table, anything else if in ascii table 
+.RE
+.PP
+
+.SS "int ft_isspace (int character)"
+
+.PP
+Check if arg is a whitespace\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 0 not space, anything else is a whitespace 
+.RE
+.PP
+
+.SS "int ft_iswhitespace (int character)"
+
+.PP
+Alternative name for ft_isspace\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 0 not space, anything else is a whitespace 
+.RE
+.PP
+
+.SS "int ft_tolower (int character)"
+
+.PP
+Transform majuscules into minuscules\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+character in minuscules if was in majuscules OR character isn´t majuscules 
+.RE
+.PP
+
+.SS "int ft_toupper (int character)"
+
+.PP
+Transform minuscules into majuscules\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcharacter\fP character to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+character in majuscule if was in minuscule OR character isn´t minuscule 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Libft from the source code\&.
