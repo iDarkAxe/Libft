@@ -45,7 +45,9 @@ INC = \
 SRC = \
 	ft_atoi.c \
 	ft_atoi_base.c \
-	ft_itoa.c 
+	ft_itoa.c \
+	ft_frees.c \
+	ft_frees_va.c \
 	
 SRC_MEM = \
 	ft_memset.c \

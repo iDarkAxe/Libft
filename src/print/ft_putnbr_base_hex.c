@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:31:04 by ppontet           #+#    #+#             */
-/*   Updated: 2025/05/10 12:15:27 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/06/13 23:47:35 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ static ssize_t	ft_putnbr_hex_start(unsigned int nbr, const char *base, int fd)
  *
  * @param nbr number to print
  * @param height 1 for hex, 0 for HEX
+ * @param fd file descriptor
+ * @return ssize_t number of char printed
  */
 ssize_t	ft_putnbr_hex_fd(unsigned int nbr, char height, int fd)
 {

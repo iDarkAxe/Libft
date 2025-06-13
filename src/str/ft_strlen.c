@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:35:19 by ppontet           #+#    #+#             */
-/*   Updated: 2025/05/23 11:29:37 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/06/13 23:46:41 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ size_t	ft_strlen(const char *the_string)
 }
 
 /**
- * @brief Len of string without '\0' and character
+ * @brief Number of occurrence of character in the string
  *
  * @param the_string string to check
+ * @param character character to count
  * @return size_t len of the string
  */
 size_t	ft_strlen_char(const char *the_string, int character)

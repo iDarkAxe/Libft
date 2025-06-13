@@ -6,13 +6,15 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:58:40 by ppontet           #+#    #+#             */
-/*   Updated: 2025/04/27 13:02:26 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/06/13 23:52:36 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdarg.h>
 #include <stdlib.h>
+
+void	ft_frees_va(void *ptr, ...);
 
 /**
  * @brief Frees multiple pointers using va_list

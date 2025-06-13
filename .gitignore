@@ -10,3 +10,6 @@ main
 **/*.sw*
 libft.a
 **/*.a
+doxy-log-err.txt
+doxy-log.txt
+test.c
