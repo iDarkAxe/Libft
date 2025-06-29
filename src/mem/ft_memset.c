@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:29:02 by ppontet           #+#    #+#             */
-/*   Updated: 2025/06/29 12:33:49 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/06/29 15:41:36 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	*ft_memset(void *pointer, int value, size_t count)
 	ptr = (uint8_t *)pointer;
 	while (i < count && ((uintptr_t)(ptr + i) % 4) != 0)
 		ptr[i++] = (unsigned char)value;
-	ptr32 = (uint32_t *)(ptr + i);
+	ptr32 = (uint32_t *)(void *)(ptr + i);
 	block = (uint8_t)value * 0x01010101;
 	while (i + 4 <= count)
 	{
@@ -96,7 +96,7 @@ void	*ft_memset64(void *pointer, int value, size_t count)
 	ptr = (uint8_t *)pointer;
 	while (i < count && ((uintptr_t)(ptr + i) % 4) != 0)
 		ptr[i++] = (unsigned char)value;
-	ptr64 = (uint64_t *)(ptr + i);
+	ptr64 = (uint64_t *)(void *)(ptr + i);
 	block = (uint8_t)value * 0x0101010101010101;
 	while (i + 8 <= count)
 	{

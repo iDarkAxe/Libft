@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/06/29 12:26:22 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/06/29 14:20:39 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,6 @@
 # endif
 
 /**
- * @brief Basic type to mimic stdbool
- * 
- */
-typedef enum e_bool
-{
-	FALSE = 0,
-	TRUE = 1
-}			t_bool;
-
-/**
  * @brief Structure for linked list
  */
 typedef struct s_list
@@ -58,6 +48,7 @@ typedef struct s_list
  * @brief Basics functions 
  * @{
  */
+
 int			ft_atoi(const char *nptr);
 int			ft_atoi_base(char *str, char *base);
 char		*ft_itoa(int n);
@@ -68,6 +59,7 @@ char		*ft_itoa(int n);
  * @brief Char functions
  * @{
  */
+
 int			ft_isalpha(int character);
 int			ft_isdigit(int character);
 int			ft_isalnum(int character);
@@ -84,6 +76,7 @@ int			ft_iswhitespace(int character);
  * @brief String functions 
  * @{
  */
+
 size_t		ft_strlen(const char *the_string);
 size_t		ft_strlen_char(const char *the_string, int character);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
@@ -113,6 +106,7 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char *));
  * @brief Sorting arrays
  * @{
  */
+
 void		ft_rev_int(int *tab, size_t size);
 /** @} */
 
@@ -121,9 +115,11 @@ void		ft_rev_int(int *tab, size_t size);
  * @brief Memory functions
  * @{
  */
+
 void		ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *destination, const void *source, size_t size);
 void		*ft_memset(void *pointer, int value, size_t count);
+void		*ft_memset64(void *pointer, int value, size_t count);
 void		*ft_memmove(void *destination, const void *source, size_t size);
 const void	*ft_memchr(const void *memory_block, int searched_char,
 				size_t size);
@@ -136,6 +132,7 @@ void		*ft_calloc(size_t element_count, size_t element_size);
  * @brief Swap functions
  * @{
  */
+
 void		ft_swap_int(int *a, int *b);
 void		ft_swap_char(char *a, char *b);
 void		ft_swap_str(char **a, char **b);
@@ -152,6 +149,7 @@ void		ft_swap_char_no_temp(char *a, char *b);
  * @brief Print functions
  * @{
  */
+
 ssize_t		ft_putchar_fd(const char c, int fd);
 ssize_t		ft_putstr_fd(const char *s, int fd);
 ssize_t		ft_putnstr_fd(const char *s, size_t len, int fd);
@@ -176,6 +174,7 @@ ssize_t		ft_putpointer_fd(const void *ptr);
  * @brief LST functions
  * @{
  */
+
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
@@ -193,6 +192,7 @@ void		ft_swap_nodes(t_list **start, t_list *lst1, t_list *lst2);
  * @brief Free functions
  * @{
  */
+
 void		ft_frees(void **ptr);
 # if (FX_VA == 1)
 
