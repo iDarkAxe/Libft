@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/06/13 23:55:17 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/06/29 12:26:22 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@
  */
 # ifndef FX_VA
 #  define FX_VA 0
+# endif
+
+/**
+ * @brief Activate the optimised functions
+ * 1 is activated, 0 is desactivated
+ * 
+ */
+# ifndef OPTI_ALIGNMENT_FT
+#  define OPTI_ALIGNMENT_FT 1
 # endif
 
 /**
