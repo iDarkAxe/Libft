@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/11/20 18:42:05 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/11/20 19:08:26 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,6 +194,7 @@ void		ft_swap_nodes(t_list **start, t_list *lst1, t_list *lst2);
  * @{
  */
 
+void		ft_free_array(char **ptr);
 void		ft_frees(void **ptr);
 # if (FX_VA == 1)
 
