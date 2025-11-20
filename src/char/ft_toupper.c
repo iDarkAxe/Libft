@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:49:30 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 12:40:19 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2025/11/20 18:16:58 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_toupper(int character);
  */
 int	ft_toupper(int character)
 {
-	if ((character >= 'a' && character <= 'z'))
+	if (character >= 'a' && character <= 'z')
 		return (character - 32);
 	return (character);
 }
