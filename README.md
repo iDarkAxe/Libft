@@ -1,6 +1,7 @@
 # Library for C Project at 42 #
 
 These functions are clones of functions that already exist in C. We must mimic their behavior as perfectly as possible.
+The project incorporates the [ft_printf repo](https://github.com/iDarkAxe/ft_printf/).
 
 ## How to use ##
 
@@ -26,6 +27,7 @@ The functions are in different groups.
 * `mem/`
 * `char/`
 * `str/`
+* `ft_printf/`
 * `print/`
 * `sort/`
 * `swap/`
@@ -54,7 +56,6 @@ Print related functions
 ### P_PRINT = ft_printf/ ###
 
 Own implementation of printf and dprintf without the memory allocation.
-see [ft_printf repo](https://github.com/iDarkAxe/ft_printf/) for more infos.
 
 ### P_SORT = sort/ ###
 
