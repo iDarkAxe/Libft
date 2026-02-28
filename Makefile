@@ -146,6 +146,13 @@ DEPS = $(OBJS:%.o=%.d)
 # List of header files
 INCS = $(addprefix $(P_INC)/, $(INC))
 
+# Bonus
+SRCS_BONUS =	\
+	$(SRCS) \
+	$(addprefix $(P_SRC)$(P_LST), $(SRC_LST)) \
+
+OBJS_BONUS = $(subst $(P_SRC), $(P_OBJ), $(SRCS_BONUS:.c=.o))
+DEPS_BONUS = $(OBJS_BONUS:%.o=%.d)
 #############################################################################################
 #                                                                                           #
 #                                          RULES                                            #
@@ -169,6 +176,9 @@ $(P_OBJ)%.o: $(P_SRC)%.c $(INCS)
 	else \
 		echo "$(Red)Error creating $@$(Color_Off)"; \
 	fi
+
+bonus: 
+	@$(MAKE) all OBJS="$(OBJS_BONUS)"
 
 # Debugging rules
 debug:
