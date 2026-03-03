@@ -6,13 +6,14 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:58:19 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 13:16:00 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2026/03/03 15:31:06 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
-size_t	ft_strlcpy(char *dst, char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 /**
  * @brief Copy of src into dst, up to size bytes
@@ -22,14 +23,14 @@ size_t	ft_strlcpy(char *dst, char *src, size_t size);
  * @param size size of the destination string
  * @return size_t size of src
  */
-size_t	ft_strlcpy(char *dst, char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	index;
 	size_t	src_len;
 
-	src_len = 0;
-	while (src[src_len] != '\0')
-		src_len++;
+	if (dst == NULL || src == NULL)
+		return (0);
+	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
 	index = 0;

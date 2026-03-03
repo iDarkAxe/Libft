@@ -6,10 +6,11 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:54 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 13:15:45 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2026/03/03 15:36:38 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
 const char	*ft_strrchr(const char *string, int searched_char);
@@ -23,11 +24,9 @@ const char	*ft_strrchr(const char *string, int searched_char);
  */
 const char	*ft_strrchr(const char *string, int searched_char)
 {
-	unsigned long int	i;
+	size_t	i;
 
-	i = 0;
-	while (string[i] != '\0')
-		i++;
+	i = ft_strlen(string);
 	while (i > 0)
 	{
 		if (string[i] == (char)searched_char)

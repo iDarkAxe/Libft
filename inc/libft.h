@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:25:12 by ppontet           #+#    #+#             */
-/*   Updated: 2025/11/20 19:08:26 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2026/03/03 15:36:49 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ size_t		ft_strlen_char(const char *the_string, int character);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 char		*ft_strchr(const char *string, int searched_char);
-char		*ft_strrchr(const char *string, int searched_char);
+const char	*ft_strrchr(const char *string, int searched_char);
 int			ft_strcmp(const char *first, const char *second);
 int			ft_strncmp(const char *first, const char *second, size_t length);
 const char	*ft_strnstr(const char *big, const char *little, size_t len);

@@ -6,7 +6,7 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:59:13 by ppontet           #+#    #+#             */
-/*   Updated: 2025/03/21 12:28:50 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2026/03/03 15:41:32 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  * @param dst destination string
  * @param src source string
  * @param size size of the destination string
- * @return unsigned int size of the new string
+ * @return size_t size of the new string
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
