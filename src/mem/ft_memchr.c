@@ -6,14 +6,14 @@
 /*   By: ppontet <ppontet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:06:29 by ppontet           #+#    #+#             */
-/*   Updated: 2025/04/15 11:45:56 by ppontet          ###   ########lyon.fr   */
+/*   Updated: 2026/03/04 10:44:10 by ppontet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-const void	*ft_memchr(const void *memory_block, int searched_char,
-				size_t size);
+void	*ft_memchr(const void *memory_block, int searched_char,
+			size_t size);
 
 /**
  * @brief Research the first occurence of a value typed int,
@@ -25,7 +25,7 @@ const void	*ft_memchr(const void *memory_block, int searched_char,
  * @return void* pointer to the first occurence of the value
  * or NULL if not found
  */
-const void	*ft_memchr(const void *memory_block, int searched_char, size_t size)
+void	*ft_memchr(const void *memory_block, int searched_char, size_t size)
 {
 	const unsigned char	*pointer;
 	size_t				index;
@@ -35,7 +35,7 @@ const void	*ft_memchr(const void *memory_block, int searched_char, size_t size)
 	while (index < size)
 	{
 		if (pointer[index] == (unsigned char)searched_char)
-			return ((const void *)&pointer[index]);
+			return ((void *)&pointer[index]);
 		index++;
 	}
 	return (NULL);
